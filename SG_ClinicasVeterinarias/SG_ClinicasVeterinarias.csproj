@@ -72,6 +72,7 @@
     <Compile Include="pt.com.GCV.DAO\SqLConnection.cs" />
     <Compile Include="pt.com.GCV.MODEL\Animal.cs" />
     <Compile Include="pt.com.GCV.MODEL\Cliente.cs" />
+    <Compile Include="pt.com.GCV.MODEL\Colaborador.cs" />
     <Compile Include="pt.com.GCV.MODEL\Consulta.cs" />
     <Compile Include="pt.com.GCV.MODEL\Ficha.cs" />
     <Compile Include="pt.com.GCV.MODEL\Precario.cs" />
