@@ -16,5 +16,15 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
         {
             InitializeComponent();
         }
+
+        private void guna2HtmlLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ImageButton2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
