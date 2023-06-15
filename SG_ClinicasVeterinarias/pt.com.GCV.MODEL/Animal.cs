@@ -16,6 +16,8 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.MODEL
         public string RacaPai { get; set; }
         public string RacaMae { get; set; }
         /// <summary>
+        /// NS BEM COMO FAZER COM A INFORMAÇÃO DA FOREIGN KEY MAS ACHO QUE É ALGO ASSIM:
+        /// 
         /// public int Cliente_id { get; set; }
         /// public Cliente cliente { get; set; }
         /// </summary>
