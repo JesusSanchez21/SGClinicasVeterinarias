@@ -35,5 +35,14 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.MODEL
             DataNasc = dataNasc;
             Nif = nif;
         }
+        public Cliente( string nome, string email, int telefone, DateTime dataNasc, int nif)
+        {
+           
+            Nome = nome;
+            Email = email;
+            Telefone = telefone;
+            DataNasc = dataNasc;
+            Nif = nif;
+        }
     }
 }
