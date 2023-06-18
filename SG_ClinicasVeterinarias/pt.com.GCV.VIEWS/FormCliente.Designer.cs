@@ -256,6 +256,7 @@
             this.Save.Size = new System.Drawing.Size(180, 45);
             this.Save.TabIndex = 12;
             this.Save.Text = "Save";
+            this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
             // Cancel
             // 
