@@ -1,5 +1,4 @@
-﻿using MaterialSkin.Controls;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,16 +10,16 @@ using System.Windows.Forms;
 
 namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
 {
-    public partial class FormHome : Form
+    public partial class FormAnimal : Form
     {
-        public FormHome()
+        public FormAnimal()
         {
             InitializeComponent();
         }
 
-        private void FormHome_Load(object sender, EventArgs e)
+        private void Close_Click(object sender, EventArgs e)
         {
-
+           
         }
     }
 }

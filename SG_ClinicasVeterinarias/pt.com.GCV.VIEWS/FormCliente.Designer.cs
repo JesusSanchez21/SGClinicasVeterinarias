@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCliente));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Close = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2TextBoxName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBoxTelefone = new Guna.UI2.WinForms.Guna2TextBox();
@@ -47,6 +45,7 @@
             this.Cancel = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Close = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -55,33 +54,11 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.LightSalmon;
-            this.guna2Panel1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2Panel1.Controls.Add(this.Close);
             this.guna2Panel1.Location = new System.Drawing.Point(-1, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(802, 30);
+            this.guna2Panel1.Size = new System.Drawing.Size(970, 30);
             this.guna2Panel1.TabIndex = 0;
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(745, 5);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(15, 22);
-            this.guna2HtmlLabel1.TabIndex = 3;
-            this.guna2HtmlLabel1.Text = "--";
-            // 
-            // Close
-            // 
-            this.Close.BackColor = System.Drawing.Color.Transparent;
-            this.Close.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Close.Location = new System.Drawing.Point(774, 5);
-            this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(15, 22);
-            this.Close.TabIndex = 2;
-            this.Close.Text = "X";
-            this.Close.Click += new System.EventHandler(this.Close_Click);
             // 
             // label1
             // 
@@ -95,7 +72,9 @@
             // 
             // guna2TextBoxName
             // 
+            this.guna2TextBoxName.AutoRoundedCorners = true;
             this.guna2TextBoxName.BackColor = System.Drawing.Color.PeachPuff;
+            this.guna2TextBoxName.BorderRadius = 17;
             this.guna2TextBoxName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxName.DefaultText = "";
             this.guna2TextBoxName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -116,7 +95,9 @@
             // 
             // guna2TextBoxTelefone
             // 
+            this.guna2TextBoxTelefone.AutoRoundedCorners = true;
             this.guna2TextBoxTelefone.BackColor = System.Drawing.Color.PeachPuff;
+            this.guna2TextBoxTelefone.BorderRadius = 17;
             this.guna2TextBoxTelefone.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxTelefone.DefaultText = "";
             this.guna2TextBoxTelefone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -147,7 +128,9 @@
             // 
             // guna2TextBoxEmail
             // 
+            this.guna2TextBoxEmail.AutoRoundedCorners = true;
             this.guna2TextBoxEmail.BackColor = System.Drawing.Color.PeachPuff;
+            this.guna2TextBoxEmail.BorderRadius = 17;
             this.guna2TextBoxEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxEmail.DefaultText = "";
             this.guna2TextBoxEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -178,7 +161,9 @@
             // 
             // guna2TextBoxNif
             // 
+            this.guna2TextBoxNif.AutoRoundedCorners = true;
             this.guna2TextBoxNif.BackColor = System.Drawing.Color.PeachPuff;
+            this.guna2TextBoxNif.BorderRadius = 17;
             this.guna2TextBoxNif.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBoxNif.DefaultText = "";
             this.guna2TextBoxNif.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -211,7 +196,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(289, 48);
+            this.label5.Location = new System.Drawing.Point(408, 54);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(239, 37);
             this.label5.TabIndex = 9;
@@ -229,7 +214,9 @@
             // 
             // Date_of_Birth
             // 
+            this.Date_of_Birth.AutoRoundedCorners = true;
             this.Date_of_Birth.BackColor = System.Drawing.Color.Transparent;
+            this.Date_of_Birth.BorderRadius = 14;
             this.Date_of_Birth.Checked = true;
             this.Date_of_Birth.FillColor = System.Drawing.Color.PapayaWhip;
             this.Date_of_Birth.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -244,14 +231,16 @@
             // 
             // Save
             // 
+            this.Save.AutoRoundedCorners = true;
+            this.Save.BorderRadius = 21;
             this.Save.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Save.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.Save.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.Save.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.Save.FillColor = System.Drawing.Color.DarkSalmon;
-            this.Save.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Save.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.Save.ForeColor = System.Drawing.Color.White;
-            this.Save.Location = new System.Drawing.Point(310, 399);
+            this.Save.Location = new System.Drawing.Point(386, 424);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(180, 45);
             this.Save.TabIndex = 12;
@@ -260,14 +249,16 @@
             // 
             // Cancel
             // 
+            this.Cancel.AutoRoundedCorners = true;
+            this.Cancel.BorderRadius = 21;
             this.Cancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Cancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.Cancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.Cancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.Cancel.FillColor = System.Drawing.Color.DarkSalmon;
-            this.Cancel.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cancel.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.Cancel.ForeColor = System.Drawing.Color.White;
-            this.Cancel.Location = new System.Drawing.Point(110, 399);
+            this.Cancel.Location = new System.Drawing.Point(176, 424);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(180, 45);
             this.Cancel.TabIndex = 13;
@@ -276,7 +267,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(491, 88);
+            this.pictureBox1.Location = new System.Drawing.Point(633, 143);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(297, 301);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -298,17 +289,32 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(14, 94);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(475, 271);
+            this.groupBox1.Size = new System.Drawing.Size(565, 308);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Clientes";
+            // 
+            // Close
+            // 
+            this.Close.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Close.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Close.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Close.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Close.FillColor = System.Drawing.Color.Transparent;
+            this.Close.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Close.ForeColor = System.Drawing.Color.Black;
+            this.Close.Location = new System.Drawing.Point(937, 2);
+            this.Close.Name = "Close";
+            this.Close.Size = new System.Drawing.Size(30, 25);
+            this.Close.TabIndex = 16;
+            this.Close.Text = "X";
             // 
             // FormCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
-            this.ClientSize = new System.Drawing.Size(800, 502);
+            this.ClientSize = new System.Drawing.Size(968, 637);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Cancel);
@@ -319,7 +325,6 @@
             this.Name = "FormCliente";
             this.Text = "FormCliente";
             this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -331,8 +336,7 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel Close;
+       
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxName;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxTelefone;
@@ -348,5 +352,6 @@
         private Guna.UI2.WinForms.Guna2Button Cancel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private Guna.UI2.WinForms.Guna2Button Close;
     }
 }

@@ -1,26 +1,31 @@
-﻿using MaterialSkin.Controls;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using MaterialSkin.Controls;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
 {
-    public partial class FormHome : Form
+    public partial class FormEmploye :  Form
     {
-        public FormHome()
+        public FormEmploye()
         {
             InitializeComponent();
         }
 
-        private void FormHome_Load(object sender, EventArgs e)
-        {
+    
 
+        private void FormEmploye_Load(object sender, EventArgs e)
+        {
+            
+            
         }
+
+  
     }
 }
