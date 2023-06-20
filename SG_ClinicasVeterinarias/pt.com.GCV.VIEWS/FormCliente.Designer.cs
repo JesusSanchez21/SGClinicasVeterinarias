@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCliente));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.Close = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2TextBoxName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBoxTelefone = new Guna.UI2.WinForms.Guna2TextBox();
@@ -45,7 +46,6 @@
             this.Cancel = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Close = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -59,6 +59,21 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(970, 30);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // Close
+            // 
+            this.Close.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Close.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Close.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Close.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Close.FillColor = System.Drawing.Color.Transparent;
+            this.Close.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Close.ForeColor = System.Drawing.Color.Black;
+            this.Close.Location = new System.Drawing.Point(937, 2);
+            this.Close.Name = "Close";
+            this.Close.Size = new System.Drawing.Size(30, 25);
+            this.Close.TabIndex = 16;
+            this.Close.Text = "X";
             // 
             // label1
             // 
@@ -292,22 +307,7 @@
             this.groupBox1.Size = new System.Drawing.Size(565, 308);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Clientes";
-            // 
-            // Close
-            // 
-            this.Close.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Close.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Close.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Close.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Close.FillColor = System.Drawing.Color.Transparent;
-            this.Close.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Close.ForeColor = System.Drawing.Color.Black;
-            this.Close.Location = new System.Drawing.Point(937, 2);
-            this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(30, 25);
-            this.Close.TabIndex = 16;
-            this.Close.Text = "X";
+            this.groupBox1.Text = " ";
             // 
             // FormCliente
             // 
@@ -322,6 +322,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormCliente";
             this.Text = "FormCliente";
             this.guna2Panel1.ResumeLayout(false);

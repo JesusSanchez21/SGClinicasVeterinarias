@@ -104,6 +104,7 @@
             this.guna2TextBox2.SelectedText = "";
             this.guna2TextBox2.Size = new System.Drawing.Size(288, 31);
             this.guna2TextBox2.TabIndex = 3;
+            this.guna2TextBox2.TextChanged += new System.EventHandler(this.guna2TextBox2_TextChanged);
             // 
             // guna2HtmlLabel2
             // 
@@ -182,6 +183,7 @@
             this.Controls.Add(this.guna2HtmlLabel1);
             this.ForeColor = System.Drawing.Color.PeachPuff;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLogin";

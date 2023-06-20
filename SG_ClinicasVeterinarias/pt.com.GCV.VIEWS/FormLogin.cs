@@ -26,5 +26,12 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
         {
 
         }
+
+        private void guna2TextBox2_TextChanged(object sender, EventArgs e)
+        {
+            Guna.UI2.WinForms.Guna2TextBox textBox = (Guna.UI2.WinForms.Guna2TextBox)sender;
+            textBox.PasswordChar = 'ඞ';
+            textBox.UseSystemPasswordChar = true;
+        }
     }
 }

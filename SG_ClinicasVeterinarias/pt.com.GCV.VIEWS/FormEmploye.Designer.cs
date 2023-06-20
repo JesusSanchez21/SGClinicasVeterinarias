@@ -415,6 +415,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.Save);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormEmploye";
             this.Text = "FormEmploye";
             this.Load += new System.EventHandler(this.FormEmploye_Load);
