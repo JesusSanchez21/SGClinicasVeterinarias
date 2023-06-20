@@ -399,6 +399,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.guna2Button1.Size = new System.Drawing.Size(30, 25);
             this.guna2Button1.TabIndex = 16;
             this.guna2Button1.Text = "X";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // FormAnimal
             // 

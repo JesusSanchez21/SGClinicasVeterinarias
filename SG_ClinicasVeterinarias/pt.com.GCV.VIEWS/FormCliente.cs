@@ -120,5 +120,15 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Close_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
 {
-    public partial class FormAnimal : Form
+    public partial class FormProduto : Form
     {
-        public FormAnimal()
+        public FormProduto()
         {
             InitializeComponent();
         }
 
         private void Close_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }

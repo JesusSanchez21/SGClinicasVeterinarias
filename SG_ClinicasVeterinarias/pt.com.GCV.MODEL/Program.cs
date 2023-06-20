@@ -16,7 +16,7 @@ namespace SG_ClinicasVeterinarias
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.FormRegister());
+            Application.Run(new SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.FormHome());
         }
     }
 }

@@ -33,8 +33,10 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
 
         private void guna2ImageButton2_Click(object sender, EventArgs e)
         {
-            FormLogin form = new FormLogin();
-            form.ShowDialog();
+            this.Hide();
+            FormLogin formLogin = new FormLogin();
+            formLogin.ShowDialog();
+            
         }
     }
 }

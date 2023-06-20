@@ -74,6 +74,7 @@
             this.Close.Size = new System.Drawing.Size(30, 25);
             this.Close.TabIndex = 16;
             this.Close.Text = "X";
+            this.Close.Click += new System.EventHandler(this.Close_Click_1);
             // 
             // label1
             // 
@@ -211,11 +212,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(408, 54);
+            this.label5.Location = new System.Drawing.Point(349, 54);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(239, 37);
+            this.label5.Size = new System.Drawing.Size(293, 37);
             this.label5.TabIndex = 9;
-            this.label5.Text = "Form Clientes ";
+            this.label5.Text = "Adicionar Clientes";
             // 
             // label6
             // 
@@ -255,11 +256,11 @@
             this.Save.FillColor = System.Drawing.Color.DarkSalmon;
             this.Save.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.Save.ForeColor = System.Drawing.Color.White;
-            this.Save.Location = new System.Drawing.Point(386, 424);
+            this.Save.Location = new System.Drawing.Point(324, 424);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(180, 45);
             this.Save.TabIndex = 12;
-            this.Save.Text = "Save";
+            this.Save.Text = "Adicionar";
             this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
             // Cancel
@@ -273,11 +274,11 @@
             this.Cancel.FillColor = System.Drawing.Color.DarkSalmon;
             this.Cancel.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.Cancel.ForeColor = System.Drawing.Color.White;
-            this.Cancel.Location = new System.Drawing.Point(176, 424);
+            this.Cancel.Location = new System.Drawing.Point(36, 424);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(180, 45);
             this.Cancel.TabIndex = 13;
-            this.Cancel.Text = "Cancel";
+            this.Cancel.Text = "Cancelar";
             // 
             // pictureBox1
             // 
@@ -288,6 +289,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // groupBox1
             // 

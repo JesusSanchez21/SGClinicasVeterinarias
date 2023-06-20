@@ -24,7 +24,9 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
 
         private void guna2ImageButton2_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            FormRegister formLogin = new FormRegister();
+            formLogin.ShowDialog();
         }
 
         private void guna2TextBox2_TextChanged(object sender, EventArgs e)
