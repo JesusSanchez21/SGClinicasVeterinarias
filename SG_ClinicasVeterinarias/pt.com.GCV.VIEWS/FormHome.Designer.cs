@@ -56,7 +56,7 @@
             this.menuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(3, 33);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(74, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(194, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -80,7 +80,7 @@
             this.formProductToolStripMenuItem,
             this.formMedicalRecordToolStripMenuItem1});
             this.fIllToolStripMenuItem.Name = "fIllToolStripMenuItem";
-            this.fIllToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.fIllToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.fIllToolStripMenuItem.Text = "Forms";
             // 
             // formClientesToolStripMenuItem1
@@ -88,30 +88,35 @@
             this.formClientesToolStripMenuItem1.Name = "formClientesToolStripMenuItem1";
             this.formClientesToolStripMenuItem1.Size = new System.Drawing.Size(181, 22);
             this.formClientesToolStripMenuItem1.Text = "FormClientes";
+            this.formClientesToolStripMenuItem1.Click += new System.EventHandler(this.formClientesToolStripMenuItem1_Click);
             // 
             // formAnimalsToolStripMenuItem1
             // 
             this.formAnimalsToolStripMenuItem1.Name = "formAnimalsToolStripMenuItem1";
             this.formAnimalsToolStripMenuItem1.Size = new System.Drawing.Size(181, 22);
             this.formAnimalsToolStripMenuItem1.Text = "FormAnimals";
+            this.formAnimalsToolStripMenuItem1.Click += new System.EventHandler(this.formAnimalsToolStripMenuItem1_Click);
             // 
             // formEmployeToolStripMenuItem
             // 
             this.formEmployeToolStripMenuItem.Name = "formEmployeToolStripMenuItem";
             this.formEmployeToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.formEmployeToolStripMenuItem.Text = "FormEmploye";
+            this.formEmployeToolStripMenuItem.Click += new System.EventHandler(this.formEmployeToolStripMenuItem_Click);
             // 
             // formProductToolStripMenuItem
             // 
             this.formProductToolStripMenuItem.Name = "formProductToolStripMenuItem";
             this.formProductToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.formProductToolStripMenuItem.Text = "FormProduct";
+            this.formProductToolStripMenuItem.Click += new System.EventHandler(this.formProductToolStripMenuItem_Click);
             // 
             // formMedicalRecordToolStripMenuItem1
             // 
             this.formMedicalRecordToolStripMenuItem1.Name = "formMedicalRecordToolStripMenuItem1";
             this.formMedicalRecordToolStripMenuItem1.Size = new System.Drawing.Size(181, 22);
             this.formMedicalRecordToolStripMenuItem1.Text = "FormMedicalRecord";
+            this.formMedicalRecordToolStripMenuItem1.Click += new System.EventHandler(this.formMedicalRecordToolStripMenuItem1_Click);
             // 
             // listasToolStripMenuItem1
             // 
@@ -122,7 +127,7 @@
             this.listProductToolStripMenuItem,
             this.listMedicalRecordToolStripMenuItem1});
             this.listasToolStripMenuItem1.Name = "listasToolStripMenuItem1";
-            this.listasToolStripMenuItem1.Size = new System.Drawing.Size(107, 22);
+            this.listasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.listasToolStripMenuItem1.Text = "Listas";
             // 
             // listClientesToolStripMenuItem1
@@ -192,6 +197,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormHome";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormHome";
             this.Load += new System.EventHandler(this.FormHome_Load);
             this.menuStrip1.ResumeLayout(false);

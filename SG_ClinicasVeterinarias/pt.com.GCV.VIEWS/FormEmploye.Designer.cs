@@ -430,6 +430,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormEmploye";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEmploye";
             this.Load += new System.EventHandler(this.FormEmploye_Load);
             this.groupBox1.ResumeLayout(false);
