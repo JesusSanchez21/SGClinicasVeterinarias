@@ -44,9 +44,7 @@
             this.listProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listMedicalRecordToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.Close = new Guna.UI2.WinForms.Guna2Button();
             this.menuStrip1.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -56,7 +54,7 @@
             this.menuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(3, 33);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(194, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(74, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -80,7 +78,7 @@
             this.formProductToolStripMenuItem,
             this.formMedicalRecordToolStripMenuItem1});
             this.fIllToolStripMenuItem.Name = "fIllToolStripMenuItem";
-            this.fIllToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fIllToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.fIllToolStripMenuItem.Text = "Forms";
             // 
             // formClientesToolStripMenuItem1
@@ -127,7 +125,7 @@
             this.listProductToolStripMenuItem,
             this.listMedicalRecordToolStripMenuItem1});
             this.listasToolStripMenuItem1.Name = "listasToolStripMenuItem1";
-            this.listasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.listasToolStripMenuItem1.Size = new System.Drawing.Size(107, 22);
             this.listasToolStripMenuItem1.Text = "Listas";
             // 
             // listClientesToolStripMenuItem1
@@ -163,27 +161,10 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.LightSalmon;
-            this.guna2Panel1.Controls.Add(this.Close);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(970, 30);
             this.guna2Panel1.TabIndex = 3;
-            // 
-            // Close
-            // 
-            this.Close.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Close.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Close.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Close.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Close.FillColor = System.Drawing.Color.Transparent;
-            this.Close.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Close.ForeColor = System.Drawing.Color.Black;
-            this.Close.Location = new System.Drawing.Point(937, 2);
-            this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(30, 25);
-            this.Close.TabIndex = 16;
-            this.Close.Text = "X";
-            this.Close.Click += new System.EventHandler(this.Close_Click);
             // 
             // FormHome
             // 
@@ -202,7 +183,6 @@
             this.Load += new System.EventHandler(this.FormHome_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,7 +193,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fIllToolStripMenuItem;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Button Close;
         private System.Windows.Forms.ToolStripMenuItem formClientesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem formAnimalsToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem formEmployeToolStripMenuItem;

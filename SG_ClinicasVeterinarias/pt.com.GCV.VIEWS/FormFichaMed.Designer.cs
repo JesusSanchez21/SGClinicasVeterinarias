@@ -40,22 +40,20 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.guna2TextBoxNif = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.guna2TextBoxTelefone = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.guna2TextBoxName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Cancel = new Guna.UI2.WinForms.Guna2Button();
             this.Save = new Guna.UI2.WinForms.Guna2Button();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.Close = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2DateTimePickerStartedWorkl = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
+            this.guna2ComboBoxOwner = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2TextBox1
@@ -80,6 +78,8 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.guna2ComboBox1);
+            this.groupBox1.Controls.Add(this.guna2ComboBoxOwner);
             this.groupBox1.Controls.Add(this.guna2TextBox4);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.guna2TextBox1);
@@ -89,9 +89,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.groupBox1.Controls.Add(this.guna2TextBoxNif);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.guna2TextBoxTelefone);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.guna2TextBoxName);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(-3, 94);
@@ -217,29 +215,6 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.label3.TabIndex = 5;
             this.label3.Text = "Observações";
             // 
-            // guna2TextBoxTelefone
-            // 
-            this.guna2TextBoxTelefone.AutoRoundedCorners = true;
-            this.guna2TextBoxTelefone.BackColor = System.Drawing.Color.PeachPuff;
-            this.guna2TextBoxTelefone.BorderRadius = 17;
-            this.guna2TextBoxTelefone.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBoxTelefone.DefaultText = "";
-            this.guna2TextBoxTelefone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBoxTelefone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBoxTelefone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxTelefone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxTelefone.FillColor = System.Drawing.Color.PapayaWhip;
-            this.guna2TextBoxTelefone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxTelefone.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBoxTelefone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxTelefone.Location = new System.Drawing.Point(251, 44);
-            this.guna2TextBoxTelefone.Name = "guna2TextBoxTelefone";
-            this.guna2TextBoxTelefone.PasswordChar = '\0';
-            this.guna2TextBoxTelefone.PlaceholderText = "";
-            this.guna2TextBoxTelefone.SelectedText = "";
-            this.guna2TextBoxTelefone.Size = new System.Drawing.Size(200, 36);
-            this.guna2TextBoxTelefone.TabIndex = 4;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -250,38 +225,15 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.label2.TabIndex = 3;
             this.label2.Text = "Id do Colaborador";
             // 
-            // guna2TextBoxName
-            // 
-            this.guna2TextBoxName.AutoRoundedCorners = true;
-            this.guna2TextBoxName.BackColor = System.Drawing.Color.PeachPuff;
-            this.guna2TextBoxName.BorderRadius = 17;
-            this.guna2TextBoxName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBoxName.DefaultText = "";
-            this.guna2TextBoxName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBoxName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBoxName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxName.FillColor = System.Drawing.Color.PapayaWhip;
-            this.guna2TextBoxName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxName.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBoxName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxName.Location = new System.Drawing.Point(22, 44);
-            this.guna2TextBoxName.Name = "guna2TextBoxName";
-            this.guna2TextBoxName.PasswordChar = '\0';
-            this.guna2TextBoxName.PlaceholderText = "";
-            this.guna2TextBoxName.SelectedText = "";
-            this.guna2TextBoxName.Size = new System.Drawing.Size(200, 36);
-            this.guna2TextBoxName.TabIndex = 2;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(17, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 25);
+            this.label1.Size = new System.Drawing.Size(141, 25);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Id do Paciente";
+            this.label1.Text = "Id do Animals";
             // 
             // pictureBox1
             // 
@@ -340,27 +292,10 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.LightSalmon;
-            this.guna2Panel1.Controls.Add(this.Close);
             this.guna2Panel1.Location = new System.Drawing.Point(-18, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(970, 30);
             this.guna2Panel1.TabIndex = 23;
-            // 
-            // Close
-            // 
-            this.Close.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Close.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Close.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Close.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Close.FillColor = System.Drawing.Color.Transparent;
-            this.Close.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Close.ForeColor = System.Drawing.Color.Black;
-            this.Close.Location = new System.Drawing.Point(937, 2);
-            this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(30, 25);
-            this.Close.TabIndex = 16;
-            this.Close.Text = "X";
-            this.Close.Click += new System.EventHandler(this.Close_Click);
             // 
             // guna2TextBox3
             // 
@@ -412,6 +347,42 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.label8.TabIndex = 30;
             this.label8.Text = "Prox. Visita";
             // 
+            // guna2ComboBoxOwner
+            // 
+            this.guna2ComboBoxOwner.AutoRoundedCorners = true;
+            this.guna2ComboBoxOwner.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBoxOwner.BorderRadius = 17;
+            this.guna2ComboBoxOwner.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBoxOwner.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBoxOwner.FillColor = System.Drawing.Color.PapayaWhip;
+            this.guna2ComboBoxOwner.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBoxOwner.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBoxOwner.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.guna2ComboBoxOwner.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.guna2ComboBoxOwner.ItemHeight = 30;
+            this.guna2ComboBoxOwner.Location = new System.Drawing.Point(22, 55);
+            this.guna2ComboBoxOwner.Name = "guna2ComboBoxOwner";
+            this.guna2ComboBoxOwner.Size = new System.Drawing.Size(176, 36);
+            this.guna2ComboBoxOwner.TabIndex = 25;
+            // 
+            // guna2ComboBox1
+            // 
+            this.guna2ComboBox1.AutoRoundedCorners = true;
+            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBox1.BorderRadius = 17;
+            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBox1.FillColor = System.Drawing.Color.PapayaWhip;
+            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.guna2ComboBox1.ItemHeight = 30;
+            this.guna2ComboBox1.Location = new System.Drawing.Point(253, 55);
+            this.guna2ComboBox1.Name = "guna2ComboBox1";
+            this.guna2ComboBox1.Size = new System.Drawing.Size(176, 36);
+            this.guna2ComboBox1.TabIndex = 26;
+            // 
             // FormFichaMed
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -435,7 +406,6 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -450,21 +420,20 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxNif;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxTelefone;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2Button Cancel;
         private Guna.UI2.WinForms.Guna2Button Save;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Button Close;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePickerStartedWorkl;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
         private System.Windows.Forms.Label label9;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBoxOwner;
     }
 }

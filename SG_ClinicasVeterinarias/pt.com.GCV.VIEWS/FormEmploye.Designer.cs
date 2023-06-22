@@ -51,7 +51,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.Save = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.Close = new Guna.UI2.WinForms.Guna2Button();
+           
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -383,28 +383,13 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.LightSalmon;
-            this.guna2Panel1.Controls.Add(this.Close);
+
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(970, 30);
             this.guna2Panel1.TabIndex = 21;
             // 
-            // Close
-            // 
-            this.Close.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Close.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Close.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Close.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Close.FillColor = System.Drawing.Color.Transparent;
-            this.Close.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Close.ForeColor = System.Drawing.Color.Black;
-            this.Close.Location = new System.Drawing.Point(937, 2);
-            this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(30, 25);
-            this.Close.TabIndex = 16;
-            this.Close.Text = "X";
-            this.Close.Click += new System.EventHandler(this.Close_Click);
-            // 
+          
             // label5
             // 
             this.label5.AutoSize = true;
@@ -464,7 +449,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxFuncion;
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Button Close;
+
         private System.Windows.Forms.Label label5;
     }
 }

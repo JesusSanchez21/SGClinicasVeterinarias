@@ -51,11 +51,11 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Cancel = new Guna.UI2.WinForms.Guna2Button();
             this.Save = new Guna.UI2.WinForms.Guna2Button();
-            this.Close = new Guna.UI2.WinForms.Guna2Panel();
+            
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.Close.SuspendLayout();
+           
             this.SuspendLayout();
             // 
             // label5
@@ -377,14 +377,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.Save.Text = "Save";
             // 
             // Close
-            // 
-            this.Close.BackColor = System.Drawing.Color.LightSalmon;
-            this.Close.Controls.Add(this.guna2Button1);
-            this.Close.Location = new System.Drawing.Point(-1, 0);
-            this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(970, 30);
-            this.Close.TabIndex = 20;
-            // 
+       
             // guna2Button1
             // 
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -407,7 +400,6 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(968, 637);
-            this.Controls.Add(this.Close);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.Save);
             this.Controls.Add(this.pictureBox1);
@@ -421,7 +413,6 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.Close.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -449,7 +440,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2Button Cancel;
         private Guna.UI2.WinForms.Guna2Button Save;
-        private Guna.UI2.WinForms.Guna2Panel Close;
+      
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

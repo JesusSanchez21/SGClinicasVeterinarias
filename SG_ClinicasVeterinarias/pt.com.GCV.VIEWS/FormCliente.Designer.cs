@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCliente));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.Close = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2TextBoxName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBoxTelefone = new Guna.UI2.WinForms.Guna2TextBox();
@@ -46,7 +45,6 @@
             this.Cancel = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -54,27 +52,10 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.LightSalmon;
-            this.guna2Panel1.Controls.Add(this.Close);
             this.guna2Panel1.Location = new System.Drawing.Point(-1, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(970, 30);
             this.guna2Panel1.TabIndex = 0;
-            // 
-            // Close
-            // 
-            this.Close.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Close.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Close.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Close.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Close.FillColor = System.Drawing.Color.Transparent;
-            this.Close.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Close.ForeColor = System.Drawing.Color.Black;
-            this.Close.Location = new System.Drawing.Point(937, 2);
-            this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(30, 25);
-            this.Close.TabIndex = 16;
-            this.Close.Text = "X";
-            this.Close.Click += new System.EventHandler(this.Close_Click_1);
             // 
             // label1
             // 
@@ -289,7 +270,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // groupBox1
             // 
@@ -328,7 +308,6 @@
             this.Name = "FormCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCliente";
-            this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -356,6 +335,5 @@
         private Guna.UI2.WinForms.Guna2Button Cancel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private Guna.UI2.WinForms.Guna2Button Close;
     }
 }

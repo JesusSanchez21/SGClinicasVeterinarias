@@ -31,8 +31,8 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
         private void formClientesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormCliente form = new FormCliente();
-            form.ShowDialog();
+            
+           
         }
 
         private void formAnimalsToolStripMenuItem1_Click(object sender, EventArgs e)

@@ -1,4 +1,5 @@
-﻿using SG_ClinicasVeterinarias.pt.com.GCV.MODEL;
+﻿using SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO;
+using SG_ClinicasVeterinarias.pt.com.GCV.MODEL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using static SG_ClinicasVeterinarias.Setting.Utils;
 
 namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
@@ -20,9 +22,75 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
 
         Cliente clientes { get; set; } = null;
 
-        public FormCliente()
+        public FormCliente(int sqlAction, Cliente clientes)
         {
+            this.clientes = clientes;
+            SQLAction = sqlAction;
             InitializeComponent();
+        }
+
+        private void Save_Click(object sender, EventArgs e)
+        {
+            switch (SQLAction)
+            {
+                case SQL_INSERT:
+
+                    if (FormDataValidation())
+                    {
+                        FillForm(null);
+                        SQLClientes.Insert(clientes);
+                        this.Close();
+                    }
+                    break;
+                /*
+            case SQL_UPDATE:
+                buttonAction.Text = "Editar";
+                if (FormDataValidation())
+                {
+                    Employee employee = new Employee(this.employee.Cod, cbName.Text, textBoxDepartment.Text, textBoxPhoneNo.Text);
+
+                    SQLEmployee.Update(employee);
+                    this.Close();
+                }
+                break;
+            case SQL_DELETE:
+                buttonAction.Text = "Remover";
+                DisableFields();
+                FillForm(employee);
+
+                var result = MessageBox.Show($"Deseja mesmo eliminar o registo Cod[{employee.Cod}] - {employee.Name}", "Confirmação de remover", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    SQLEmployee.Delete(employee);
+                }
+                this.Close();
+                break;*/
+                default:
+
+                    MessageBox.Show("Ação não permitida", "Por favor faça uma ação que seja permitida.",
+                        MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                    break;
+            }
+        }
+
+        private void FormCliente_Load(object sender, EventArgs e)
+        {
+            switch (SQLAction)
+            {
+                case SQL_INSERT:
+                    Save.Text = "Inserir";
+                    break;
+                case SQL_UPDATE:
+                    Save.Text = "Editar";
+                    break;
+                case SQL_DELETE:
+                    Save.Text = "Remover";
+                    break;
+                default:
+                    MessageBox.Show("Operação não permitida.");
+                    break;
+            }
         }
         #region Utils
 
@@ -92,8 +160,8 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
 
                 this.clientes.Nome = guna2TextBoxName.Text;
                 this.clientes.Email = guna2TextBoxEmail.Text;
-                this.clientes.Nif =int.Parse(guna2TextBoxNif.Text);
-                this.clientes.Telefone = int.Parse( guna2TextBoxTelefone.Text);
+                this.clientes.Nif = int.Parse(guna2TextBoxNif.Text);
+                this.clientes.Telefone = int.Parse(guna2TextBoxTelefone.Text);
 
             }
 
@@ -111,24 +179,5 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             guna2TextBoxTelefone.Enabled = false;
         }
         #endregion
-        private void Close_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void Save_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Close_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }
