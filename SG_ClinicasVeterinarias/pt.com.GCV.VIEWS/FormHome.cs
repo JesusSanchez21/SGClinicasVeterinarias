@@ -52,7 +52,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
         private void formProductToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormProduto form = new FormProduto();
+            FormProduto form = new FormProduto(Utils.SQL_INSERT, null);
             form.ShowDialog();
         }
 
