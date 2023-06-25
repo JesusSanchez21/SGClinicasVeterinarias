@@ -25,7 +25,6 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                         sqlCommand.Parameters.Add(new SqlParameter("@descProd", produto.DescProd));
                         sqlCommand.Parameters.Add(new SqlParameter("@quantArmazem", produto.QuantArmazem));
                         sqlCommand.Parameters.Add(new SqlParameter("@precoUnit", produto.PrecoUnit));
-                        sqlCommand.Parameters.Add(new SqlParameter("@estado", produto.Estado));
 
 
                         if (sqlCommand.ExecuteNonQuery() != 1)

@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using SG_ClinicasVeterinarias.pt.com.GCV.VIEWS;
+using System;
 using System.Windows.Forms;
 
 namespace SG_ClinicasVeterinarias
 {
-    internal static class Program
+    static class Program
     {
         /// <summary>
         /// The main entry point for the application.
@@ -16,7 +14,7 @@ namespace SG_ClinicasVeterinarias
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.FormLogin());
+            Application.Run(new FormLogin());
         }
     }
 }

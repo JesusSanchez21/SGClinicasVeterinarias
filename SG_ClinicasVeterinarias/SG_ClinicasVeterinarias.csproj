@@ -72,6 +72,7 @@
     <Compile Include="pt.com.GCV.CONEXAO\SQLColaboradores.cs" />
     <Compile Include="pt.com.GCV.CONEXAO\SQLFicha.cs" />
     <Compile Include="pt.com.GCV.CONEXAO\SQLProduto.cs" />
+    <Compile Include="pt.com.GCV.CONEXAO\SQLUser.cs" />
     <Compile Include="pt.com.GCV.DAO\SqLConnection.cs" />
     <Compile Include="pt.com.GCV.MODEL\Animal.cs" />
     <Compile Include="pt.com.GCV.MODEL\Cliente.cs" />
@@ -82,11 +83,48 @@
     <Compile Include="pt.com.GCV.MODEL\Produto.cs" />
     <Compile Include="pt.com.GCV.MODEL\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="pt.com.GCV.MODEL\User.cs" />
+    <Compile Include="pt.com.GCV.VIEWS\FormFichaMed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pt.com.GCV.VIEWS\FormFichaMed.Designer.cs">
+      <DependentUpon>FormFichaMed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pt.com.GCV.VIEWS\FormAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pt.com.GCV.VIEWS\FormAnimal.Designer.cs">
+      <DependentUpon>FormAnimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pt.com.GCV.VIEWS\FormCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pt.com.GCV.VIEWS\FormCliente.Designer.cs">
+      <DependentUpon>FormCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pt.com.GCV.VIEWS\FormEmploye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pt.com.GCV.VIEWS\FormEmploye.Designer.cs">
+      <DependentUpon>FormEmploye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pt.com.GCV.VIEWS\FormHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pt.com.GCV.VIEWS\FormHome.Designer.cs">
+      <DependentUpon>FormHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="pt.com.GCV.VIEWS\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="pt.com.GCV.VIEWS\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pt.com.GCV.VIEWS\FormProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pt.com.GCV.VIEWS\FormProduto.Designer.cs">
+      <DependentUpon>FormProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="pt.com.GCV.VIEWS\FormRegister.cs">
       <SubType>Form</SubType>
@@ -94,6 +132,7 @@
     <Compile Include="pt.com.GCV.VIEWS\FormRegister.Designer.cs">
       <DependentUpon>FormRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="Setting\Utils.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -103,8 +142,26 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="pt.com.GCV.VIEWS\FormFichaMed.resx">
+      <DependentUpon>FormFichaMed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pt.com.GCV.VIEWS\FormAnimal.resx">
+      <DependentUpon>FormAnimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pt.com.GCV.VIEWS\FormCliente.resx">
+      <DependentUpon>FormCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pt.com.GCV.VIEWS\FormEmploye.resx">
+      <DependentUpon>FormEmploye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pt.com.GCV.VIEWS\FormHome.resx">
+      <DependentUpon>FormHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="pt.com.GCV.VIEWS\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pt.com.GCV.VIEWS\FormProduto.resx">
+      <DependentUpon>FormProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pt.com.GCV.VIEWS\FormRegister.resx">
       <DependentUpon>FormRegister.cs</DependentUpon>

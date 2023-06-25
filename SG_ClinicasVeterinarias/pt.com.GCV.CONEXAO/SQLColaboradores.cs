@@ -32,7 +32,6 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                         sqlCommand.Parameters.Add(new SqlParameter("@tipoColab", colaborador.TipoColab));
                         sqlCommand.Parameters.Add(new SqlParameter("@funcao", colaborador.Funcao));
                         sqlCommand.Parameters.Add(new SqlParameter("@dataIniColab", colaborador.DataIniColab));
-                        sqlCommand.Parameters.Add(new SqlParameter("@dataFimColab", colaborador.DataFimColab));
                         sqlCommand.Parameters.Add(new SqlParameter("@telefone", colaborador.Telefone));
                         sqlCommand.Parameters.Add(new SqlParameter("@email", colaborador.Email));
 
