@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manupation_of_the_Form
+namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manipulation_of_the_Form
 {
     public partial class MedicalFile : Form
     {

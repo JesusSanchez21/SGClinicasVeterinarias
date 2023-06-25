@@ -1,23 +1,22 @@
-﻿using SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO;
+﻿using SG_ClinicasVeterinarias.pt.com.GCV.MODEL;
+using SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.Common;
+using System.Data.SqlClient;
 using System.Windows.Forms;
+using static SG_ClinicasVeterinarias.pt.com.GCV.DAO.SqLConnection;
 
-namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manupation_of_the_Form
+namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manipulation_of_the_Form
 {
-    public partial class User : Form
+    public partial class Users : Form
     {
 
-        List<User> userlist = new List< User>();
+        List<User> userlist = new List<User>();
 
         private User selectedUser;
-        public User()
+        public Users()
         {
             InitializeComponent();
         }
@@ -45,8 +44,8 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manupation_of_the_Form
             {
                 ListViewItem row = new ListViewItem(new[] {
                             user.Id.ToString(),
-                            user.Name,
-                            user.Email
+                            user.Name.ToString(),
+                            user.Email.ToString()
                         });
                 listView2.Items.Add(row);
             }

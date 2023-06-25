@@ -56,11 +56,10 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
         #endregion
 
         #region Read
-        static public List<User> getAll()
+        internal static List<User> getAll()
         {
             List<User> users = new List<User>();   // Lista Principal
             String query = "";
-            User user1 = null;
 
 
             //Execução do SQL DML sob controlo do try catch

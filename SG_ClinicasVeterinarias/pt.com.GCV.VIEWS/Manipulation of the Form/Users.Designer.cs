@@ -1,6 +1,6 @@
-﻿namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manupation_of_the_Form
+﻿namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manipulation_of_the_Form
 {
-    partial class User
+    partial class Users
     {
         /// <summary>
         /// Required designer variable.

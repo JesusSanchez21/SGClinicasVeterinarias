@@ -1,5 +1,4 @@
 ﻿using SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO;
-using SG_ClinicasVeterinarias.pt.com.GCV.MODEL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,35 +9,35 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manupation_of_the_Form
+namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manipulation_of_the_Form
 {
-
-    public partial class Form1 : Form
+    public partial class Product : Form
     {
+        List<Product> produtos = new List<Product>();
 
-        List<Cliente> clienteLista = new List<Cliente>();
+        private Product selectprodutos;
 
-        private Cliente selectedCliente;
-
-        public Form1()
+        public Product()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Product_Load(object sender, EventArgs e)
         {
 
+            /*produtos = SQLProduto.getAll();
 
-            clienteLista = SQLClientes.getAll();
             //Definir colunas
             // Definição dos nomes das colunas
             listView2.Columns[0].Text = "#";
             listView2.Columns[1].Text = "Nome";
-            listView2.Columns[2].Text = "Morada";
+            listView2.Columns[2].Text = "Funcion";
             listView2.Columns[3].Text = "Email";
             listView2.Columns[4].Text = "Telefone";
             listView2.Columns[5].Text = "Nif";
             listView2.Columns[6].Text = "Date of birth";
+            listView2.Columns[7].Text = "Type of Employe";
+            listView2.Columns[8].Text = "Start Date";
 
             // Definição das colunas da listview. 
             // NOTA: Os valores percentuais da largura das colunas tem de somar 100
@@ -49,19 +48,21 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manupation_of_the_Form
             listView2.Columns[4].Width = (15 * listView2.Width) / 100;
             listView2.Columns[5].Width = (15 * listView2.Width) / 100;
             listView2.Columns[6].Width = (15 * listView2.Width) / 100;
+            listView2.Columns[7].Width = (15 * listView2.Width) / 100;
+            listView2.Columns[8].Width = (15 * listView2.Width) / 100;
 
-            foreach (Cliente cliente in clienteLista)
+            foreach (Product product in produtos)
             {
                 ListViewItem row = new ListViewItem(new[] {
-                            cliente.Id.ToString(),
-                            cliente.Nome,
-                            cliente.Email,
-                            cliente.Telefone.ToString(),
-                            cliente.Nif.ToString(),
-                            cliente.DataNasc.ToString()
-                        }); 
+                            product.CodProd.ToString(),
+                            product.TipoProd,
+                            product.DescProd,
+                            product.QuantArmazem.ToString(),
+                            product.PrecoUnit.ToString(),
+                        });
                 listView2.Items.Add(row);
             }
+        */
         }
     }
 }

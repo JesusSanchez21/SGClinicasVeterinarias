@@ -1,4 +1,5 @@
 ﻿using SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO;
+using SG_ClinicasVeterinarias.pt.com.GCV.MODEL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,23 +10,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manupation_of_the_Form
+namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manipulation_of_the_Form
 {
-    public partial class Product : Form
+    public partial class Employe : Form
     {
-        List<Product> produtos = new List<Product>();
+        List<Colaborador> colabs = new List<Colaborador>();
 
-        private Product selectprodutos;
+        private Colaborador selectcolab ;
 
-        public Product()
+        public Employe()
         {
             InitializeComponent();
         }
 
-        private void Product_Load(object sender, EventArgs e)
+        private void Employe_Load(object sender, EventArgs e)
         {
 
-            /*produtos = SQLProduto.getAll();
+            colabs = SQLColaboradores.getAll();
 
             //Definir colunas
             // Definição dos nomes das colunas
@@ -51,18 +52,21 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manupation_of_the_Form
             listView2.Columns[7].Width = (15 * listView2.Width) / 100;
             listView2.Columns[8].Width = (15 * listView2.Width) / 100;
 
-            foreach (Product product in produtos)
+            foreach (Colaborador colab in colabs)
             {
                 ListViewItem row = new ListViewItem(new[] {
-                            product.CodProd.ToString(),
-                            product.TipoProd,
-                            product.DescProd,
-                            product.QuantArmazem.ToString(),
-                            product.PrecoUnit.ToString(),
+                            colab.Id.ToString(),
+                            colab.Nome,
+                            colab.DataNasc.ToString(),
+                            colab.Nif.ToString(),
+                            colab.Funcao,
+                            colab.DataIniColab.ToString(),
+                            colab.Telefone.ToString(),
+                            colab.Email,
+                            colab.TipoColab.ToString()
                         });
                 listView2.Items.Add(row);
             }
-        */
         }
     }
 }
