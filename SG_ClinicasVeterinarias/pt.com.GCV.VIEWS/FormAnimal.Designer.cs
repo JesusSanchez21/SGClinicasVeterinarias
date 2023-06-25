@@ -51,11 +51,9 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Cancel = new Guna.UI2.WinForms.Guna2Button();
             this.Save = new Guna.UI2.WinForms.Guna2Button();
-            
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-           
             this.SuspendLayout();
             // 
             // label5
@@ -348,12 +346,14 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             // 
             // Cancel
             // 
+            this.Cancel.AutoRoundedCorners = true;
+            this.Cancel.BorderRadius = 21;
             this.Cancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Cancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.Cancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.Cancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.Cancel.FillColor = System.Drawing.Color.DarkSalmon;
-            this.Cancel.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cancel.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.Cancel.ForeColor = System.Drawing.Color.White;
             this.Cancel.Location = new System.Drawing.Point(204, 542);
             this.Cancel.Name = "Cancel";
@@ -363,21 +363,23 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             // 
             // Save
             // 
+            this.Save.AutoRoundedCorners = true;
+            this.Save.BackColor = System.Drawing.Color.Transparent;
+            this.Save.BorderRadius = 21;
             this.Save.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Save.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.Save.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.Save.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.Save.FillColor = System.Drawing.Color.DarkSalmon;
-            this.Save.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Save.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.Save.ForeColor = System.Drawing.Color.White;
             this.Save.Location = new System.Drawing.Point(414, 542);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(180, 45);
             this.Save.TabIndex = 18;
             this.Save.Text = "Save";
+            this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
-            // Close
-       
             // guna2Button1
             // 
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;

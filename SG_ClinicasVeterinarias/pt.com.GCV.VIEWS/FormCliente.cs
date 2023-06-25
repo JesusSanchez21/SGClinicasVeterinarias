@@ -18,8 +18,6 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
     public partial class FormCliente : Form
     {
         public int SQLAction = -1;
-
-
         Cliente clientes { get; set; } = null;
 
         public FormCliente(int sqlAction, Cliente clientes)
