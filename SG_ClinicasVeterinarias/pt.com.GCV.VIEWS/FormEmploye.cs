@@ -35,13 +35,13 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             switch (SQLAction)
             {
                 case SQL_INSERT:
-                    Save.Text = "Inserir";
+                    Save.Text = "Save";
                     break;
                 case SQL_UPDATE:
-                    Save.Text = "Editar";
+                    Save.Text = "Edit";
                     break;
                 case SQL_DELETE:
-                    Save.Text = "Remover";
+                    Save.Text = "Remove";
                     break;
                 default:
                     MessageBox.Show("Operação não permitida.");
