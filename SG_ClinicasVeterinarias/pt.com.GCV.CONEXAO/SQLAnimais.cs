@@ -18,8 +18,8 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                     {
                         sqlCommand.CommandType = CommandType.Text;
                         sqlCommand.CommandText = "INSERT INTO \"animais\" "
-                        + "(nomeDono, dataNasc, dataFal, dataUltimaCons, tipoAnimal, raca, sexo, peso, racaPai, racaMae) "
-                        + "VALUES (@nomeDono, @dataNasc, @dataFal, @dataUltimaCons, @tipoAnimal, @raca, @sexo, @peso, @racaPai, @racaMae);";
+                        + "(nomeDono, dataNasc, dataFal, dataUltimaCons, tipoAnimal, raca, sexo, peso) "
+                        + "VALUES (@nomeDono, @dataNasc, @dataFal, @dataUltimaCons, @tipoAnimal, @raca, @sexo, @peso);";
                         //sqlCommand.Parameters.Add(new SqlParameter("@id", animal.Id));
                         sqlCommand.Parameters.Add(new SqlParameter("@nomeDono", animal.NomeDono));
                         sqlCommand.Parameters.Add(new SqlParameter("@dataNasc", animal.DataNasc));

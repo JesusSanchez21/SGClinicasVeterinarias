@@ -27,7 +27,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.MODEL
         /// <summary>
         /// Id for get by id sql query 
         /// </summary>
-        /// <param name="id"></param>
+        // <param name="id"></param>
         public User(int id)
         {
             Id = id;

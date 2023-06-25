@@ -1,4 +1,6 @@
 ﻿using SG_ClinicasVeterinarias.pt.com.GCV.MODEL;
+using System.Collections.Generic;
+using System;
 using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
@@ -39,6 +41,51 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
 
                 throw new System.Exception(ex.Message, ex.InnerException);
             }
+        }
+        internal static List<Produto> getAll()
+        {
+            List<Produto> produtos = new List<Produto>();
+            Produto produto = null;
+
+            try
+            {
+                using (DbConnection conn = OpenConnection())
+                {
+                    //instancia para permitir comandos 
+                    using (SqlCommand sqlCommand = ((SqlConnection)conn).CreateCommand())
+                    {
+                        string query = "Select * from produtos;";
+                        //defining o tipo de comando
+                        sqlCommand.CommandText = query;
+                        sqlCommand.CommandType = CommandType.Text;
+                        sqlCommand.Connection = ((SqlConnection)conn);
+
+
+                        using (SqlDataReader reader = sqlCommand.ExecuteReader())
+                        {
+
+                            while (reader.Read())
+                            {
+                                produto = new Produto(
+                                    reader.GetInt32(reader.GetOrdinal("codProd")),
+                                    reader["tipoProd"].ToString(),
+                                    reader["descProd"].ToString(),
+                                    int.Parse(reader["quantArmazem"].ToString()),
+                                    int.Parse(reader["precoUnit"].ToString()));
+                                produtos.Add(produto);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Um erro ocorreu -  contacte do administrador de sistema." + ex.Message);
+                return null;
+            }
+
+            return produtos;
+
         }
     }
 }

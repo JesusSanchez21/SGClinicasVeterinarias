@@ -16,7 +16,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
         /// <summary>
         /// Adiciona um novo registo à tabela
         /// </summary>
-        /// <param name="user"></param>
+        // <param name="user"></param>
         static public void Insert(User user)
         {
             try
@@ -29,6 +29,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                         sqlCommand.CommandText = "INSERT INTO \"Users\""
                         + "(name, email, password)"
                         + "VALUES(@name, @email, @password);";
+                        //sqlCommand.Parameters.Add(new SqlParameter("@id", user.Id));
                         sqlCommand.Parameters.Add(new SqlParameter("@name", user.Name));
                         sqlCommand.Parameters.Add(new SqlParameter("@email", user.Email));
                         sqlCommand.Parameters.Add(new SqlParameter("@password", user.Password));
@@ -55,10 +56,11 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
         #endregion
 
         #region Read
-        static public List<User> GetAll()
+        static public List<User> getAll()
         {
             List<User> users = new List<User>();   // Lista Principal
             String query = "";
+            User user1 = null;
 
 
             //Execução do SQL DML sob controlo do try catch
@@ -81,11 +83,10 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                             while (reader.Read())
                             {
                                 User user = new User(
-                                    reader.GetInt32(reader.GetOrdinal("ID")),
+                                    reader.GetInt32(reader.GetOrdinal("Id")),
                                     reader["Name"].ToString(),
                                     reader["Email"].ToString(),
                                     reader["Password"].ToString());
-
                                 users.Add(user);
                             }
                         }
@@ -234,7 +235,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
         #region Update
         internal static bool UpdateUser(User user)
         {
-            bool sucess = false;
+            bool success = false;
             try
             {
                 using (DbConnection conn = OpenConnection())
@@ -257,11 +258,8 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                         int rowsAffected = sqlCommand.ExecuteNonQuery();
                         success = rowsAffected > 0;
                     }
-
-
-
-
                 }
+
             }
             catch (Exception e)
             {
@@ -273,13 +271,14 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                     MessageBoxIcon.Error  // Icon
                 );
             }
+            return success;
         }
         #endregion
 
         #region Delete
         internal static bool Delete(int id)
         {
-            bool sucess = false;
+            bool success = false;
             try
             {
                 using (DbConnection conn = OpenConnection())
@@ -311,11 +310,8 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                     MessageBoxIcon.Error  // Icon
                 );
             }
+            return success;
         }
-
-
-        #endregion
-
-
     }
+    #endregion
 }

@@ -25,7 +25,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manupation_of_the_Form
         private void Product_Load(object sender, EventArgs e)
         {
 
-            produto = SQLProduto.getAll();
+            /*produtos = SQLProduto.getAll();
 
             //Definir colunas
             // Definição dos nomes das colunas
@@ -62,6 +62,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manupation_of_the_Form
                         });
                 listView2.Items.Add(row);
             }
+        */
         }
     }
 }

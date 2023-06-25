@@ -26,7 +26,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manupation_of_the_Form
         private void Employe_Load(object sender, EventArgs e)
         {
 
-            colab = SQLColaboradores.getAll();
+            colabs = SQLColaboradores.getAll();
 
             //Definir colunas
             // Definição dos nomes das colunas
@@ -57,13 +57,13 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manupation_of_the_Form
                 ListViewItem row = new ListViewItem(new[] {
                             colab.Id.ToString(),
                             colab.Nome,
-                            colab.Funcao,
-                            colab.Email,
-                            colab.Telefone.ToString(),
-                            colab.Nif.ToString(),
                             colab.DataNasc.ToString(),
-                            colab.TipoColab,
-                            colab.DataIniColab.ToString()
+                            colab.Nif.ToString(),
+                            colab.Funcao,
+                            colab.DataIniColab.ToString(),
+                            colab.Telefone.ToString(),
+                            colab.Email,
+                            colab.TipoColab.ToString()
                         });
                 listView2.Items.Add(row);
             }

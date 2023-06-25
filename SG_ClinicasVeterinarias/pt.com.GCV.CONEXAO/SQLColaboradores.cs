@@ -51,8 +51,8 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
         }
         internal static List<Colaborador> getAll()
         {
-            List<Colaborador> colab = new List<Colaborador>();
-            Colaborador colabs = null;
+            List<Colaborador> colabs = new List<Colaborador>();
+            Colaborador colab = null;
 
             try
             {
@@ -73,7 +73,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
 
                             while (reader.Read())
                             {
-                                colabs = new Colaborador(
+                                colab = new Colaborador(
                                     reader.GetInt32(reader.GetOrdinal("id")),
                                     reader["nome"].ToString(),
                                     (DateTime)reader["dataNasc"],
@@ -81,10 +81,8 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                                     char.Parse(reader["tipoColab"].ToString()),
                                     reader["funcao"].ToString(),
                                     (DateTime)reader["dataInicolab"],
-                                    reader["email"].ToString(),
-                                    int.Parse(reader["telefone"].ToString())
-                                    
-                                    
+                                    int.Parse(reader["telefone"].ToString()),
+                                     reader["email"].ToString()
                                 );
                             }
                         }
@@ -97,7 +95,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                 return null;
             }
 
-            return clientes;
+            return colabs;
         }
 
         internal static Colaborador getColaboradorById(int id)
@@ -124,7 +122,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                         {
                             if (reader.Read())
                             {
-                                colabs = new Colaborador(
+                                colab = new Colaborador(
                                     reader.GetInt32(reader.GetOrdinal("id")),
                                     reader["nome"].ToString(),
                                     (DateTime)reader["dataNasc"],
@@ -132,8 +130,8 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                                     char.Parse(reader["tipoColab"].ToString()),
                                     reader["funcao"].ToString(),
                                     (DateTime)reader["dataInicolab"],
-                                    reader["email"].ToString(),
-                                    int.Parse(reader["telefone"].ToString())
+                                    int.Parse(reader["telefone"].ToString()),
+                                    reader["email"].ToString()
 
 
                                 );
@@ -147,7 +145,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                 Console.WriteLine("Error retrieving employe by ID: " + ex.Message);
             }
 
-            return cliente;
+            return colab;
         }
 
         internal static bool updateColaborador(Colaborador colab)
@@ -170,9 +168,9 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                         // Adiciona os parametros
                         sqlCommand.Parameters.AddWithValue("@nome", colab.Nome);
                         sqlCommand.Parameters.AddWithValue("@nif", colab.Nif);
-                        sqlCommand.Parameters.AddWithValue("@tipoColab", colab.tipoColab);
-                        sqlCommand.Parameters.AddWithValue("@funcao", colab.funcao);
-                        sqlCommand.Parameters.AddWithValue("@dataIniColab", colab.dataIniColab);
+                        sqlCommand.Parameters.AddWithValue("@tipoColab", colab.TipoColab);
+                        sqlCommand.Parameters.AddWithValue("@funcao", colab.Funcao);
+                        sqlCommand.Parameters.AddWithValue("@dataIniColab", colab.DataIniColab);
                         sqlCommand.Parameters.AddWithValue("@email", colab.Email);
                         sqlCommand.Parameters.AddWithValue("@telefone", colab.Telefone);
                         sqlCommand.Parameters.AddWithValue("@dataNasc", colab.DataNasc);

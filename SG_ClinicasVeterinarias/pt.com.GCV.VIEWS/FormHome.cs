@@ -45,7 +45,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
         private void formEmployeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormEmploye form = new FormEmploye(Utils.SQL_INSERT,null);
+            FormEmploye form = new FormEmploye();
             form.ShowDialog();
         }
 
