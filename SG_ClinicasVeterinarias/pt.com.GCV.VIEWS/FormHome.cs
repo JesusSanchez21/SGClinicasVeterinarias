@@ -1,4 +1,6 @@
-﻿using MaterialSkin.Controls;
+﻿
+using SG_ClinicasVeterinarias.pt.com.GCV.MODEL;
+using SG_ClinicasVeterinarias.Setting;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,19 +15,16 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
 {
     public partial class FormHome : Form
     {
-        public FormHome()
+        private User user;
+        public FormHome(User userLogged)
         {
+            this.user = userLogged;
             InitializeComponent();
         }
 
         private void FormHome_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void Close_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void formClientesToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -45,7 +44,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
         private void formEmployeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormEmploye form = new FormEmploye();
+            FormEmploye form = new FormEmploye(Utils.SQL_INSERT,null);
             form.ShowDialog();
         }
 

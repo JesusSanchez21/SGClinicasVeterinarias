@@ -33,7 +33,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.guna2TextBoxFuncion = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.guna2ComboBoxTypeWorker = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.TypeWorker = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.guna2DateTimePickerStartedWorkl = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
@@ -51,18 +51,16 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.Save = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-           
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.guna2TextBoxFuncion);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.guna2ComboBoxTypeWorker);
+            this.groupBox1.Controls.Add(this.TypeWorker);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.guna2DateTimePickerStartedWorkl);
             this.groupBox1.Controls.Add(this.label7);
@@ -117,26 +115,26 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.label9.TabIndex = 17;
             this.label9.Text = "Function";
             // 
-            // guna2ComboBoxTypeWorker
+            // TypeWorker
             // 
-            this.guna2ComboBoxTypeWorker.AutoRoundedCorners = true;
-            this.guna2ComboBoxTypeWorker.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBoxTypeWorker.BorderRadius = 17;
-            this.guna2ComboBoxTypeWorker.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBoxTypeWorker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBoxTypeWorker.FillColor = System.Drawing.Color.PapayaWhip;
-            this.guna2ComboBoxTypeWorker.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBoxTypeWorker.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBoxTypeWorker.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBoxTypeWorker.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBoxTypeWorker.ItemHeight = 30;
-            this.guna2ComboBoxTypeWorker.Items.AddRange(new object[] {
+            this.TypeWorker.AutoRoundedCorners = true;
+            this.TypeWorker.BackColor = System.Drawing.Color.Transparent;
+            this.TypeWorker.BorderRadius = 17;
+            this.TypeWorker.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.TypeWorker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TypeWorker.FillColor = System.Drawing.Color.PapayaWhip;
+            this.TypeWorker.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TypeWorker.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TypeWorker.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.TypeWorker.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.TypeWorker.ItemHeight = 30;
+            this.TypeWorker.Items.AddRange(new object[] {
             "Full Time",
             "Part Time"});
-            this.guna2ComboBoxTypeWorker.Location = new System.Drawing.Point(22, 227);
-            this.guna2ComboBoxTypeWorker.Name = "guna2ComboBoxTypeWorker";
-            this.guna2ComboBoxTypeWorker.Size = new System.Drawing.Size(176, 36);
-            this.guna2ComboBoxTypeWorker.TabIndex = 16;
+            this.TypeWorker.Location = new System.Drawing.Point(22, 227);
+            this.TypeWorker.Name = "TypeWorker";
+            this.TypeWorker.Size = new System.Drawing.Size(176, 36);
+            this.TypeWorker.TabIndex = 16;
             // 
             // label8
             // 
@@ -346,11 +344,11 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.Cancel.FillColor = System.Drawing.Color.DarkSalmon;
             this.Cancel.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.Cancel.ForeColor = System.Drawing.Color.White;
-            this.Cancel.Location = new System.Drawing.Point(12, 544);
+            this.Cancel.Location = new System.Drawing.Point(250, 544);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(180, 45);
             this.Cancel.TabIndex = 18;
-            this.Cancel.Text = "Cancelar";
+            this.Cancel.Text = "Cancel";
             // 
             // Save
             // 
@@ -368,7 +366,8 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(180, 45);
             this.Save.TabIndex = 17;
-            this.Save.Text = "Adicionar";
+            this.Save.Text = "Save";
+            this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
             // pictureBox1
             // 
@@ -383,22 +382,20 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.LightSalmon;
-
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(970, 30);
             this.guna2Panel1.TabIndex = 21;
             // 
-          
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(310, 59);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(360, 37);
+            this.label5.Size = new System.Drawing.Size(277, 37);
             this.label5.TabIndex = 22;
-            this.label5.Text = "Adicionar Colaborador";
+            this.label5.Text = "Add Colaborador";
             // 
             // FormEmploye
             // 
@@ -421,7 +418,6 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -444,7 +440,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePickerStartedWorkl;
         private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBoxTypeWorker;
+        private Guna.UI2.WinForms.Guna2ComboBox TypeWorker;
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxFuncion;
         private System.Windows.Forms.Label label9;

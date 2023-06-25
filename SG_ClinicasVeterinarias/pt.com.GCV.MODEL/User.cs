@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SG_ClinicasVeterinarias.pt.com.GCV.MODEL
 {
-    internal class User
+    public class User
     {
 
         public int Id { get; set; }

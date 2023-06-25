@@ -241,7 +241,7 @@
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(180, 45);
             this.Save.TabIndex = 12;
-            this.Save.Text = "Adicionar";
+            this.Save.Text = "Save";
             this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
             // Cancel
@@ -259,7 +259,7 @@
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(180, 45);
             this.Cancel.TabIndex = 13;
-            this.Cancel.Text = "Cancelar";
+            this.Cancel.Text = "Cancel";
             // 
             // pictureBox1
             // 
@@ -308,6 +308,7 @@
             this.Name = "FormCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCliente";
+            this.Load += new System.EventHandler(this.FormCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -73,25 +73,6 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
                     break;
             }
         }
-
-        private void FormCliente_Load(object sender, EventArgs e)
-        {
-            switch (SQLAction)
-            {
-                case SQL_INSERT:
-                    Save.Text = "Inserir";
-                    break;
-                case SQL_UPDATE:
-                    Save.Text = "Editar";
-                    break;
-                case SQL_DELETE:
-                    Save.Text = "Remover";
-                    break;
-                default:
-                    MessageBox.Show("Operação não permitida.");
-                    break;
-            }
-        }
         #region Utils
 
 
@@ -124,7 +105,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             if (IsNumber(guna2TextBoxTelefone.Text))
             {
                 MessageBox.Show(
-                 "Campo Estado incorreto, por favor coloque corretamente",
+                 "Campo telefone incorreto, por favor coloque corretamente",
                  "Dados Inválidos",
                  MessageBoxButtons.OK,
                  MessageBoxIcon.Information
@@ -136,7 +117,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             if (IsNumber(guna2TextBoxNif.Text))
             {
                 MessageBox.Show(
-                 "Campo morada incorreto, por favor coloque corretamente",
+                 "Campo Nif incorreto, por favor coloque corretamente",
                  "Dados Inválidos",
                  MessageBoxButtons.OK,
                  MessageBoxIcon.Information
@@ -179,5 +160,25 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             guna2TextBoxTelefone.Enabled = false;
         }
         #endregion
+
+        private void FormCliente_Load(object sender, EventArgs e)
+        {
+
+            switch (SQLAction)
+            {
+                case SQL_INSERT:
+                    Save.Text = "Inserir";
+                    break;
+                case SQL_UPDATE:
+                    Save.Text = "Editar";
+                    break;
+                case SQL_DELETE:
+                    Save.Text = "Remover";
+                    break;
+                default:
+                    MessageBox.Show("Operação não permitida.");
+                    break;
+            }
+        }
     }
 }
