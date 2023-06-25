@@ -79,7 +79,6 @@
     <Compile Include="pt.com.GCV.MODEL\Colaborador.cs" />
     <Compile Include="pt.com.GCV.MODEL\Consulta.cs" />
     <Compile Include="pt.com.GCV.MODEL\Ficha.cs" />
-    <Compile Include="pt.com.GCV.MODEL\Precario.cs" />
     <Compile Include="pt.com.GCV.MODEL\Produto.cs" />
     <Compile Include="pt.com.GCV.MODEL\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

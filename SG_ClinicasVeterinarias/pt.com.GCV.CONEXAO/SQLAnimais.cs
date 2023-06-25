@@ -29,8 +29,6 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                         sqlCommand.Parameters.Add(new SqlParameter("@raca", animal.Raca));
                         sqlCommand.Parameters.Add(new SqlParameter("@sexo", animal.Sexo));
                         sqlCommand.Parameters.Add(new SqlParameter("@peso", animal.Peso));
-                        sqlCommand.Parameters.Add(new SqlParameter("@racaPai", animal.RacaPai));
-                        sqlCommand.Parameters.Add(new SqlParameter("@racaMae", animal.RacaMae));
 
 
                         if (sqlCommand.ExecuteNonQuery() != 1)

@@ -18,7 +18,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
     public partial class FormCliente : Form
     {
         public int SQLAction = -1;
-        Cliente clientes { get; set; } = null;
+        Cliente clientes { get; set; } 
 
         public FormCliente(int sqlAction, Cliente clientes)
         {
@@ -29,53 +29,24 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
 
         private void Save_Click(object sender, EventArgs e)
         {
-            switch (SQLAction)
+            if (FormDataValidation(out Cliente clientes))
             {
-                case SQL_INSERT:
+                clientes.Nome = guna2TextBoxName.Text;
+                clientes.Email = guna2TextBoxEmail.Text;
+                clientes.DataNasc = Date_of_Birth.Value;
+                clientes.Telefone = int.Parse(guna2TextBoxTelefone.Text);
+                clientes.Nif = int.Parse(guna2TextBoxNif.Text);
 
-                    if (FormDataValidation())
-                    {
-                        FillForm(null);
-                        SQLClientes.Insert(clientes);
-                        this.Close();
-                    }
-                    break;
-                /*
-            case SQL_UPDATE:
-                buttonAction.Text = "Editar";
-                if (FormDataValidation())
-                {
-                    Employee employee = new Employee(this.employee.Cod, cbName.Text, textBoxDepartment.Text, textBoxPhoneNo.Text);
-
-                    SQLEmployee.Update(employee);
-                    this.Close();
-                }
-                break;
-            case SQL_DELETE:
-                buttonAction.Text = "Remover";
-                DisableFields();
-                FillForm(employee);
-
-                var result = MessageBox.Show($"Deseja mesmo eliminar o registo Cod[{employee.Cod}] - {employee.Name}", "Confirmação de remover", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (result == DialogResult.Yes)
-                {
-                    SQLEmployee.Delete(employee);
-                }
-                this.Close();
-                break;*/
-                default:
-
-                    MessageBox.Show("Ação não permitida", "Por favor faça uma ação que seja permitida.",
-                        MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                    break;
+                SQLClientes.Insert(clientes);
             }
+            MessageBox.Show("Data saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #region Utils
 
 
-        private bool FormDataValidation()
+        private bool FormDataValidation(out Cliente clientes)
         {
+            clientes = new Cliente();
             if (IsEmpty(guna2TextBoxName.Text))
             {
                 MessageBox.Show(
@@ -84,8 +55,8 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
                  MessageBoxButtons.OK,
                  MessageBoxIcon.Information
                 );
-
                 return false;
+
             }
 
             if (!IsEmail(guna2TextBoxEmail.Text))
@@ -99,6 +70,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
 
                 return false;
             }
+            
 
             if (!IsNumber(guna2TextBoxTelefone.Text))
             {

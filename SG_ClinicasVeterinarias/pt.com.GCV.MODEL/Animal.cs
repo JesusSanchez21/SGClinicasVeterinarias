@@ -13,8 +13,6 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.MODEL
         public string Raca { get; set; }
         public char Sexo { get; set; }
         public int Peso { get; set; }
-        public string RacaPai { get; set; }
-        public string RacaMae { get; set; }
         /// <summary>
         /// NS BEM COMO FAZER COM A INFORMAÇÃO DA FOREIGN KEY MAS ACHO QUE É ALGO ASSIM:
         /// 
@@ -44,21 +42,6 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.MODEL
             Sexo = sexo;
             Peso = peso;
 
-        }
-        public Animal(int id, string nomeDono, DateTime dataNasc, DateTime dataFal, DateTime dataUltimaCons, string tipoAnimal, string raca, char sexo, int peso, string racaMae, string racaPai)
-        {
-            Id = id;
-            NomeDono = nomeDono;
-            DataNasc = dataNasc;
-            DataFal = dataFal;
-            DataUltimaCons = dataUltimaCons;
-            TipoAnimal = tipoAnimal;
-            Raca = raca;
-            Sexo = sexo;
-            Peso = peso;
-            RacaPai = racaPai;
-            RacaMae = racaMae;
-            
         }
     }
 }

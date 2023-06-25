@@ -37,7 +37,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.Diagnosis = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2TextBoxWeight = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.guna2TextBoxPresciprtion = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,7 +50,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.label5 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2TextBoxQnt = new Guna.UI2.WinForms.Guna2TextBox();
-            this.NextVist = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.NextVisit = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -84,7 +84,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.Observation);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.guna2TextBox2);
+            this.groupBox1.Controls.Add(this.guna2TextBoxWeight);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.guna2TextBoxPresciprtion);
             this.groupBox1.Controls.Add(this.label4);
@@ -175,28 +175,28 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.label7.TabIndex = 11;
             this.label7.Text = "Quantidade";
             // 
-            // guna2TextBox2
+            // guna2TextBoxWeight
             // 
-            this.guna2TextBox2.AutoRoundedCorners = true;
-            this.guna2TextBox2.BackColor = System.Drawing.Color.PeachPuff;
-            this.guna2TextBox2.BorderRadius = 17;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FillColor = System.Drawing.Color.PapayaWhip;
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(22, 135);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(200, 36);
-            this.guna2TextBox2.TabIndex = 10;
+            this.guna2TextBoxWeight.AutoRoundedCorners = true;
+            this.guna2TextBoxWeight.BackColor = System.Drawing.Color.PeachPuff;
+            this.guna2TextBoxWeight.BorderRadius = 17;
+            this.guna2TextBoxWeight.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBoxWeight.DefaultText = "";
+            this.guna2TextBoxWeight.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBoxWeight.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBoxWeight.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxWeight.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxWeight.FillColor = System.Drawing.Color.PapayaWhip;
+            this.guna2TextBoxWeight.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBoxWeight.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBoxWeight.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBoxWeight.Location = new System.Drawing.Point(22, 135);
+            this.guna2TextBoxWeight.Name = "guna2TextBoxWeight";
+            this.guna2TextBoxWeight.PasswordChar = '\0';
+            this.guna2TextBoxWeight.PlaceholderText = "";
+            this.guna2TextBoxWeight.SelectedText = "";
+            this.guna2TextBoxWeight.Size = new System.Drawing.Size(200, 36);
+            this.guna2TextBoxWeight.TabIndex = 10;
             // 
             // label6
             // 
@@ -314,6 +314,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.Save.Size = new System.Drawing.Size(180, 45);
             this.Save.TabIndex = 25;
             this.Save.Text = "Save";
+            this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
             // label5
             // 
@@ -356,22 +357,22 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.guna2TextBoxQnt.Size = new System.Drawing.Size(115, 36);
             this.guna2TextBoxQnt.TabIndex = 11;
             // 
-            // NextVist
+            // NextVisit
             // 
-            this.NextVist.AutoRoundedCorners = true;
-            this.NextVist.BackColor = System.Drawing.Color.Transparent;
-            this.NextVist.BorderRadius = 14;
-            this.NextVist.Checked = true;
-            this.NextVist.FillColor = System.Drawing.Color.PapayaWhip;
-            this.NextVist.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.NextVist.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.NextVist.Location = new System.Drawing.Point(666, 379);
-            this.NextVist.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.NextVist.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.NextVist.Name = "NextVist";
-            this.NextVist.Size = new System.Drawing.Size(197, 31);
-            this.NextVist.TabIndex = 29;
-            this.NextVist.Value = new System.DateTime(2023, 6, 15, 14, 43, 26, 890);
+            this.NextVisit.AutoRoundedCorners = true;
+            this.NextVisit.BackColor = System.Drawing.Color.Transparent;
+            this.NextVisit.BorderRadius = 14;
+            this.NextVisit.Checked = true;
+            this.NextVisit.FillColor = System.Drawing.Color.PapayaWhip;
+            this.NextVisit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.NextVisit.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.NextVisit.Location = new System.Drawing.Point(666, 379);
+            this.NextVisit.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.NextVisit.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.NextVisit.Name = "NextVisit";
+            this.NextVisit.Size = new System.Drawing.Size(197, 31);
+            this.NextVisit.TabIndex = 29;
+            this.NextVisit.Value = new System.DateTime(2023, 6, 15, 14, 43, 26, 890);
             // 
             // label8
             // 
@@ -391,7 +392,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.ClientSize = new System.Drawing.Size(952, 598);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.guna2TextBoxQnt);
-            this.Controls.Add(this.NextVist);
+            this.Controls.Add(this.NextVisit);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.Save);
@@ -415,7 +416,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
 
         private Guna.UI2.WinForms.Guna2TextBox Observation;
         private System.Windows.Forms.GroupBox groupBox1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxWeight;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxPresciprtion;
         private System.Windows.Forms.Label label4;
@@ -430,7 +431,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxQnt;
         private System.Windows.Forms.Label label8;
-        private Guna.UI2.WinForms.Guna2DateTimePicker NextVist;
+        private Guna.UI2.WinForms.Guna2DateTimePicker NextVisit;
         private Guna.UI2.WinForms.Guna2TextBox Diagnosis;
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBoxIdColab;
