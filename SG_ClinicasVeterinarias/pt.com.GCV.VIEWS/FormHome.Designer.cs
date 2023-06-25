@@ -182,7 +182,7 @@
             this.menuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(3, 33);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(195, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(75, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -199,12 +199,12 @@
             // Welcome
             // 
             this.Welcome.BackColor = System.Drawing.Color.Transparent;
-            this.Welcome.Font = new System.Drawing.Font("Georgia", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Welcome.Location = new System.Drawing.Point(3, 78);
+            this.Welcome.Font = new System.Drawing.Font("Georgia", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Welcome.Location = new System.Drawing.Point(0, 69);
             this.Welcome.Name = "Welcome";
-            this.Welcome.Size = new System.Drawing.Size(171, 43);
+            this.Welcome.Size = new System.Drawing.Size(732, 74);
             this.Welcome.TabIndex = 5;
-            this.Welcome.Text = "Welcome ";
+            this.Welcome.Text = "Welcome - Bem Vindo";
             // 
             // FormHome
             // 
