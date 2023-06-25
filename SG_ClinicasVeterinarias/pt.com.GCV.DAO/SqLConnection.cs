@@ -17,7 +17,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.DAO
         static internal SqlConnection conn_sqlserver = null;
         public static string clipboardText = null;
         // LocalDB -Instância local SQL Server express do Visual Studio.
-        static private readonly string sqlConnStringBdLocal = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={projectDirectory}\pt.com.GCV.CONEXAO\Database.mdf;Integrated Security=True";
+        static private readonly string sqlConnStringBdLocal = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={projectDirectory}\pt.com.GCV.CONEXAO\Database1.mdf;Integrated Security=True";
 
 
         static internal DbConnection OpenConnection()

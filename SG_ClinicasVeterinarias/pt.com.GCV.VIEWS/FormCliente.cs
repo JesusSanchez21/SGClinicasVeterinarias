@@ -100,7 +100,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
                 return false;
             }
 
-            if (IsNumber(guna2TextBoxTelefone.Text))
+            if (!IsNumber(guna2TextBoxTelefone.Text))
             {
                 MessageBox.Show(
                  "Campo telefone incorreto, por favor coloque corretamente",
@@ -112,7 +112,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
                 return false;
             }
 
-            if (IsNumber(guna2TextBoxNif.Text))
+            if (!IsNumber(guna2TextBoxNif.Text))
             {
                 MessageBox.Show(
                  "Campo Nif incorreto, por favor coloque corretamente",

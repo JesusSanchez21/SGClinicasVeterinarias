@@ -17,7 +17,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                     using (SqlCommand sqlCommand = ((SqlConnection)conn).CreateCommand())
                     {
                         sqlCommand.CommandType = CommandType.Text;
-                        sqlCommand.CommandText = "INSERT INTO \"clientes\" "
+                        sqlCommand.CommandText = "INSERT INTO \"cliente\" "
                         + "(nome, email, telefone, dataNasc, nif) "
                         + "VALUES (@nome, @email, @telefone, @dataNasc, @nif);";
                         //sqlCommand.Parameters.Add(new SqlParameter("@id", cliente.Id));

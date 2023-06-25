@@ -31,12 +31,11 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                     {
                         sqlCommand.CommandType = CommandType.Text;
                         sqlCommand.CommandText = "INSERT INTO \"Users\""
-                        + "(Name,Email,Password, CreatedAt)"
-                        + "VALUES(@name, @email, @password, @createdAt);";
+                        + "(name, email, password)"
+                        + "VALUES(@name, @email, @password);";
                         sqlCommand.Parameters.Add(new SqlParameter("@name", user.Name));
                         sqlCommand.Parameters.Add(new SqlParameter("@email", user.Email));
                         sqlCommand.Parameters.Add(new SqlParameter("@password", user.Password));
-                        sqlCommand.Parameters.Add(new SqlParameter("@createdAt", DateTime.Now));
 
                         if (sqlCommand.ExecuteNonQuery() != 1)
                         {
