@@ -127,5 +127,18 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             return true;
         }
         #endregion
+
+        private void LogIn_Click(object sender, EventArgs e)
+        {
+
+            FormLogin fromlogIn = new FormLogin();
+            this.Hide();
+            fromlogIn.Show();
+        }
+
+        private void guna2ButtonCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

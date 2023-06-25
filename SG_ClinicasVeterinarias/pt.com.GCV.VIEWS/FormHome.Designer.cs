@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHome));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fIllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formClientesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,120 +43,12 @@
             this.listEmployeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listMedicalRecordToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Welcome = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(3, 33);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(74, 24);
-            this.menuStrip1.TabIndex = 2;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // menuToolStripMenuItem
-            // 
-            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fIllToolStripMenuItem,
-            this.listasToolStripMenuItem1});
-            this.menuToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("menuToolStripMenuItem.Image")));
-            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.menuToolStripMenuItem.Text = "Menu";
-            // 
-            // fIllToolStripMenuItem
-            // 
-            this.fIllToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.fIllToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.formClientesToolStripMenuItem1,
-            this.formAnimalsToolStripMenuItem1,
-            this.formEmployeToolStripMenuItem,
-            this.formProductToolStripMenuItem,
-            this.formMedicalRecordToolStripMenuItem1});
-            this.fIllToolStripMenuItem.Name = "fIllToolStripMenuItem";
-            this.fIllToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
-            this.fIllToolStripMenuItem.Text = "Forms";
-            // 
-            // formClientesToolStripMenuItem1
-            // 
-            this.formClientesToolStripMenuItem1.Name = "formClientesToolStripMenuItem1";
-            this.formClientesToolStripMenuItem1.Size = new System.Drawing.Size(181, 22);
-            this.formClientesToolStripMenuItem1.Text = "FormClientes";
-            this.formClientesToolStripMenuItem1.Click += new System.EventHandler(this.formClientesToolStripMenuItem1_Click);
-            // 
-            // formAnimalsToolStripMenuItem1
-            // 
-            this.formAnimalsToolStripMenuItem1.Name = "formAnimalsToolStripMenuItem1";
-            this.formAnimalsToolStripMenuItem1.Size = new System.Drawing.Size(181, 22);
-            this.formAnimalsToolStripMenuItem1.Text = "FormAnimals";
-            this.formAnimalsToolStripMenuItem1.Click += new System.EventHandler(this.formAnimalsToolStripMenuItem1_Click);
-            // 
-            // formEmployeToolStripMenuItem
-            // 
-            this.formEmployeToolStripMenuItem.Name = "formEmployeToolStripMenuItem";
-            this.formEmployeToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.formEmployeToolStripMenuItem.Text = "FormEmploye";
-            this.formEmployeToolStripMenuItem.Click += new System.EventHandler(this.formEmployeToolStripMenuItem_Click);
-            // 
-            // formProductToolStripMenuItem
-            // 
-            this.formProductToolStripMenuItem.Name = "formProductToolStripMenuItem";
-            this.formProductToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.formProductToolStripMenuItem.Text = "FormProduct";
-            this.formProductToolStripMenuItem.Click += new System.EventHandler(this.formProductToolStripMenuItem_Click);
-            // 
-            // formMedicalRecordToolStripMenuItem1
-            // 
-            this.formMedicalRecordToolStripMenuItem1.Name = "formMedicalRecordToolStripMenuItem1";
-            this.formMedicalRecordToolStripMenuItem1.Size = new System.Drawing.Size(181, 22);
-            this.formMedicalRecordToolStripMenuItem1.Text = "FormMedicalRecord";
-            this.formMedicalRecordToolStripMenuItem1.Click += new System.EventHandler(this.formMedicalRecordToolStripMenuItem1_Click);
-            // 
-            // listasToolStripMenuItem1
-            // 
-            this.listasToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.listClientesToolStripMenuItem1,
-            this.listAnimalsToolStripMenuItem1,
-            this.listEmployeToolStripMenuItem,
-            this.listProductToolStripMenuItem,
-            this.listMedicalRecordToolStripMenuItem1});
-            this.listasToolStripMenuItem1.Name = "listasToolStripMenuItem1";
-            this.listasToolStripMenuItem1.Size = new System.Drawing.Size(107, 22);
-            this.listasToolStripMenuItem1.Text = "Listas";
-            // 
-            // listClientesToolStripMenuItem1
-            // 
-            this.listClientesToolStripMenuItem1.Name = "listClientesToolStripMenuItem1";
-            this.listClientesToolStripMenuItem1.Size = new System.Drawing.Size(171, 22);
-            this.listClientesToolStripMenuItem1.Text = "ListClientes";
-            // 
-            // listAnimalsToolStripMenuItem1
-            // 
-            this.listAnimalsToolStripMenuItem1.Name = "listAnimalsToolStripMenuItem1";
-            this.listAnimalsToolStripMenuItem1.Size = new System.Drawing.Size(171, 22);
-            this.listAnimalsToolStripMenuItem1.Text = "ListAnimals";
-            // 
-            // listEmployeToolStripMenuItem
-            // 
-            this.listEmployeToolStripMenuItem.Name = "listEmployeToolStripMenuItem";
-            this.listEmployeToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.listEmployeToolStripMenuItem.Text = "ListEmploye";
-            // 
-            // listProductToolStripMenuItem
-            // 
-            this.listProductToolStripMenuItem.Name = "listProductToolStripMenuItem";
-            this.listProductToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.listProductToolStripMenuItem.Text = "ListProduct";
-            // 
-            // listMedicalRecordToolStripMenuItem1
-            // 
-            this.listMedicalRecordToolStripMenuItem1.Name = "listMedicalRecordToolStripMenuItem1";
-            this.listMedicalRecordToolStripMenuItem1.Size = new System.Drawing.Size(171, 22);
-            this.listMedicalRecordToolStripMenuItem1.Text = "ListMedicalRecord";
             // 
             // guna2Panel1
             // 
@@ -166,12 +58,162 @@
             this.guna2Panel1.Size = new System.Drawing.Size(970, 30);
             this.guna2Panel1.TabIndex = 3;
             // 
+            // menuToolStripMenuItem
+            // 
+            this.menuToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fIllToolStripMenuItem,
+            this.listasToolStripMenuItem1});
+            this.menuToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("menuToolStripMenuItem.Image")));
+            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.menuToolStripMenuItem.Text = "Menu";
+            // 
+            // fIllToolStripMenuItem
+            // 
+            this.fIllToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.fIllToolStripMenuItem.BackColor = System.Drawing.Color.PeachPuff;
+            this.fIllToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.formClientesToolStripMenuItem1,
+            this.formAnimalsToolStripMenuItem1,
+            this.formEmployeToolStripMenuItem,
+            this.formProductToolStripMenuItem,
+            this.formMedicalRecordToolStripMenuItem1});
+            this.fIllToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fIllToolStripMenuItem.Name = "fIllToolStripMenuItem";
+            this.fIllToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fIllToolStripMenuItem.Text = "Forms";
+            // 
+            // formClientesToolStripMenuItem1
+            // 
+            this.formClientesToolStripMenuItem1.Name = "formClientesToolStripMenuItem1";
+            this.formClientesToolStripMenuItem1.Size = new System.Drawing.Size(186, 22);
+            this.formClientesToolStripMenuItem1.Text = "FormClientes";
+            this.formClientesToolStripMenuItem1.Click += new System.EventHandler(this.formClientesToolStripMenuItem1_Click);
+            // 
+            // formAnimalsToolStripMenuItem1
+            // 
+            this.formAnimalsToolStripMenuItem1.Name = "formAnimalsToolStripMenuItem1";
+            this.formAnimalsToolStripMenuItem1.Size = new System.Drawing.Size(186, 22);
+            this.formAnimalsToolStripMenuItem1.Text = "FormAnimals";
+            this.formAnimalsToolStripMenuItem1.Click += new System.EventHandler(this.formAnimalsToolStripMenuItem1_Click);
+            // 
+            // formEmployeToolStripMenuItem
+            // 
+            this.formEmployeToolStripMenuItem.Name = "formEmployeToolStripMenuItem";
+            this.formEmployeToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.formEmployeToolStripMenuItem.Text = "FormEmploye";
+            this.formEmployeToolStripMenuItem.Click += new System.EventHandler(this.formEmployeToolStripMenuItem_Click);
+            // 
+            // formProductToolStripMenuItem
+            // 
+            this.formProductToolStripMenuItem.Name = "formProductToolStripMenuItem";
+            this.formProductToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.formProductToolStripMenuItem.Text = "FormProduct";
+            this.formProductToolStripMenuItem.Click += new System.EventHandler(this.formProductToolStripMenuItem_Click);
+            // 
+            // formMedicalRecordToolStripMenuItem1
+            // 
+            this.formMedicalRecordToolStripMenuItem1.Name = "formMedicalRecordToolStripMenuItem1";
+            this.formMedicalRecordToolStripMenuItem1.Size = new System.Drawing.Size(186, 22);
+            this.formMedicalRecordToolStripMenuItem1.Text = "FormMedicalRecord";
+            this.formMedicalRecordToolStripMenuItem1.Click += new System.EventHandler(this.formMedicalRecordToolStripMenuItem1_Click);
+            // 
+            // listasToolStripMenuItem1
+            // 
+            this.listasToolStripMenuItem1.BackColor = System.Drawing.Color.PeachPuff;
+            this.listasToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listClientesToolStripMenuItem1,
+            this.listAnimalsToolStripMenuItem1,
+            this.listEmployeToolStripMenuItem,
+            this.listProductToolStripMenuItem,
+            this.listMedicalRecordToolStripMenuItem1});
+            this.listasToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listasToolStripMenuItem1.Name = "listasToolStripMenuItem1";
+            this.listasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.listasToolStripMenuItem1.Text = "Listas";
+            // 
+            // listClientesToolStripMenuItem1
+            // 
+            this.listClientesToolStripMenuItem1.BackColor = System.Drawing.Color.PeachPuff;
+            this.listClientesToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listClientesToolStripMenuItem1.Name = "listClientesToolStripMenuItem1";
+            this.listClientesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.listClientesToolStripMenuItem1.Text = "ListClientes";
+            // 
+            // listAnimalsToolStripMenuItem1
+            // 
+            this.listAnimalsToolStripMenuItem1.BackColor = System.Drawing.Color.PeachPuff;
+            this.listAnimalsToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listAnimalsToolStripMenuItem1.Name = "listAnimalsToolStripMenuItem1";
+            this.listAnimalsToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.listAnimalsToolStripMenuItem1.Text = "ListAnimals";
+            // 
+            // listEmployeToolStripMenuItem
+            // 
+            this.listEmployeToolStripMenuItem.BackColor = System.Drawing.Color.PeachPuff;
+            this.listEmployeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listEmployeToolStripMenuItem.Name = "listEmployeToolStripMenuItem";
+            this.listEmployeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listEmployeToolStripMenuItem.Text = "ListEmploye";
+            // 
+            // listProductToolStripMenuItem
+            // 
+            this.listProductToolStripMenuItem.BackColor = System.Drawing.Color.PeachPuff;
+            this.listProductToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listProductToolStripMenuItem.Name = "listProductToolStripMenuItem";
+            this.listProductToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listProductToolStripMenuItem.Text = "ListProduct";
+            // 
+            // listMedicalRecordToolStripMenuItem1
+            // 
+            this.listMedicalRecordToolStripMenuItem1.BackColor = System.Drawing.Color.PeachPuff;
+            this.listMedicalRecordToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.listMedicalRecordToolStripMenuItem1.Name = "listMedicalRecordToolStripMenuItem1";
+            this.listMedicalRecordToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.listMedicalRecordToolStripMenuItem1.Text = "ListMedicalRecord";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.PeachPuff;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(3, 33);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(195, 24);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 60);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(970, 576);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Welcome
+            // 
+            this.Welcome.BackColor = System.Drawing.Color.Transparent;
+            this.Welcome.Font = new System.Drawing.Font("Georgia", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Welcome.Location = new System.Drawing.Point(3, 78);
+            this.Welcome.Name = "Welcome";
+            this.Welcome.Size = new System.Drawing.Size(171, 43);
+            this.Welcome.TabIndex = 5;
+            this.Welcome.Text = "Welcome ";
+            // 
             // FormHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(968, 637);
+            this.Controls.Add(this.Welcome);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -183,16 +225,16 @@
             this.Load += new System.EventHandler(this.FormHome_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fIllToolStripMenuItem;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.ToolStripMenuItem formClientesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem formAnimalsToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem formEmployeToolStripMenuItem;
@@ -204,5 +246,8 @@
         private System.Windows.Forms.ToolStripMenuItem listEmployeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listProductToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listMedicalRecordToolStripMenuItem1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Welcome;
     }
 }

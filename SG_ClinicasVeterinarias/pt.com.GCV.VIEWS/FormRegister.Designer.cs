@@ -149,9 +149,11 @@
             this.guna2ButtonCancel.Size = new System.Drawing.Size(288, 45);
             this.guna2ButtonCancel.TabIndex = 16;
             this.guna2ButtonCancel.Text = "Cancel";
+            this.guna2ButtonCancel.Click += new System.EventHandler(this.guna2ButtonCancel_Click);
             // 
             // textBoxName
             // 
+            this.textBoxName.AcceptsTab = true;
             this.textBoxName.BackColor = System.Drawing.Color.Sienna;
             this.textBoxName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxName.DefaultText = "";
@@ -163,7 +165,7 @@
             this.textBoxName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBoxName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxName.Location = new System.Drawing.Point(23, 288);
+            this.textBoxName.Location = new System.Drawing.Point(23, 290);
             this.textBoxName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.PasswordChar = '\0';
@@ -196,6 +198,7 @@
             this.LogIn.Size = new System.Drawing.Size(92, 31);
             this.LogIn.TabIndex = 19;
             this.LogIn.Text = "Log In";
+            this.LogIn.Click += new System.EventHandler(this.LogIn_Click);
             // 
             // FormRegister
             // 
