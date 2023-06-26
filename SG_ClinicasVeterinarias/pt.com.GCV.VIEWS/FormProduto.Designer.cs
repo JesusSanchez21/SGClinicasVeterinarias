@@ -58,9 +58,9 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.groupBox1.Controls.Add(this.guna2TextBoxTypeProduct);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(3, 95);
+            this.groupBox1.Location = new System.Drawing.Point(5, 95);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(565, 308);
+            this.groupBox1.Size = new System.Drawing.Size(565, 364);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = " ";

@@ -1,15 +1,11 @@
 ﻿using SG_ClinicasVeterinarias.pt.com.GCV.MODEL;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using  static SG_ClinicasVeterinarias.pt.com.GCV.DAO.SqLConnection;
-using static SG_ClinicasVeterinarias.Setting.Utils;
+using static SG_ClinicasVeterinarias.pt.com.GCV.DAO.SqLConnection;
 
 namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
 {
@@ -127,7 +123,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
         ///     Usa um ciclo para correr a lista principal e um ciclo ou obj FK
         /// </summary>
         /// <returns>Devolve um objeto preenchido ou NULL</returns>
-        static public User GetById(int Id)
+        internal static User GetById(int Id)
         {
             User user = null;
 
@@ -236,48 +232,35 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
         #endregion
 
         #region Update
-        static public void Update(User user)
+        internal static bool UpdateUser(User user)
         {
+            bool sucess = false;
             try
             {
                 using (DbConnection conn = OpenConnection())
                 {
-                    switch (DBMSactive)
+
+                    using (SqlCommand sqlCommand = ((SqlConnection)conn).CreateCommand())
                     {
-                        case DBMS_BD_LOCAL:
+                        sqlCommand.CommandType = CommandType.Text;
+                        sqlCommand.CommandText = "UPDATE Users SET" +
+                            " Name = @name," +
+                            " Email = @email," +
+                            " password = @password" +
+                            " WHERE ID = @id";
+                        sqlCommand.Parameters.Add(new SqlParameter("@id", user.Id));
+                        sqlCommand.Parameters.Add(new SqlParameter("@name", user.Name));
+                        sqlCommand.Parameters.Add(new SqlParameter("@email", user.Email));
+                        sqlCommand.Parameters.Add(new SqlParameter("@password", user.Password));
 
-                            using (SqlCommand sqlCommand = ((SqlConnection)conn).CreateCommand())
-                            {
-                                sqlCommand.CommandType = CommandType.Text;
-                                sqlCommand.CommandText = "UPDATE Users SET" +
-                                    " Name = @name," +
-                                    " Email = @email," +
-                                    " password = @password" +
-                                    " WHERE ID = @id";
-                                sqlCommand.Parameters.Add(new SqlParameter("@id", user.Id));
-                                sqlCommand.Parameters.Add(new SqlParameter("@name", user.Name));
-                                sqlCommand.Parameters.Add(new SqlParameter("@email", user.Email));
-                                sqlCommand.Parameters.Add(new SqlParameter("@password", user.Password));
-
-                                // Tenta executar o comando, que é suposto devolver 1
-                                if (sqlCommand.ExecuteNonQuery() != 1)
-                                {
-                                    // Se diferente, inverte o commit e Provoca a excessão saltanto para o catch
-                                    throw new InvalidProgramException("SQLUser - set() - bdLocal: ");
-                                }
-                            }
-                            break;
-
-
-                        default:
-                            MessageBox.Show(
-                                "O DBMS Ativo não está definido: SQLUser - update()",
-                                "SQLuser - Set() - switch(DBMSactive)",   // Título
-                                MessageBoxButtons.OK,       // Botões
-                                MessageBoxIcon.Information  // Icon
-                            );
-                            break;
+                        // Execute a query update
+                        int rowsAffected = sqlCommand.ExecuteNonQuery();
+                        success = rowsAffected > 0;
                     }
+
+
+
+
                 }
             }
             catch (Exception e)
@@ -294,37 +277,27 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
         #endregion
 
         #region Delete
-        static public void Delete(User user)
+        internal static bool Delete(int id)
         {
+            bool sucess = false;
             try
             {
                 using (DbConnection conn = OpenConnection())
                 {
-                    switch (DBMSactive)
+                    using (SqlCommand sqlCommand = ((SqlConnection)conn).CreateCommand())
                     {
-                        case DBMS_BD_LOCAL:
-                            using (SqlCommand sqlCommand = ((SqlConnection)conn).CreateCommand())
-                            {
-                                sqlCommand.CommandType = CommandType.Text;
-                                sqlCommand.CommandText = "DELETE FROM Users WHERE ID=@id ;";
-                                sqlCommand.Parameters.Add(new SqlParameter("@id", user.Id));
 
-                                // Tenta executar o comando, que é suposto devolver 1
-                                if (sqlCommand.ExecuteNonQuery() != 1)
-                                {
-                                    // Se diferente, inverte o commit e Provoca a excessão saltanto para o catch
-                                    throw new InvalidProgramException("SQLUser - delelete() - bdlocal: ");
-                                }
-                            }
-                            break;
-                        default:
-                            MessageBox.Show(
-                                "O DBMS Ativo não está definido: SQLUser - delete()",
-                                "SQLUser - Delete() - switch(DBMSactive)",   // Título
-                                MessageBoxButtons.OK,       // Botões
-                                MessageBoxIcon.Information  // Icon
-                            );
-                            break;
+                        string query = "DELETE FROM clientes WHERE id = @id;";
+                        sqlCommand.CommandText = query;
+                        sqlCommand.CommandType = CommandType.Text;
+                        sqlCommand.Connection = ((SqlConnection)conn);
+
+                        // Adiciona o parametro
+                        sqlCommand.Parameters.AddWithValue("@id", id);
+
+                        // Executa a query delete
+                        int rowsAffected = sqlCommand.ExecuteNonQuery();
+                        success = rowsAffected > 0;
                     }
                 }
             }

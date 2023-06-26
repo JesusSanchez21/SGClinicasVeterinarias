@@ -1,7 +1,6 @@
-﻿
-namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
+﻿namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manupation_of_the_Form
 {
-    partial class FormFichaMed
+    partial class MedicalFile
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +28,26 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFichaMed));
-            this.Observation = new Guna.UI2.WinForms.Guna2TextBox();
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            this.Cancel = new Guna.UI2.WinForms.Guna2Button();
+            this.confirm_edit = new Guna.UI2.WinForms.Guna2Button();
+            this.edit = new Guna.UI2.WinForms.Guna2Button();
+            this.Remove = new Guna.UI2.WinForms.Guna2Button();
+            this.search = new Guna.UI2.WinForms.Guna2Button();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.guna2ComboBoxIdColab = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2ComboBoxIdAnimal = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Diagnosis = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.Observation = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -44,42 +56,137 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Cancel = new Guna.UI2.WinForms.Guna2Button();
-            this.Save = new Guna.UI2.WinForms.Guna2Button();
+            this.textBoxId = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2TextBoxQnt = new Guna.UI2.WinForms.Guna2TextBox();
-            this.NextVist = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.label8 = new System.Windows.Forms.Label();
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // Observation
+            // Cancel
             // 
-            this.Observation.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Observation.DefaultText = "";
-            this.Observation.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Observation.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Observation.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Observation.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Observation.FillColor = System.Drawing.Color.PapayaWhip;
-            this.Observation.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Observation.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Observation.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Observation.Location = new System.Drawing.Point(381, 235);
-            this.Observation.Name = "Observation";
-            this.Observation.PasswordChar = '\0';
-            this.Observation.PlaceholderText = "";
-            this.Observation.SelectedText = "";
-            this.Observation.Size = new System.Drawing.Size(253, 121);
-            this.Observation.TabIndex = 22;
+            this.Cancel.AutoRoundedCorners = true;
+            this.Cancel.BorderRadius = 21;
+            this.Cancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Cancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Cancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Cancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Cancel.FillColor = System.Drawing.Color.DarkSalmon;
+            this.Cancel.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.Cancel.ForeColor = System.Drawing.Color.White;
+            this.Cancel.Location = new System.Drawing.Point(674, 425);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(180, 45);
+            this.Cancel.TabIndex = 48;
+            this.Cancel.Text = "Cancel";
+            // 
+            // confirm_edit
+            // 
+            this.confirm_edit.AutoRoundedCorners = true;
+            this.confirm_edit.BorderRadius = 21;
+            this.confirm_edit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.confirm_edit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.confirm_edit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.confirm_edit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.confirm_edit.FillColor = System.Drawing.Color.DarkSalmon;
+            this.confirm_edit.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.confirm_edit.ForeColor = System.Drawing.Color.White;
+            this.confirm_edit.Location = new System.Drawing.Point(674, 356);
+            this.confirm_edit.Name = "confirm_edit";
+            this.confirm_edit.Size = new System.Drawing.Size(180, 45);
+            this.confirm_edit.TabIndex = 47;
+            this.confirm_edit.Text = "Confirm Edit";
+            // 
+            // edit
+            // 
+            this.edit.AutoRoundedCorners = true;
+            this.edit.BorderRadius = 21;
+            this.edit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.edit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.edit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.edit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.edit.FillColor = System.Drawing.Color.DarkSalmon;
+            this.edit.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.edit.ForeColor = System.Drawing.Color.White;
+            this.edit.Location = new System.Drawing.Point(674, 283);
+            this.edit.Name = "edit";
+            this.edit.Size = new System.Drawing.Size(180, 45);
+            this.edit.TabIndex = 46;
+            this.edit.Text = "Edit";
+            // 
+            // Remove
+            // 
+            this.Remove.AutoRoundedCorners = true;
+            this.Remove.BorderRadius = 21;
+            this.Remove.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Remove.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Remove.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Remove.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Remove.FillColor = System.Drawing.Color.DarkSalmon;
+            this.Remove.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.Remove.ForeColor = System.Drawing.Color.White;
+            this.Remove.Location = new System.Drawing.Point(674, 220);
+            this.Remove.Name = "Remove";
+            this.Remove.Size = new System.Drawing.Size(180, 45);
+            this.Remove.TabIndex = 45;
+            this.Remove.Text = "Remove";
+            // 
+            // search
+            // 
+            this.search.AutoRoundedCorners = true;
+            this.search.BorderRadius = 21;
+            this.search.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.search.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.search.FillColor = System.Drawing.Color.DarkSalmon;
+            this.search.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.search.ForeColor = System.Drawing.Color.White;
+            this.search.Location = new System.Drawing.Point(674, 143);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(180, 45);
+            this.search.TabIndex = 44;
+            this.search.Text = "Search";
+            // 
+            // listView2
+            // 
+            this.listView2.BackColor = System.Drawing.Color.PeachPuff;
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8});
+            listViewGroup1.Header = "ListViewGroup";
+            listViewGroup1.Name = "listViewGroup1";
+            this.listView2.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            listViewGroup1});
+            this.listView2.HideSelection = false;
+            this.listView2.Location = new System.Drawing.Point(0, 490);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(967, 146);
+            this.listView2.TabIndex = 49;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(236, 19);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(503, 37);
+            this.label10.TabIndex = 50;
+            this.label10.Text = "Manupulation Form Medical File";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.guna2ComboBoxIdColab);
             this.groupBox1.Controls.Add(this.guna2TextBoxQnt);
+            this.groupBox1.Controls.Add(this.guna2ComboBoxIdColab);
             this.groupBox1.Controls.Add(this.guna2ComboBoxIdAnimal);
             this.groupBox1.Controls.Add(this.Diagnosis);
             this.groupBox1.Controls.Add(this.label9);
@@ -93,10 +200,10 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 94);
+            this.groupBox1.Location = new System.Drawing.Point(12, 111);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(640, 373);
-            this.groupBox1.TabIndex = 28;
+            this.groupBox1.TabIndex = 51;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = " ";
             // 
@@ -166,11 +273,31 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.label9.TabIndex = 23;
             this.label9.Text = "Diagnosis";
             // 
+            // Observation
+            // 
+            this.Observation.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Observation.DefaultText = "";
+            this.Observation.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Observation.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Observation.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Observation.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Observation.FillColor = System.Drawing.Color.PapayaWhip;
+            this.Observation.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Observation.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Observation.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Observation.Location = new System.Drawing.Point(381, 235);
+            this.Observation.Name = "Observation";
+            this.Observation.PasswordChar = '\0';
+            this.Observation.PlaceholderText = "";
+            this.Observation.SelectedText = "";
+            this.Observation.Size = new System.Drawing.Size(253, 121);
+            this.Observation.TabIndex = 22;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(465, 107);
+            this.label7.Location = new System.Drawing.Point(477, 107);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(123, 25);
             this.label7.TabIndex = 11;
@@ -272,67 +399,38 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.label1.TabIndex = 1;
             this.label1.Text = "Id Animals";
             // 
-            // pictureBox1
+            // textBoxId
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(643, 33);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(297, 301);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 27;
-            this.pictureBox1.TabStop = false;
-            // 
-            // Cancel
-            // 
-            this.Cancel.AutoRoundedCorners = true;
-            this.Cancel.BorderRadius = 21;
-            this.Cancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Cancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Cancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Cancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Cancel.FillColor = System.Drawing.Color.DarkSalmon;
-            this.Cancel.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
-            this.Cancel.ForeColor = System.Drawing.Color.White;
-            this.Cancel.Location = new System.Drawing.Point(204, 496);
-            this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(180, 45);
-            this.Cancel.TabIndex = 26;
-            this.Cancel.Text = "Cancel";
-            // 
-            // Save
-            // 
-            this.Save.AutoRoundedCorners = true;
-            this.Save.BorderRadius = 21;
-            this.Save.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Save.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Save.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Save.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Save.FillColor = System.Drawing.Color.DarkSalmon;
-            this.Save.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
-            this.Save.ForeColor = System.Drawing.Color.White;
-            this.Save.Location = new System.Drawing.Point(463, 496);
-            this.Save.Name = "Save";
-            this.Save.Size = new System.Drawing.Size(180, 45);
-            this.Save.TabIndex = 25;
-            this.Save.Text = "Save";
+            this.textBoxId.AutoRoundedCorners = true;
+            this.textBoxId.BackColor = System.Drawing.Color.PeachPuff;
+            this.textBoxId.BorderRadius = 17;
+            this.textBoxId.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxId.DefaultText = "";
+            this.textBoxId.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBoxId.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBoxId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxId.FillColor = System.Drawing.Color.PapayaWhip;
+            this.textBoxId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxId.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textBoxId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxId.Location = new System.Drawing.Point(86, 69);
+            this.textBoxId.Name = "textBoxId";
+            this.textBoxId.PasswordChar = '\0';
+            this.textBoxId.PlaceholderText = "";
+            this.textBoxId.SelectedText = "";
+            this.textBoxId.Size = new System.Drawing.Size(200, 36);
+            this.textBoxId.TabIndex = 55;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(294, 54);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(30, 69);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(281, 37);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "Form Medial File ";
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.LightSalmon;
-            this.guna2Panel1.Location = new System.Drawing.Point(-18, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(970, 30);
-            this.guna2Panel1.TabIndex = 23;
+            this.label5.Size = new System.Drawing.Size(32, 25);
+            this.label5.TabIndex = 54;
+            this.label5.Text = "ID";
             // 
             // guna2TextBoxQnt
             // 
@@ -349,63 +447,35 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.guna2TextBoxQnt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxQnt.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBoxQnt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxQnt.Location = new System.Drawing.Point(470, 135);
+            this.guna2TextBoxQnt.Location = new System.Drawing.Point(485, 135);
             this.guna2TextBoxQnt.Name = "guna2TextBoxQnt";
             this.guna2TextBoxQnt.PasswordChar = '\0';
             this.guna2TextBoxQnt.PlaceholderText = "";
             this.guna2TextBoxQnt.SelectedText = "";
             this.guna2TextBoxQnt.Size = new System.Drawing.Size(115, 36);
-            this.guna2TextBoxQnt.TabIndex = 11;
+            this.guna2TextBoxQnt.TabIndex = 27;
             // 
-            // NextVist
-            // 
-            this.NextVist.AutoRoundedCorners = true;
-            this.NextVist.BackColor = System.Drawing.Color.Transparent;
-            this.NextVist.BorderRadius = 14;
-            this.NextVist.Checked = true;
-            this.NextVist.FillColor = System.Drawing.Color.PapayaWhip;
-            this.NextVist.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.NextVist.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.NextVist.Location = new System.Drawing.Point(666, 379);
-            this.NextVist.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.NextVist.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.NextVist.Name = "NextVist";
-            this.NextVist.Size = new System.Drawing.Size(197, 31);
-            this.NextVist.TabIndex = 29;
-            this.NextVist.Value = new System.DateTime(2023, 6, 15, 14, 43, 26, 890);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(661, 351);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(103, 25);
-            this.label8.TabIndex = 30;
-            this.label8.Text = "Next Visit";
-            // 
-            // FormFichaMed
+            // MedicalFile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
-            this.ClientSize = new System.Drawing.Size(952, 598);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.NextVist);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.Cancel);
-            this.Controls.Add(this.Save);
+            this.ClientSize = new System.Drawing.Size(968, 637);
+            this.Controls.Add(this.textBoxId);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.listView2);
+            this.Controls.Add(this.Cancel);
+            this.Controls.Add(this.confirm_edit);
+            this.Controls.Add(this.edit);
+            this.Controls.Add(this.Remove);
+            this.Controls.Add(this.search);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FormFichaMed";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Name = "MedicalFile";
+            this.Text = "MedicalFile";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -413,8 +483,26 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2TextBox Observation;
+        private Guna.UI2.WinForms.Guna2Button Cancel;
+        private Guna.UI2.WinForms.Guna2Button confirm_edit;
+        private Guna.UI2.WinForms.Guna2Button edit;
+        private Guna.UI2.WinForms.Guna2Button Remove;
+        private Guna.UI2.WinForms.Guna2Button search;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBoxIdColab;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBoxIdAnimal;
+        private Guna.UI2.WinForms.Guna2TextBox Diagnosis;
+        private System.Windows.Forms.Label label9;
+        private Guna.UI2.WinForms.Guna2TextBox Observation;
+        private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxPresciprtion;
@@ -422,18 +510,10 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private Guna.UI2.WinForms.Guna2Button Cancel;
-        private Guna.UI2.WinForms.Guna2Button Save;
+        private Guna.UI2.WinForms.Guna2TextBox textBoxId;
         private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxQnt;
-        private System.Windows.Forms.Label label8;
-        private Guna.UI2.WinForms.Guna2DateTimePicker NextVist;
-        private Guna.UI2.WinForms.Guna2TextBox Diagnosis;
-        private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBoxIdColab;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBoxIdAnimal;
     }
 }

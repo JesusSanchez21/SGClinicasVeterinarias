@@ -132,6 +132,42 @@
     <Compile Include="pt.com.GCV.VIEWS\FormRegister.Designer.cs">
       <DependentUpon>FormRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="pt.com.GCV.VIEWS\Manupation of the Form\Animals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pt.com.GCV.VIEWS\Manupation of the Form\Animals.Designer.cs">
+      <DependentUpon>Animals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pt.com.GCV.VIEWS\Manupation of the Form\cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pt.com.GCV.VIEWS\Manupation of the Form\cliente.Designer.cs">
+      <DependentUpon>cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pt.com.GCV.VIEWS\Manupation of the Form\Employe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pt.com.GCV.VIEWS\Manupation of the Form\Employe.Designer.cs">
+      <DependentUpon>Employe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pt.com.GCV.VIEWS\Manupation of the Form\MedicalFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pt.com.GCV.VIEWS\Manupation of the Form\MedicalFile.Designer.cs">
+      <DependentUpon>MedicalFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pt.com.GCV.VIEWS\Manupation of the Form\Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pt.com.GCV.VIEWS\Manupation of the Form\Product.Designer.cs">
+      <DependentUpon>Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pt.com.GCV.VIEWS\Manupation of the Form\User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pt.com.GCV.VIEWS\Manupation of the Form\User.Designer.cs">
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
     <Compile Include="Setting\Utils.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -165,6 +201,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="pt.com.GCV.VIEWS\FormRegister.resx">
       <DependentUpon>FormRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pt.com.GCV.VIEWS\Manupation of the Form\Animals.resx">
+      <DependentUpon>Animals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pt.com.GCV.VIEWS\Manupation of the Form\cliente.resx">
+      <DependentUpon>cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pt.com.GCV.VIEWS\Manupation of the Form\Employe.resx">
+      <DependentUpon>Employe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pt.com.GCV.VIEWS\Manupation of the Form\MedicalFile.resx">
+      <DependentUpon>MedicalFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pt.com.GCV.VIEWS\Manupation of the Form\Product.resx">
+      <DependentUpon>Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pt.com.GCV.VIEWS\Manupation of the Form\User.resx">
+      <DependentUpon>User.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

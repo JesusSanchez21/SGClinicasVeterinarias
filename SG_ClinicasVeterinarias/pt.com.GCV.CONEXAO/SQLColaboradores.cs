@@ -49,5 +49,183 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                 throw new System.Exception(ex.Message, ex.InnerException);
             }
         }
+        internal static List<Colaborador> getAll()
+        {
+            List<Colaborador> colab = new List<Colaborador>();
+            Colaborador colabs = null;
+
+            try
+            {
+                using (DbConnection conn = OpenConnection())
+                {
+                    //instancia para permitir comandos 
+                    using (SqlCommand sqlCommand = ((SqlConnection)conn).CreateCommand())
+                    {
+                        string query = "Select * from employe;";
+                        //defining o tipo de comando
+                        sqlCommand.CommandText = query;
+                        sqlCommand.CommandType = CommandType.Text;
+                        sqlCommand.Connection = ((SqlConnection)conn);
+
+
+                        using (SqlDataReader reader = sqlCommand.ExecuteReader())
+                        {
+
+                            while (reader.Read())
+                            {
+                                colabs = new Colaborador(
+                                    reader.GetInt32(reader.GetOrdinal("id")),
+                                    reader["nome"].ToString(),
+                                    (DateTime)reader["dataNasc"],
+                                    int.Parse(reader["nif"].ToString()),
+                                    char.Parse(reader["tipoColab"].ToString()),
+                                    reader["funcao"].ToString(),
+                                    (DateTime)reader["dataInicolab"],
+                                    reader["email"].ToString(),
+                                    int.Parse(reader["telefone"].ToString())
+                                    
+                                    
+                                );
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Um erro ocorreu -  contacte do administrador de sistema." + ex.Message);
+                return null;
+            }
+
+            return clientes;
+        }
+
+        internal static Colaborador getColaboradorById(int id)
+        {
+            Colaborador colab = null;
+
+            try
+            {
+                using (DbConnection conn = OpenConnection())
+                {
+                    using (SqlCommand sqlCommand = ((SqlConnection)conn).CreateCommand())
+                    {
+                        // Define a query
+                        string query = "SELECT * FROM employe WHERE id = @id;";
+                        sqlCommand.CommandText = query;
+                        sqlCommand.CommandType = CommandType.Text;
+                        sqlCommand.Connection = ((SqlConnection)conn);
+
+                        // Adiciona o parametro
+                        sqlCommand.Parameters.AddWithValue("@id", id);
+
+                        // Executa a query
+                        using (SqlDataReader reader = sqlCommand.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                colabs = new Colaborador(
+                                    reader.GetInt32(reader.GetOrdinal("id")),
+                                    reader["nome"].ToString(),
+                                    (DateTime)reader["dataNasc"],
+                                    int.Parse(reader["nif"].ToString()),
+                                    char.Parse(reader["tipoColab"].ToString()),
+                                    reader["funcao"].ToString(),
+                                    (DateTime)reader["dataInicolab"],
+                                    reader["email"].ToString(),
+                                    int.Parse(reader["telefone"].ToString())
+
+
+                                );
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error retrieving employe by ID: " + ex.Message);
+            }
+
+            return cliente;
+        }
+
+        internal static bool updateColaborador(Colaborador colab)
+        {
+            bool success = false;
+
+            try
+            {
+                using (DbConnection conn = OpenConnection())
+                {
+                    // Create SQL command
+                    using (SqlCommand sqlCommand = ((SqlConnection)conn).CreateCommand())
+                    {
+                        // Cria a query
+                        string query = "UPDATE employe SET nome = @nome,dataNasc = @dataNasc ,nif = @nif, tipocolab = @tipocolab, funcao = @funcao, dataIncColab = @dataIncColab, telefone = @telefone,email = @email,  WHERE id = @id;";
+                        sqlCommand.CommandText = query;
+                        sqlCommand.CommandType = CommandType.Text;
+                        sqlCommand.Connection = ((SqlConnection)conn);
+
+                        // Adiciona os parametros
+                        sqlCommand.Parameters.AddWithValue("@nome", colab.Nome);
+                        sqlCommand.Parameters.AddWithValue("@nif", colab.Nif);
+                        sqlCommand.Parameters.AddWithValue("@tipoColab", colab.tipoColab);
+                        sqlCommand.Parameters.AddWithValue("@funcao", colab.funcao);
+                        sqlCommand.Parameters.AddWithValue("@dataIniColab", colab.dataIniColab);
+                        sqlCommand.Parameters.AddWithValue("@email", colab.Email);
+                        sqlCommand.Parameters.AddWithValue("@telefone", colab.Telefone);
+                        sqlCommand.Parameters.AddWithValue("@dataNasc", colab.DataNasc);
+                        sqlCommand.Parameters.AddWithValue("@id", colab.Id);
+
+                        // Execute a query update
+                        int rowsAffected = sqlCommand.ExecuteNonQuery();
+                        success = rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine("Error updating employe: " + ex.Message);
+            }
+
+            return success;
+        }
+
+        internal static bool deleteEmploye(int id)
+        {
+            bool success = false;
+
+            try
+            {
+
+                using (DbConnection conn = OpenConnection())
+                {
+                    // Cria o comando SQL
+                    using (SqlCommand sqlCommand = ((SqlConnection)conn).CreateCommand())
+                    {
+
+                        string query = "DELETE FROM employe WHERE id = @id;";
+                        sqlCommand.CommandText = query;
+                        sqlCommand.CommandType = CommandType.Text;
+                        sqlCommand.Connection = ((SqlConnection)conn);
+
+                        // Adiciona o parametro
+                        sqlCommand.Parameters.AddWithValue("@id", id);
+
+                        // Executa a query delete
+                        int rowsAffected = sqlCommand.ExecuteNonQuery();
+                        success = rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error deleting employe: " + ex.Message);
+            }
+
+            return success;
+        }
     }
 }
