@@ -195,7 +195,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                             if (reader.Read())
                             {
                                 user = new User(
-                                    reader.GetInt32(reader.GetOrdinal("ID")),
+                                    reader.GetInt32(reader.GetOrdinal("id")),
                                     reader["Name"].ToString(),
                                     reader["Email"].ToString(),
                                     reader["Password"].ToString());

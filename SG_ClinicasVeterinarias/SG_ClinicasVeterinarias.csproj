@@ -72,7 +72,7 @@
     <Compile Include="pt.com.GCV.CONEXAO\SQLAnimais.cs" />
     <Compile Include="pt.com.GCV.CONEXAO\SQLClientes.cs" />
     <Compile Include="pt.com.GCV.CONEXAO\SQLColaboradores.cs" />
-    <Compile Include="pt.com.GCV.CONEXAO\SQLFicha.cs" />
+    <Compile Include="pt.com.GCV.CONEXAO\SQLficha.cs" />
     <Compile Include="pt.com.GCV.CONEXAO\SQLProduto.cs" />
     <Compile Include="pt.com.GCV.CONEXAO\SQLUser.cs" />
     <Compile Include="pt.com.GCV.DAO\SqLConnection.cs" />

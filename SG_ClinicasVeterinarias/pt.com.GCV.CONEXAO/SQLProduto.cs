@@ -5,11 +5,13 @@ using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
 using static SG_ClinicasVeterinarias.pt.com.GCV.DAO.SqLConnection;
+using System.Windows.Forms;
 
 namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
 {
     internal class SQLProduto
     {
+        #region Create
         static public void Insert(Produto produto)
         {
             try
@@ -42,6 +44,9 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                 throw new System.Exception(ex.Message, ex.InnerException);
             }
         }
+        #endregion
+
+        #region Read
         internal static List<Produto> getAll()
         {
             List<Produto> produtos = new List<Produto>();
@@ -86,5 +91,145 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
             return produtos;
 
         }
+        #endregion
+
+        #region GetByID
+        internal static Produto GetById(int CodProd)
+        {
+            Produto produto = null;
+
+            try
+            {
+                using (DbConnection conn = OpenConnection())
+                {
+                    using (SqlCommand sqlCommand = new SqlCommand())
+                    {
+                        sqlCommand.CommandType = CommandType.Text;
+                        sqlCommand.Connection = ((SqlConnection)conn);
+
+                        sqlCommand.CommandText = "SELECT * FROM produtos where CodProd=@codProd;";
+                        sqlCommand.Parameters.Add(new SqlParameter("@codProd", CodProd));
+
+                        using (SqlDataReader reader = sqlCommand.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                produto = new Produto(
+                                    reader.GetInt32(reader.GetOrdinal("codProd")),
+                                    reader["tipoProd"].ToString(),
+                                    reader["descProd"].ToString(),
+                                    int.Parse(reader["quantArmazem"].ToString()),
+                                    int.Parse(reader["precoUnit"].ToString()));
+
+                            }
+                        }
+
+                        //TODO add relationship here
+                        //Produto.Client = SQLClient.GetClientById(Produto.Client.Id);
+                    }
+                }
+
+                // Se Entidade tem FKs, completar o objeto extraído com o objeto fk, com um get(id) à SQL respetiva
+                //Produto.CategoriaProduto = SQLcategoriaProduto.Get(Convert.ToInt32(Produto.CategoriaProduto.ID));
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Erro: SQLProduto - get() - \n" + e.ToString());
+                MessageBox.Show(
+                    "SQLProduto - Get() - \n Ocorreram problemas com a ligação à Base de Dados: \n" + e.ToString(),
+                    "SQLProduto - Get() - Catch",   // Título
+                    MessageBoxButtons.OK,       // Botões
+                    MessageBoxIcon.Error  // Icon
+                );
+                return null;
+            }
+            return produto;
+        }
+        #endregion
+
+        #region Update
+        internal static bool UpdateProduto(Produto produto)
+        {
+            bool success = false;
+            try
+            {
+                using (DbConnection conn = OpenConnection())
+                {
+
+                    using (SqlCommand sqlCommand = ((SqlConnection)conn).CreateCommand())
+                    {
+                        sqlCommand.CommandType = CommandType.Text;
+                        sqlCommand.CommandText = "UPDATE Produtos SET" +
+                            " TipoProd = @tipoProd," +
+                            " DescProd = @descProd," +
+                            " QuantArmazem = @quantArmazem" +
+                            " PrecoUnit = @precoUnit" +
+                            " WHERE CodProd = @codProd";
+                        sqlCommand.Parameters.Add(new SqlParameter("@codProd", produto.CodProd));    
+                        sqlCommand.Parameters.Add(new SqlParameter("@animal_id", produto.TipoProd));
+                        sqlCommand.Parameters.Add(new SqlParameter("@colaborador_Id", produto.DescProd));
+                        sqlCommand.Parameters.Add(new SqlParameter("@diagnostico", produto.QuantArmazem));
+                        sqlCommand.Parameters.Add(new SqlParameter("@peso", produto.PrecoUnit));
+                        
+                        // Execute a query update
+                        int rowsAffected = sqlCommand.ExecuteNonQuery();
+                        success = rowsAffected > 0;
+                    }
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Erro: SQLProduto - update() - \n" + e.ToString());
+                MessageBox.Show(
+                    "SQLProduto - update() - \n Ocorreram problemas com a ligação à Base de Dados: \n" + e.ToString(),
+                    "SQLProduto - update() - Catch",   // Título
+                    MessageBoxButtons.OK,       // Botões
+                    MessageBoxIcon.Error  // Icon
+                );
+            }
+            return success;
+        }
+        #endregion
+
+        #region Delete
+        internal static bool Delete(int codProd)
+        {
+            bool success = false;
+            try
+            {
+                using (DbConnection conn = OpenConnection())
+                {
+                    using (SqlCommand sqlCommand = ((SqlConnection)conn).CreateCommand())
+                    {
+
+                        string query = "DELETE FROM produtos WHERE codProd = @codProd;";
+                        sqlCommand.CommandText = query;
+                        sqlCommand.CommandType = CommandType.Text;
+                        sqlCommand.Connection = ((SqlConnection)conn);
+
+                        // Adiciona o parametro
+                        sqlCommand.Parameters.AddWithValue("@codProd", codProd);
+
+                        // Executa a query delete
+                        int rowsAffected = sqlCommand.ExecuteNonQuery();
+                        success = rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Erro: SQLFicha - delete() - \n" + e.ToString());
+                MessageBox.Show(
+                    "SQLProdutos - delete() - \n Ocorreram problemas com a ligação à Base de Dados: \n" + e.ToString(),
+                    "SQLProdutos - delete() - Catch",   // Título
+                    MessageBoxButtons.OK,       // Botões
+                    MessageBoxIcon.Error  // Icon
+                );
+            }
+            return success;
+        }
+        #endregion
     }
 }
+
