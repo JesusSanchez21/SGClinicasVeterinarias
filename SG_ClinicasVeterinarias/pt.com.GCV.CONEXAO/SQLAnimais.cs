@@ -1,4 +1,6 @@
 ﻿using SG_ClinicasVeterinarias.pt.com.GCV.MODEL;
+using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
@@ -43,6 +45,54 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
 
                 throw new System.Exception(ex.Message, ex.InnerException);
             }
+        }
+        internal static List<Animal> getAll()
+        {
+            List<Animal> animais = new List<Animal>();
+
+            try
+            {
+                using (DbConnection conn = OpenConnection())
+                {
+                    //instancia para permitir comandos 
+                    using (SqlCommand sqlCommand = ((SqlConnection)conn).CreateCommand())
+                    {
+                        string query = "Select * from animais;";
+                        //defining o tipo de comando
+                        sqlCommand.CommandText = query;
+                        sqlCommand.CommandType = CommandType.Text;
+                        sqlCommand.Connection = ((SqlConnection)conn);
+
+
+                        using (SqlDataReader reader = sqlCommand.ExecuteReader())
+                        {
+
+                            while (reader.Read())
+                            {
+                                Animal animal = new Animal(
+                                    reader.GetInt32(reader.GetOrdinal("id")),
+                                    reader["nomeDono"].ToString(),
+                                    (DateTime)reader["dataNasc"],
+                                    (DateTime)reader["dataFal"],
+                                    (DateTime)reader["dataUltimaCons"],
+                                    reader["tipoAnimal"].ToString(),
+                                    reader["raca"].ToString(),
+                                    char.Parse(reader["sexo"].ToString()),
+                                    int.Parse(reader["peso"].ToString()));
+                                animais.Add(animal);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Um erro ocorreu -  contacte do administrador de sistema." + ex.Message);
+                return null;
+            }
+
+            return animais;
+
         }
     }
 }

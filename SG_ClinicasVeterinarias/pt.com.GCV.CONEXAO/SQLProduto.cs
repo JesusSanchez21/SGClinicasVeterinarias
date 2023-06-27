@@ -20,8 +20,8 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                     {
                         sqlCommand.CommandType = CommandType.Text;
                         sqlCommand.CommandText = "INSERT INTO \"produtos\" "
-                        + "(tipoProd, descProd, quantArmazem, precoUnit, estado) "
-                        + "VALUES (@tipoProd, @descProd, @quantArmazem, @precoUnit, @estado);";
+                        + "(tipoProd, descProd, quantArmazem, precoUnit) "
+                        + "VALUES (@tipoProd, @descProd, @quantArmazem, @precoUnit);";
                         //sqlCommand.Parameters.Add(new SqlParameter("@codProd", produto.CodProd));
                         sqlCommand.Parameters.Add(new SqlParameter("@tipoProd", produto.TipoProd));
                         sqlCommand.Parameters.Add(new SqlParameter("@descProd", produto.DescProd));
@@ -45,7 +45,6 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
         internal static List<Produto> getAll()
         {
             List<Produto> produtos = new List<Produto>();
-            Produto produto = null;
 
             try
             {
@@ -66,7 +65,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
 
                             while (reader.Read())
                             {
-                                produto = new Produto(
+                                Produto produto = new Produto(
                                     reader.GetInt32(reader.GetOrdinal("codProd")),
                                     reader["tipoProd"].ToString(),
                                     reader["descProd"].ToString(),
