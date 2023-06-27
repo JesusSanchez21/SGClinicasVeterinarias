@@ -9,6 +9,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Listas;
+using SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manipulation_of_the_Form;
 using System.Windows.Forms;
 
 namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
@@ -61,6 +63,32 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.Hide();
             FormFichaMed form = new FormFichaMed();
             form.ShowDialog();
+        }
+
+        private void listClientesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+           ListaClinete form = new ListaClinete();
+            form.ShowDialog();
+        }
+
+        private void listUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ListaUser form = new ListaUser();
+            form.ShowDialog();
+        }
+
+        private void usersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Users form = new Users(1);
+            form.ShowDialog();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

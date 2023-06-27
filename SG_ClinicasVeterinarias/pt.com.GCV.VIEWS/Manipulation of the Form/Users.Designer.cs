@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
             this.Cancel = new Guna.UI2.WinForms.Guna2Button();
             this.confirm_edit = new Guna.UI2.WinForms.Guna2Button();
             this.edit = new Guna.UI2.WinForms.Guna2Button();
@@ -46,6 +46,8 @@
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.textBoxEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.textBoxPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textBoxId = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Cancel
@@ -64,6 +66,7 @@
             this.Cancel.Size = new System.Drawing.Size(180, 45);
             this.Cancel.TabIndex = 48;
             this.Cancel.Text = "Cancel";
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // confirm_edit
             // 
@@ -81,6 +84,7 @@
             this.confirm_edit.Size = new System.Drawing.Size(180, 45);
             this.confirm_edit.TabIndex = 47;
             this.confirm_edit.Text = "Confirm Edit";
+            this.confirm_edit.Click += new System.EventHandler(this.confirm_edit_Click);
             // 
             // edit
             // 
@@ -98,6 +102,7 @@
             this.edit.Size = new System.Drawing.Size(180, 45);
             this.edit.TabIndex = 46;
             this.edit.Text = "Edit";
+            this.edit.Click += new System.EventHandler(this.edit_Click);
             // 
             // Remove
             // 
@@ -115,6 +120,7 @@
             this.Remove.Size = new System.Drawing.Size(180, 45);
             this.Remove.TabIndex = 45;
             this.Remove.Text = "Remove";
+            this.Remove.Click += new System.EventHandler(this.Remove_Click);
             // 
             // search
             // 
@@ -132,6 +138,7 @@
             this.search.Size = new System.Drawing.Size(180, 45);
             this.search.TabIndex = 44;
             this.search.Text = "Search";
+            this.search.Click += new System.EventHandler(this.search_Click);
             // 
             // listView2
             // 
@@ -141,10 +148,10 @@
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
-            listViewGroup1.Header = "ListViewGroup";
-            listViewGroup1.Name = "listViewGroup1";
+            listViewGroup6.Header = "ListViewGroup";
+            listViewGroup6.Name = "listViewGroup1";
             this.listView2.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1});
+            listViewGroup6});
             this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(1, 491);
             this.listView2.Name = "listView2";
@@ -167,7 +174,7 @@
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Bahnschrift SemiLight", 14.25F);
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(36, 165);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(39, 191);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(52, 25);
             this.guna2HtmlLabel1.TabIndex = 56;
@@ -176,7 +183,9 @@
             // textBoxName
             // 
             this.textBoxName.AcceptsTab = true;
-            this.textBoxName.BackColor = System.Drawing.Color.Sienna;
+            this.textBoxName.AutoRoundedCorners = true;
+            this.textBoxName.BackColor = System.Drawing.Color.Transparent;
+            this.textBoxName.BorderRadius = 14;
             this.textBoxName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxName.DefaultText = "";
             this.textBoxName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -185,9 +194,9 @@
             this.textBoxName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.textBoxName.FillColor = System.Drawing.Color.PapayaWhip;
             this.textBoxName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.textBoxName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxName.Location = new System.Drawing.Point(34, 192);
+            this.textBoxName.Location = new System.Drawing.Point(37, 218);
             this.textBoxName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.PasswordChar = '\0';
@@ -200,7 +209,7 @@
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Bahnschrift SemiLight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(36, 298);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(39, 324);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(88, 25);
             this.guna2HtmlLabel3.TabIndex = 54;
@@ -210,7 +219,7 @@
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Bahnschrift SemiLight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(34, 228);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(37, 254);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(51, 25);
             this.guna2HtmlLabel2.TabIndex = 53;
@@ -218,7 +227,9 @@
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.BackColor = System.Drawing.Color.Sienna;
+            this.textBoxEmail.AutoRoundedCorners = true;
+            this.textBoxEmail.BackColor = System.Drawing.Color.Transparent;
+            this.textBoxEmail.BorderRadius = 14;
             this.textBoxEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxEmail.DefaultText = "";
             this.textBoxEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -227,9 +238,9 @@
             this.textBoxEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.textBoxEmail.FillColor = System.Drawing.Color.PapayaWhip;
             this.textBoxEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.textBoxEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxEmail.Location = new System.Drawing.Point(34, 260);
+            this.textBoxEmail.Location = new System.Drawing.Point(37, 286);
             this.textBoxEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.PasswordChar = '\0';
@@ -240,6 +251,8 @@
             // 
             // textBoxPassword
             // 
+            this.textBoxPassword.AutoRoundedCorners = true;
+            this.textBoxPassword.BorderRadius = 14;
             this.textBoxPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxPassword.DefaultText = "";
             this.textBoxPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -248,9 +261,9 @@
             this.textBoxPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.textBoxPassword.FillColor = System.Drawing.Color.PapayaWhip;
             this.textBoxPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.textBoxPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxPassword.Location = new System.Drawing.Point(36, 330);
+            this.textBoxPassword.Location = new System.Drawing.Point(37, 356);
             this.textBoxPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '\0';
@@ -259,12 +272,47 @@
             this.textBoxPassword.Size = new System.Drawing.Size(288, 31);
             this.textBoxPassword.TabIndex = 51;
             // 
-            // User
+            // textBoxId
+            // 
+            this.textBoxId.AutoRoundedCorners = true;
+            this.textBoxId.BackColor = System.Drawing.Color.PeachPuff;
+            this.textBoxId.BorderRadius = 17;
+            this.textBoxId.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxId.DefaultText = "";
+            this.textBoxId.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBoxId.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBoxId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxId.FillColor = System.Drawing.Color.PapayaWhip;
+            this.textBoxId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxId.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textBoxId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxId.Location = new System.Drawing.Point(39, 149);
+            this.textBoxId.Name = "textBoxId";
+            this.textBoxId.PasswordChar = '\0';
+            this.textBoxId.PlaceholderText = "";
+            this.textBoxId.SelectedText = "";
+            this.textBoxId.Size = new System.Drawing.Size(200, 36);
+            this.textBoxId.TabIndex = 58;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(34, 121);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(32, 25);
+            this.label5.TabIndex = 57;
+            this.label5.Text = "ID";
+            // 
+            // Users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(968, 637);
+            this.Controls.Add(this.textBoxId);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.guna2HtmlLabel3);
@@ -279,7 +327,7 @@
             this.Controls.Add(this.Remove);
             this.Controls.Add(this.search);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "User";
+            this.Name = "Users";
             this.Text = "User";
             this.Load += new System.EventHandler(this.User_Load);
             this.ResumeLayout(false);
@@ -306,5 +354,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2TextBox textBoxEmail;
         private Guna.UI2.WinForms.Guna2TextBox textBoxPassword;
+        private Guna.UI2.WinForms.Guna2TextBox textBoxId;
+        private System.Windows.Forms.Label label5;
     }
 }

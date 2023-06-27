@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
             this.Clientes = new System.Windows.Forms.GroupBox();
             this.Date_of_Birth = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
@@ -280,10 +280,10 @@
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6});
-            listViewGroup1.Header = "ListViewGroup";
-            listViewGroup1.Name = "listViewGroup1";
+            listViewGroup4.Header = "ListViewGroup";
+            listViewGroup4.Name = "listViewGroup1";
             this.listView2.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1});
+            listViewGroup4});
             this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(0, 440);
             this.listView2.Name = "listView2";
@@ -308,6 +308,7 @@
             this.search.Size = new System.Drawing.Size(180, 45);
             this.search.TabIndex = 33;
             this.search.Text = "Search";
+            this.search.Click += new System.EventHandler(this.search_Click);
             // 
             // Remove
             // 
@@ -325,6 +326,7 @@
             this.Remove.Size = new System.Drawing.Size(180, 45);
             this.Remove.TabIndex = 34;
             this.Remove.Text = "Remove";
+            this.Remove.Click += new System.EventHandler(this.Remove_Click);
             // 
             // edit
             // 
@@ -342,6 +344,7 @@
             this.edit.Size = new System.Drawing.Size(180, 45);
             this.edit.TabIndex = 35;
             this.edit.Text = "Edit";
+            this.edit.Click += new System.EventHandler(this.edit_Click);
             // 
             // confirm_edit
             // 
@@ -359,6 +362,7 @@
             this.confirm_edit.Size = new System.Drawing.Size(180, 45);
             this.confirm_edit.TabIndex = 36;
             this.confirm_edit.Text = "Confirm Edit";
+            this.confirm_edit.Click += new System.EventHandler(this.confirm_edit_Click);
             // 
             // label7
             // 

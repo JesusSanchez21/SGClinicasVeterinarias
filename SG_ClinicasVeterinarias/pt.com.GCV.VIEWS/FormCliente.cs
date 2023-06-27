@@ -139,16 +139,16 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
                 case SQL_INSERT:
                     Save.Text = "Insert";
                     break;
-                case SQL_UPDATE:
-                    Save.Text = "Edit";
-                    break;
-                case SQL_DELETE:
-                    Save.Text = "Remove";
-                    break;
+
                 default:
                     MessageBox.Show("Operação não permitida.");
                     break;
             }
+        }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

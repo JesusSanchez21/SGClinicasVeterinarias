@@ -1,10 +1,10 @@
 ﻿using SG_ClinicasVeterinarias.pt.com.GCV.MODEL;
+using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
-using System.Data;
 using static SG_ClinicasVeterinarias.pt.com.GCV.DAO.SqLConnection;
-using System.Collections.Generic;
-using System;
 
 namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
 {
@@ -19,7 +19,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                     using (SqlCommand sqlCommand = ((SqlConnection)conn).CreateCommand())
                     {
                         sqlCommand.CommandType = CommandType.Text;
-                        sqlCommand.CommandText = "INSERT INTO \"cliente\" "
+                        sqlCommand.CommandText = "INSERT INTO \"clientes\" "
                         + "(nome, email, telefone, dataNasc, nif) "
                         + "VALUES (@nome, @email, @telefone, @dataNasc, @nif);";
                         //sqlCommand.Parameters.Add(new SqlParameter("@id", cliente.Id));
@@ -76,6 +76,8 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                                     (DateTime)reader["dataNasc"],
                                     int.Parse(reader["nif"].ToString())
                                 );
+
+                                clientes.Add(cliente);
                             }
                         }
                     }

@@ -169,7 +169,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                     MessageBoxButtons.OK,       // Botões
                     MessageBoxIcon.Error  // Icon
                 );
-                return null;
+                
             }
             return user;
         }
@@ -275,7 +275,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
         #endregion
 
         #region Delete
-        internal static bool Delete(int id)
+        internal static bool DeleteUser(int id)
         {
             bool success = false;
             try

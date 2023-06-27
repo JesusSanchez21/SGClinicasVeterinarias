@@ -84,6 +84,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                                     int.Parse(reader["telefone"].ToString()),
                                      reader["email"].ToString()
                                 );
+                                colabs.Add(colab);
                             }
                         }
                     }
