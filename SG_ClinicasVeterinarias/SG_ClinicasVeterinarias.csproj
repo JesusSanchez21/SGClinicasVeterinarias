@@ -52,7 +52,7 @@
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net48\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="System">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />

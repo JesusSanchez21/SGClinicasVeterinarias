@@ -11,9 +11,9 @@ using static SG_ClinicasVeterinarias.pt.com.GCV.DAO.SqLConnection;
 
 namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
 {
-    internal class SQLColaboradores
+    public class SQLColaboradores
     {
-        static public void Insert(Colaborador colaborador)
+        public static void Insert(Colaborador colaborador)
         {
             try
             {

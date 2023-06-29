@@ -9,7 +9,7 @@ using static SG_ClinicasVeterinarias.pt.com.GCV.DAO.SqLConnection;
 
 namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
 {
-    internal class SQLUser
+    public class SQLUser
     {
         #region Create
 
@@ -56,7 +56,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
         #endregion
 
         #region Read
-        internal static List<User> getAll()
+        public static List<User> getAll()
         {
             List<User> users = new List<User>();   // Lista Principal
             String query = "";

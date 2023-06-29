@@ -10,7 +10,7 @@ using static SG_ClinicasVeterinarias.pt.com.GCV.DAO.SqLConnection;
 
 namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
 {
-    internal class SQLAnimais
+    public class SQLAnimais
     {
         #region Create
         static public void Insert(Animal animal)
@@ -26,7 +26,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                         + "(nomeDono, dataNasc, dataFal, dataUltimaCons, tipoAnimal, raca, sexo, peso) "
                         + "VALUES (@nomeDono, @dataNasc, @dataFal, @dataUltimaCons, @tipoAnimal, @raca, @sexo, @peso);";
                         //sqlCommand.Parameters.Add(new SqlParameter("@id", animal.Id));
-                        sqlCommand.Parameters.Add(new SqlParameter("@nomeDono", animal.NomeDono));
+                        //sqlCommand.Parameters.Add(new SqlParameter("@nomeDono", animal.NomeDono));
                         sqlCommand.Parameters.Add(new SqlParameter("@dataNasc", animal.DataNasc));
                         sqlCommand.Parameters.Add(new SqlParameter("@dataFal", animal.DataFal));
                         sqlCommand.Parameters.Add(new SqlParameter("@dataUltimaCons", animal.DataUltimaCons));
@@ -53,7 +53,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
         #endregion
 
         #region Read
-        internal static List<Animal> getAll()
+        public static List<Animal> getAll()
         {
             List<Animal> animais = new List<Animal>();
 

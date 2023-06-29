@@ -18,31 +18,41 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
     public partial class FormAnimal : Form
     {
         public int SQLAction = -1;
-
+        SQLClientes SQLClientes = new SQLClientes();
         Animal animal { get; set; }
 
         public FormAnimal()
         {
             InitializeComponent();
+
+            guna2ComboBoxOwner.DataSource = SQLClientes.getAll();
+            //define nome no form
+            guna2ComboBoxOwner.DisplayMember = "Name";
+            //valor do item selecionado
+            guna2ComboBoxOwner.ValueMember = "nome";
+
+            //obter valor selecionado
+            var selectedValue = guna2ComboBoxOwner.SelectedValue;
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             this.Close();
+
         }
 
         private void Save_Click(object sender, EventArgs e)
         {
-            if (FormDataValidation(out Animal animal))
+            if (FormDataValidation(out Animal animals))
             {
-                animal.NomeDono = guna2ComboBoxOwner.Text;
-                animal.Raca = guna2TextBoxRace.Text;
-                animal.Sexo = char.Parse(guna2ComboBoxSex.Text);
-                animal.Peso = int.Parse(guna2TextBoxWeight.Text);
-                animal.TipoAnimal = guna2ComboBoxTypeAnimal.Text;
-                animal.DataFal = Date_Death.Value;
-                animal.DataNasc = Date_of_Birth.Value;
-                animal.DataUltimaCons = last_visit.Value;
+                animals.NomeDono = guna2ComboBoxOwner.Text;
+                animals.Raca = guna2TextBoxRace.Text;
+                animals.Sexo = char.Parse( guna2ComboBoxSex.Text.ToString().Substring(0,1));
+                animals.Peso = int.Parse(guna2TextBoxWeight.Text);
+                animals.TipoAnimal = guna2ComboBoxTypeAnimal.Text;
+                animals.DataFal = Date_Death.Value;
+                animals.DataNasc = Date_of_Birth.Value;
+                animals.DataUltimaCons = last_visit.Value;
                 
 
                 SQLAnimais.Insert(animal);

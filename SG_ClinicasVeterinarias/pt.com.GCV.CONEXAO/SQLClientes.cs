@@ -8,7 +8,7 @@ using static SG_ClinicasVeterinarias.pt.com.GCV.DAO.SqLConnection;
 
 namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
 {
-    internal class SQLClientes
+    public class SQLClientes
     {
         static public void Insert(Cliente cliente)
         {
@@ -44,7 +44,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
             }
         }
 
-        internal static List<Cliente> getAll()
+        public static List<Cliente> getAll()
         {
             List<Cliente> clientes = new List<Cliente>();
             Cliente cliente = null;
