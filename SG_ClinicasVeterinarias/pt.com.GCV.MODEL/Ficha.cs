@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SG_ClinicasVeterinarias.pt.com.GCV.MODEL
 {
@@ -12,7 +8,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.MODEL
         public int Animal_Id { get; set; }
         public int Colaborador_Id { get; set; }
         public string Diagnostico { get; set; }
-        public int Peso { get; set; } 
+        public int Peso { get; set; }
         public string Observacoes { get; set; }
         public string Prescricao { get; set; }
         public int QuantPrescricao { get; set; }
@@ -23,7 +19,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.MODEL
 
         }
 
-        public Ficha (int id)
+        public Ficha(int id)
         {
             Id = id;
         }
