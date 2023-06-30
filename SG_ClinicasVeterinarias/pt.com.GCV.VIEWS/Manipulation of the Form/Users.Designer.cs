@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
             this.Cancel = new Guna.UI2.WinForms.Guna2Button();
             this.confirm_edit = new Guna.UI2.WinForms.Guna2Button();
             this.edit = new Guna.UI2.WinForms.Guna2Button();
@@ -148,10 +148,10 @@
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
-            listViewGroup6.Header = "ListViewGroup";
-            listViewGroup6.Name = "listViewGroup1";
+            listViewGroup1.Header = "ListViewGroup";
+            listViewGroup1.Name = "listViewGroup1";
             this.listView2.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup6});
+            listViewGroup1});
             this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(1, 491);
             this.listView2.Name = "listView2";
@@ -328,6 +328,7 @@
             this.Controls.Add(this.search);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Users";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User";
             this.Load += new System.EventHandler(this.User_Load);
             this.ResumeLayout(false);

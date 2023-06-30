@@ -29,13 +29,13 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Listas
             // Definição dos nomes das colunas
             listView2.Columns[0].Text = "#";
             listView2.Columns[1].Text = "Nome";
-            listView2.Columns[2].Text = "Funcion";
-            listView2.Columns[3].Text = "Email";
-            listView2.Columns[4].Text = "Telefone";
-            listView2.Columns[5].Text = "Nif";
-            listView2.Columns[6].Text = "Date of birth";
-            listView2.Columns[7].Text = "Type of Employe";
-            listView2.Columns[8].Text = "Start Date";
+            listView2.Columns[2].Text = "Date of birth";
+            listView2.Columns[3].Text = "Nif";
+            listView2.Columns[4].Text = "Function";
+            listView2.Columns[5].Text = "Start Date";
+            listView2.Columns[6].Text = "Telefone";
+            listView2.Columns[7].Text = "Email";
+            listView2.Columns[8].Text = "Type of Employe";
 
             // Definição das colunas da listview. 
             // NOTA: Os valores percentuais da largura das colunas tem de somar 100
