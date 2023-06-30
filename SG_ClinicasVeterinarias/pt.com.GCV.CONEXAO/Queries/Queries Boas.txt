@@ -29,13 +29,14 @@ create TABLE clientes(
 
 create TABLE fichas(
 id int PRIMARY KEY identity(1,1),
-nomeDono varchar(50),
-nomeColab varchar(50),
+animal_Id int,
+colabNome varchar(50),
 peso int not null,
 observacoes varchar(250),
 prescricao varchar(50),
 quantPrescricao int not null,
-proxVisita DateTime not null
+proxVisita DateTime not null,
+diagnostico varchar(50)
 );
 
 create TABLE colaboradores(
