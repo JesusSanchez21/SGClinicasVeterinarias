@@ -156,10 +156,10 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
 
                         // Adiciona os parametros
                         sqlCommand.Parameters.AddWithValue("@nome", cliente.Nome);
-                        sqlCommand.Parameters.AddWithValue("@morada", cliente.Nif);
                         sqlCommand.Parameters.AddWithValue("@email", cliente.Email);
                         sqlCommand.Parameters.AddWithValue("@telefone", cliente.Telefone);
                         sqlCommand.Parameters.AddWithValue("@dataNasc", cliente.DataNasc);
+                        sqlCommand.Parameters.AddWithValue("@nif", cliente.Nif);
                         sqlCommand.Parameters.AddWithValue("@id", cliente.Id);
 
                         // Execute a query update

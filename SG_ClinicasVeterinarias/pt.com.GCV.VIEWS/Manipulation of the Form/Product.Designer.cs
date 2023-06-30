@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
             this.Cancel = new Guna.UI2.WinForms.Guna2Button();
             this.confirm_edit = new Guna.UI2.WinForms.Guna2Button();
             this.edit = new Guna.UI2.WinForms.Guna2Button();
@@ -72,6 +72,7 @@
             this.Cancel.Size = new System.Drawing.Size(180, 45);
             this.Cancel.TabIndex = 48;
             this.Cancel.Text = "Cancel";
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // confirm_edit
             // 
@@ -89,6 +90,7 @@
             this.confirm_edit.Size = new System.Drawing.Size(180, 45);
             this.confirm_edit.TabIndex = 47;
             this.confirm_edit.Text = "Confirm Edit";
+            this.confirm_edit.Click += new System.EventHandler(this.confirm_edit_Click);
             // 
             // edit
             // 
@@ -106,6 +108,7 @@
             this.edit.Size = new System.Drawing.Size(180, 45);
             this.edit.TabIndex = 46;
             this.edit.Text = "Edit";
+            this.edit.Click += new System.EventHandler(this.edit_Click);
             // 
             // Remove
             // 
@@ -123,6 +126,7 @@
             this.Remove.Size = new System.Drawing.Size(180, 45);
             this.Remove.TabIndex = 45;
             this.Remove.Text = "Remove";
+            this.Remove.Click += new System.EventHandler(this.Remove_Click);
             // 
             // search
             // 
@@ -140,6 +144,7 @@
             this.search.Size = new System.Drawing.Size(180, 45);
             this.search.TabIndex = 44;
             this.search.Text = "Search";
+            this.search.Click += new System.EventHandler(this.search_Click);
             // 
             // listView2
             // 
@@ -150,10 +155,10 @@
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6});
-            listViewGroup1.Header = "ListViewGroup";
-            listViewGroup1.Name = "listViewGroup1";
+            listViewGroup5.Header = "ListViewGroup";
+            listViewGroup5.Name = "listViewGroup1";
             this.listView2.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1});
+            listViewGroup5});
             this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(1, 489);
             this.listView2.Name = "listView2";

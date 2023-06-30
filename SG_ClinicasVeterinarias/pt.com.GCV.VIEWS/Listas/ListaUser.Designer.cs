@@ -34,6 +34,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Listas
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label5 = new System.Windows.Forms.Label();
             this.Cancel = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
@@ -44,7 +45,8 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Listas
             this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
-            this.columnHeader3});
+            this.columnHeader3,
+            this.columnHeader4});
             listViewGroup1.Header = "ListViewGroup";
             listViewGroup1.Name = "listViewGroup1";
             this.listView2.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
@@ -111,5 +113,6 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Listas
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Button Cancel;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }

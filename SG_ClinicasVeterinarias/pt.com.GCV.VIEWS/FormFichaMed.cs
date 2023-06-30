@@ -12,18 +12,40 @@ using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using static SG_ClinicasVeterinarias.Setting.Utils;
+using SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO;
+using SG_ClinicasVeterinarias.pt.com.GCV.MODEL;
 
 namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
 {
     public partial class FormFichaMed : Form
     {
-        public int SQLAction = -1;
-
-        Ficha ficha { get; set; }
+        /*SQLAnimais = new SQLAnimais();
+        SQLColaboradores = new SQLColaboradores();
+        */
+         Ficha ficha { get; set; }
 
         public FormFichaMed()
         {
             InitializeComponent();
+            /*
+
+            guna2ComboBoxIdAnimal.DataSource = SQLAnimais.getAll();
+            //define nome no form
+            guna2ComboBoxIdAnimal.DisplayMember = "idAnimal";
+            //valor do item selecionado
+            guna2ComboBoxIdAnimal.ValueMember = "id";
+
+            //obter valor selecionado
+            var selectedValue1 = guna2ComboBoxIdAnimal.SelectedValue;
+            
+            guna2ComboBoxIdColab.DataSource = SQLColaboradores.getAll();
+            //define nome no form
+            guna2ComboBoxIdColab.DisplayMember = "idColab";
+            //valor do item selecionado
+            guna2ComboBoxIdColab.ValueMember = "id";
+
+            //obter valor selecionado
+            var selectedValue2 = guna2ComboBoxIdColab.SelectedValue; */
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -42,7 +64,6 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
                 ficha.Observacoes = Observation.Text;
                 ficha.Prescricao = guna2TextBoxPresciprtion.Text;
                 ficha.QuantPrescricao = int.Parse(guna2TextBoxQnt.Text);
-                ficha.ProxVisita = NextVisit.Value;
 
 
                 SQLficha.Insert(ficha);
@@ -90,6 +111,11 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             }
 
             return true;
+        }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

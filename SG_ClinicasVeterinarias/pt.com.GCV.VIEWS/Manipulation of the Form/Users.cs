@@ -34,6 +34,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manipulation_of_the_Form
             listView2.Columns[0].Text = "#";
             listView2.Columns[1].Text = "Nome";
             listView2.Columns[2].Text = "Email";
+            listView2.Columns[3].Text = "Password";
 
 
             // Definição das colunas da listview. 
@@ -41,6 +42,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manipulation_of_the_Form
             listView2.Columns[0].Width = (15 * listView2.Width) / 100; // ID -> sempre escondido
             listView2.Columns[1].Width = (10 * listView2.Width) / 100;
             listView2.Columns[2].Width = (15 * listView2.Width) / 100;
+            listView2.Columns[3].Width = (15 * listView2.Width) / 100;
 
 
             foreach (User user in userlist)
@@ -48,7 +50,8 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manipulation_of_the_Form
                 ListViewItem row = new ListViewItem(new[] {
                             user.Id.ToString(),
                             user.Name.ToString(),
-                            user.Email.ToString()
+                            user.Email.ToString(),
+                            user.Password.ToString()
                         });
                 listView2.Items.Add(row);
             }
@@ -122,6 +125,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manipulation_of_the_Form
                     user.Id.ToString(),
                     user.Name,
                     user.Email,
+                    user.Password,
                 });
                         listView2.Items.Add(row);
                     }
@@ -162,6 +166,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manipulation_of_the_Form
                 // Display the details in the appropriate input controls
                 textBoxName.Text = selectedUser.Name;
                 textBoxEmail.Text = selectedUser.Email;
+                textBoxPassword.Text = selectedUser.Password;
 
             }
             else
@@ -181,6 +186,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manipulation_of_the_Form
             // Atualiza a informação do cliente
             selectedUser.Name = textBoxName.Text;
             selectedUser.Email = textBoxEmail.Text;
+            selectedUser.Password = textBoxPassword.Text;
             
 
             // Faz a atualização na base de dados
@@ -192,6 +198,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manipulation_of_the_Form
                 // Limpa os dados apos atualizar
                 textBoxName.Clear();
                 textBoxEmail.Clear();
+                textBoxPassword.Clear();
                 selectedUser = null;
             }
             else

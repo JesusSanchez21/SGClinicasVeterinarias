@@ -246,7 +246,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                         sqlCommand.CommandText = "UPDATE Users SET" +
                             " Name = @name," +
                             " Email = @email," +
-                            " password = @password" +
+                            " Password = @password" +
                             " WHERE ID = @id";
                         sqlCommand.Parameters.Add(new SqlParameter("@id", user.Id));
                         sqlCommand.Parameters.Add(new SqlParameter("@name", user.Name));
@@ -285,7 +285,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                     using (SqlCommand sqlCommand = ((SqlConnection)conn).CreateCommand())
                     {
 
-                        string query = "DELETE FROM clientes WHERE id = @id;";
+                        string query = "DELETE FROM Users WHERE id = @id;";
                         sqlCommand.CommandText = query;
                         sqlCommand.CommandType = CommandType.Text;
                         sqlCommand.Connection = ((SqlConnection)conn);

@@ -41,8 +41,11 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.guna2TextBoxQnt = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ComboBoxIdColab = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2ComboBoxIdAnimal = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Diagnosis = new Guna.UI2.WinForms.Guna2TextBox();
@@ -58,9 +61,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxId = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.guna2TextBoxQnt = new Guna.UI2.WinForms.Guna2TextBox();
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,6 +80,7 @@
             this.Cancel.Size = new System.Drawing.Size(180, 45);
             this.Cancel.TabIndex = 48;
             this.Cancel.Text = "Cancel";
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // confirm_edit
             // 
@@ -97,6 +98,7 @@
             this.confirm_edit.Size = new System.Drawing.Size(180, 45);
             this.confirm_edit.TabIndex = 47;
             this.confirm_edit.Text = "Confirm Edit";
+            this.confirm_edit.Click += new System.EventHandler(this.confirm_edit_Click);
             // 
             // edit
             // 
@@ -114,6 +116,7 @@
             this.edit.Size = new System.Drawing.Size(180, 45);
             this.edit.TabIndex = 46;
             this.edit.Text = "Edit";
+            this.edit.Click += new System.EventHandler(this.edit_Click);
             // 
             // Remove
             // 
@@ -131,6 +134,7 @@
             this.Remove.Size = new System.Drawing.Size(180, 45);
             this.Remove.TabIndex = 45;
             this.Remove.Text = "Remove";
+            this.Remove.Click += new System.EventHandler(this.Remove_Click);
             // 
             // search
             // 
@@ -148,6 +152,7 @@
             this.search.Size = new System.Drawing.Size(180, 45);
             this.search.TabIndex = 44;
             this.search.Text = "Search";
+            this.search.Click += new System.EventHandler(this.search_Click);
             // 
             // listView2
             // 
@@ -206,6 +211,29 @@
             this.groupBox1.TabIndex = 51;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = " ";
+            // 
+            // guna2TextBoxQnt
+            // 
+            this.guna2TextBoxQnt.AutoRoundedCorners = true;
+            this.guna2TextBoxQnt.BackColor = System.Drawing.Color.PeachPuff;
+            this.guna2TextBoxQnt.BorderRadius = 17;
+            this.guna2TextBoxQnt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBoxQnt.DefaultText = "";
+            this.guna2TextBoxQnt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBoxQnt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBoxQnt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxQnt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxQnt.FillColor = System.Drawing.Color.PapayaWhip;
+            this.guna2TextBoxQnt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBoxQnt.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBoxQnt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBoxQnt.Location = new System.Drawing.Point(485, 135);
+            this.guna2TextBoxQnt.Name = "guna2TextBoxQnt";
+            this.guna2TextBoxQnt.PasswordChar = '\0';
+            this.guna2TextBoxQnt.PlaceholderText = "";
+            this.guna2TextBoxQnt.SelectedText = "";
+            this.guna2TextBoxQnt.Size = new System.Drawing.Size(115, 36);
+            this.guna2TextBoxQnt.TabIndex = 27;
             // 
             // guna2ComboBoxIdColab
             // 
@@ -431,29 +459,6 @@
             this.label5.Size = new System.Drawing.Size(32, 25);
             this.label5.TabIndex = 54;
             this.label5.Text = "ID";
-            // 
-            // guna2TextBoxQnt
-            // 
-            this.guna2TextBoxQnt.AutoRoundedCorners = true;
-            this.guna2TextBoxQnt.BackColor = System.Drawing.Color.PeachPuff;
-            this.guna2TextBoxQnt.BorderRadius = 17;
-            this.guna2TextBoxQnt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBoxQnt.DefaultText = "";
-            this.guna2TextBoxQnt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBoxQnt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBoxQnt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxQnt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxQnt.FillColor = System.Drawing.Color.PapayaWhip;
-            this.guna2TextBoxQnt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxQnt.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBoxQnt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxQnt.Location = new System.Drawing.Point(485, 135);
-            this.guna2TextBoxQnt.Name = "guna2TextBoxQnt";
-            this.guna2TextBoxQnt.PasswordChar = '\0';
-            this.guna2TextBoxQnt.PlaceholderText = "";
-            this.guna2TextBoxQnt.SelectedText = "";
-            this.guna2TextBoxQnt.Size = new System.Drawing.Size(115, 36);
-            this.guna2TextBoxQnt.TabIndex = 27;
             // 
             // MedicalFile
             // 

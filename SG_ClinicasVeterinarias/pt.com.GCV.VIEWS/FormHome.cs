@@ -90,5 +90,40 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
         {
             this.Close();
         }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 form = new Form1(1);
+            form.ShowDialog();
+        }
+
+        private void productsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Product form = new Product();
+            form.ShowDialog();
+        }
+
+        private void medicalFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MedicalFile form = new MedicalFile();
+            form.ShowDialog();
+        }
+
+        private void employesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Employe form = new Employe();
+            form.ShowDialog();
+        }
+
+        private void animalsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Animals form = new Animals();
+            form.ShowDialog();
+        }
     }
 }

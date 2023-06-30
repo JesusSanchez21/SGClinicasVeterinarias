@@ -23,8 +23,8 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                     {
                         sqlCommand.CommandType = CommandType.Text;
                         sqlCommand.CommandText = "INSERT INTO \"colaboradores\" "
-                        + "(nome, dataNasc, nif, tipoColab, funcao, dataIniColab, dataFimColab, telefone, email) "
-                        + "VALUES (@nome, @dataNasc, @nif, @tipoColab, @funcao, @dataIniColab, @dataFimColab, @telefone, @email);";
+                        + "(nome, dataNasc, nif, tipoColab, funcao, dataIniColab, telefone, email) "
+                        + "VALUES (@nome, @dataNasc, @nif, @tipoColab, @funcao, @dataIniColab, @telefone, @email);";
                         //sqlCommand.Parameters.Add(new SqlParameter("@id", colaborador.Id));
                         sqlCommand.Parameters.Add(new SqlParameter("@nome", colaborador.Nome));
                         sqlCommand.Parameters.Add(new SqlParameter("@dataNasc", colaborador.DataNasc));
@@ -78,7 +78,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                                     reader["nome"].ToString(),
                                     (DateTime)reader["dataNasc"],
                                     int.Parse(reader["nif"].ToString()),
-                                    char.Parse(reader["tipoColab"].ToString()),
+                                    reader["tipoColab"].ToString(),
                                     reader["funcao"].ToString(),
                                     (DateTime)reader["dataInicolab"],
                                     int.Parse(reader["telefone"].ToString()),
@@ -128,7 +128,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                                     reader["nome"].ToString(),
                                     (DateTime)reader["dataNasc"],
                                     int.Parse(reader["nif"].ToString()),
-                                    char.Parse(reader["tipoColab"].ToString()),
+                                    reader["tipoColab"].ToString(),
                                     reader["funcao"].ToString(),
                                     (DateTime)reader["dataInicolab"],
                                     int.Parse(reader["telefone"].ToString()),

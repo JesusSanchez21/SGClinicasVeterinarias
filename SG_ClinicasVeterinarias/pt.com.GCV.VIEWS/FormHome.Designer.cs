@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHome));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fIllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formClientesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,9 +44,6 @@
             this.listEmployeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listMedicalRecordToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Welcome = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.listUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manipulationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,7 +52,9 @@
             this.employesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.medicalFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Welcome = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,6 +68,24 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(970, 30);
             this.guna2Panel1.TabIndex = 3;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button1.Location = new System.Drawing.Point(927, 3);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(29, 24);
+            this.guna2Button1.TabIndex = 6;
+            this.guna2Button1.Text = "X";
+            this.guna2Button1.UseTransparentBackground = true;
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // menuToolStripMenuItem
             // 
@@ -157,7 +175,7 @@
             this.listClientesToolStripMenuItem1.BackColor = System.Drawing.Color.PeachPuff;
             this.listClientesToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listClientesToolStripMenuItem1.Name = "listClientesToolStripMenuItem1";
-            this.listClientesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.listClientesToolStripMenuItem1.Size = new System.Drawing.Size(176, 22);
             this.listClientesToolStripMenuItem1.Text = "ListClientes";
             this.listClientesToolStripMenuItem1.Click += new System.EventHandler(this.listClientesToolStripMenuItem1_Click);
             // 
@@ -166,7 +184,7 @@
             this.listAnimalsToolStripMenuItem1.BackColor = System.Drawing.Color.PeachPuff;
             this.listAnimalsToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listAnimalsToolStripMenuItem1.Name = "listAnimalsToolStripMenuItem1";
-            this.listAnimalsToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.listAnimalsToolStripMenuItem1.Size = new System.Drawing.Size(176, 22);
             this.listAnimalsToolStripMenuItem1.Text = "ListAnimals";
             // 
             // listEmployeToolStripMenuItem
@@ -174,7 +192,7 @@
             this.listEmployeToolStripMenuItem.BackColor = System.Drawing.Color.PeachPuff;
             this.listEmployeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listEmployeToolStripMenuItem.Name = "listEmployeToolStripMenuItem";
-            this.listEmployeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listEmployeToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.listEmployeToolStripMenuItem.Text = "ListEmploye";
             // 
             // listProductToolStripMenuItem
@@ -182,7 +200,7 @@
             this.listProductToolStripMenuItem.BackColor = System.Drawing.Color.PeachPuff;
             this.listProductToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listProductToolStripMenuItem.Name = "listProductToolStripMenuItem";
-            this.listProductToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listProductToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.listProductToolStripMenuItem.Text = "ListProduct";
             // 
             // listMedicalRecordToolStripMenuItem1
@@ -190,45 +208,13 @@
             this.listMedicalRecordToolStripMenuItem1.BackColor = System.Drawing.Color.PeachPuff;
             this.listMedicalRecordToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.listMedicalRecordToolStripMenuItem1.Name = "listMedicalRecordToolStripMenuItem1";
-            this.listMedicalRecordToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.listMedicalRecordToolStripMenuItem1.Size = new System.Drawing.Size(176, 22);
             this.listMedicalRecordToolStripMenuItem1.Text = "ListMedicalRecord";
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.PeachPuff;
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(3, 33);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(75, 24);
-            this.menuStrip1.TabIndex = 2;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 60);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(970, 576);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // Welcome
-            // 
-            this.Welcome.BackColor = System.Drawing.Color.Transparent;
-            this.Welcome.Font = new System.Drawing.Font("Georgia", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Welcome.Location = new System.Drawing.Point(0, 69);
-            this.Welcome.Name = "Welcome";
-            this.Welcome.Size = new System.Drawing.Size(732, 74);
-            this.Welcome.TabIndex = 5;
-            this.Welcome.Text = "Welcome - Bem Vindo";
             // 
             // listUserToolStripMenuItem
             // 
             this.listUserToolStripMenuItem.Name = "listUserToolStripMenuItem";
-            this.listUserToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listUserToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.listUserToolStripMenuItem.Text = "ListUser";
             this.listUserToolStripMenuItem.Click += new System.EventHandler(this.listUserToolStripMenuItem_Click);
             // 
@@ -252,6 +238,7 @@
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
+            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // animalsToolStripMenuItem
             // 
@@ -259,6 +246,7 @@
             this.animalsToolStripMenuItem.Name = "animalsToolStripMenuItem";
             this.animalsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.animalsToolStripMenuItem.Text = "Animals ";
+            this.animalsToolStripMenuItem.Click += new System.EventHandler(this.animalsToolStripMenuItem_Click);
             // 
             // usersToolStripMenuItem
             // 
@@ -274,6 +262,7 @@
             this.employesToolStripMenuItem.Name = "employesToolStripMenuItem";
             this.employesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.employesToolStripMenuItem.Text = "Employes";
+            this.employesToolStripMenuItem.Click += new System.EventHandler(this.employesToolStripMenuItem_Click);
             // 
             // medicalFileToolStripMenuItem
             // 
@@ -281,6 +270,7 @@
             this.medicalFileToolStripMenuItem.Name = "medicalFileToolStripMenuItem";
             this.medicalFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.medicalFileToolStripMenuItem.Text = "Medical File";
+            this.medicalFileToolStripMenuItem.Click += new System.EventHandler(this.medicalFileToolStripMenuItem_Click);
             // 
             // productsToolStripMenuItem
             // 
@@ -288,24 +278,39 @@
             this.productsToolStripMenuItem.Name = "productsToolStripMenuItem";
             this.productsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.productsToolStripMenuItem.Text = "Products";
+            this.productsToolStripMenuItem.Click += new System.EventHandler(this.productsToolStripMenuItem_Click);
             // 
-            // guna2Button1
+            // menuStrip1
             // 
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(927, 3);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(29, 24);
-            this.guna2Button1.TabIndex = 6;
-            this.guna2Button1.Text = "X";
-            this.guna2Button1.UseTransparentBackground = true;
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.menuStrip1.BackColor = System.Drawing.Color.PeachPuff;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(3, 33);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(195, 24);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 60);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(970, 576);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Welcome
+            // 
+            this.Welcome.BackColor = System.Drawing.Color.Transparent;
+            this.Welcome.Font = new System.Drawing.Font("Georgia", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Welcome.Location = new System.Drawing.Point(0, 69);
+            this.Welcome.Name = "Welcome";
+            this.Welcome.Size = new System.Drawing.Size(732, 74);
+            this.Welcome.TabIndex = 5;
+            this.Welcome.Text = "Welcome - Bem Vindo";
             // 
             // FormHome
             // 

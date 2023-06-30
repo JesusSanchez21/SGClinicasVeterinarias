@@ -36,21 +36,19 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manipulation_of_the_Form
             // Definição dos nomes das colunas
             listView2.Columns[0].Text = "#";
             listView2.Columns[1].Text = "Nome";
-            listView2.Columns[2].Text = "Morada";
-            listView2.Columns[3].Text = "Email";
-            listView2.Columns[4].Text = "Telefone";
-            listView2.Columns[5].Text = "Nif";
-            listView2.Columns[6].Text = "Date of birth";
+            listView2.Columns[2].Text = "Email";
+            listView2.Columns[3].Text = "Telefone";
+            listView2.Columns[4].Text = "Nif";
+            listView2.Columns[5].Text = "Data de nascimento";
 
             // Definição das colunas da listview. 
             // NOTA: Os valores percentuais da largura das colunas tem de somar 100
-            listView2.Columns[0].Width = (15 * listView2.Width) / 100; // ID -> sempre escondido
+            listView2.Columns[0].Width = (10 * listView2.Width) / 100; // ID -> sempre escondido
             listView2.Columns[1].Width = (10 * listView2.Width) / 100;
             listView2.Columns[2].Width = (15 * listView2.Width) / 100;
             listView2.Columns[3].Width = (15 * listView2.Width) / 100;
             listView2.Columns[4].Width = (15 * listView2.Width) / 100;
             listView2.Columns[5].Width = (15 * listView2.Width) / 100;
-            listView2.Columns[6].Width = (15 * listView2.Width) / 100;
 
             foreach (Cliente cliente in clienteLista)
             {
@@ -94,7 +92,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manipulation_of_the_Form
                         // Adiciona o Cliente a partir da linha
                         ListViewItem row = new ListViewItem(new[]
                         {
-                             cliente.Id.ToString(),
+                            cliente.Id.ToString(),
                             cliente.Nome,
                             cliente.Email,
                             cliente.Telefone.ToString(),
@@ -199,6 +197,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manipulation_of_the_Form
             // Atualiza a informação do cliente
             selectedCliente.Nome = guna2TextBoxName.Text;
             selectedCliente.Email = guna2TextBoxEmail.Text;
+            selectedCliente.DataNasc = Date_of_Birth.Value;
             if (int.TryParse(guna2TextBoxTelefone.Text, out int telefone))
             {
                 selectedCliente.Telefone = telefone;
@@ -230,12 +229,18 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manipulation_of_the_Form
                 guna2TextBoxEmail.Clear();
                 guna2TextBoxTelefone.Clear();
                 guna2TextBoxNif.Clear();
+
                 selectedCliente = null;
             }
             else
             {
                 MessageBox.Show("Falha ao editar cliente.");
             }
+        }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

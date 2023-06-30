@@ -12,7 +12,6 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.MODEL
         public string Observacoes { get; set; }
         public string Prescricao { get; set; }
         public int QuantPrescricao { get; set; }
-        public DateTime ProxVisita { get; set; }
 
         public Ficha()
         {
@@ -24,7 +23,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.MODEL
             Id = id;
         }
 
-        public Ficha(int id, int animal_Id, int colaborador_Id, string diagnostico, int peso, string observacoes, string prescricao, int quantPrescricao, DateTime proxVisita) //Falta tudo que está comentado
+        public Ficha(int id, int animal_Id, int colaborador_Id, string diagnostico, int peso, string observacoes, string prescricao, int quantPrescricao) //Falta tudo que está comentado
         {
             Id = id;
             Animal_Id = animal_Id;
@@ -34,7 +33,6 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.MODEL
             Observacoes = observacoes;
             Prescricao = prescricao;
             QuantPrescricao = quantPrescricao;
-            ProxVisita = proxVisita;
         }
 
 

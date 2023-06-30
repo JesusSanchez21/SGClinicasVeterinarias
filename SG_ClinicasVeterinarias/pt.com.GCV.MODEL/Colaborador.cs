@@ -9,7 +9,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.MODEL
         public string Nome { get; set; }
         public DateTime DataNasc { get; set; }
         public int Nif { get; set; }
-        public char TipoColab { get; set; }
+        public string TipoColab { get; set; }
         public string Funcao { get; set; }
         public DateTime DataIniColab { get; set; }
         public int Telefone { get; set; }
@@ -29,7 +29,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.MODEL
             Id = id;
         }
 
-        public Colaborador(int id, string nome, DateTime dataNasc, int nif, char tipoColab, string funcao, DateTime dataIniColab, int telefone, string email)
+        public Colaborador(int id, string nome, DateTime dataNasc, int nif, string tipoColab, string funcao, DateTime dataIniColab, int telefone, string email)
         {
             Id = id;
             Nome = nome;
@@ -41,7 +41,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.MODEL
             Telefone = telefone;
             Email = email;
         }
-        public Colaborador( string nome, DateTime dataNasc, int nif, char tipoColab, string funcao, DateTime dataIniColab, int telefone, string email)
+        public Colaborador( string nome, DateTime dataNasc, int nif, string tipoColab, string funcao, DateTime dataIniColab, int telefone, string email)
         {
             Nome = nome;
             DataNasc = dataNasc;

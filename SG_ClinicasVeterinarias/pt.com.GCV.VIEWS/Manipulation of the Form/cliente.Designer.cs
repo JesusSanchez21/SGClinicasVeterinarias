@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
             this.Clientes = new System.Windows.Forms.GroupBox();
             this.Date_of_Birth = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
@@ -280,10 +280,10 @@
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6});
-            listViewGroup4.Header = "ListViewGroup";
-            listViewGroup4.Name = "listViewGroup1";
+            listViewGroup2.Header = "ListViewGroup";
+            listViewGroup2.Name = "listViewGroup1";
             this.listView2.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup4});
+            listViewGroup2});
             this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(0, 440);
             this.listView2.Name = "listView2";
@@ -390,6 +390,7 @@
             this.Cancel.Size = new System.Drawing.Size(180, 45);
             this.Cancel.TabIndex = 38;
             this.Cancel.Text = "Cancel";
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // Form1
             // 
@@ -409,6 +410,7 @@
             this.Controls.Add(this.Clientes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Clientes.ResumeLayout(false);

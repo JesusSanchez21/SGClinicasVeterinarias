@@ -16,85 +16,67 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
 {
     public partial class FormProduto : Form
     {
-        public int SQLAction = -1;
-        Produto products { get; set; } = null;
-        public FormProduto(int sqlAction, Produto products)
+        Produto produtos { get; set; }
+        public FormProduto(int sqlAction, Produto produtos)
         {
-            this.products = products;
-            SQLAction = sqlAction;
+            this.produtos = produtos;
             InitializeComponent();
         }
 
         private void FormProduto_Load(object sender, EventArgs e)
         {
 
-            switch (SQLAction)
+          Save.Text = "Insert";
+
+        }
+
+        private void FillForm(Produto produtos)
+        {
+
+            //if product is null jumps out of the method
+            if (produtos == null)
             {
-                case SQL_INSERT:
-                    Save.Text = "Insert";
-                    break;
-                case SQL_UPDATE:
-                    Save.Text = "Edit";
-                    break;
-                case SQL_DELETE:
-                    Save.Text = "Remove";
-                    break;
-                default:
-                    MessageBox.Show("Operação não permitida.");
-                    break;
+
+                this.produtos = new Produto();
+
+                this.produtos.TipoProd = guna2TextBoxTypeProduct.Text;
+                this.produtos.DescProd = guna2TextBoxDesproduct.Text;
+                this.produtos.PrecoUnit = int.Parse(guna2TextBoxPrice.Text);
+                this.produtos.QuantArmazem = int.Parse(guna2TextBoxStock.Text);
+
             }
+
+            //fill the product data
+            guna2TextBoxTypeProduct.Text = this.produtos.TipoProd;
+            guna2TextBoxDesproduct.Text = this.produtos.DescProd;
+            guna2TextBoxPrice.Text = this.produtos.PrecoUnit.ToString();
+            guna2TextBoxStock.Text = this.produtos.QuantArmazem.ToString();
+        }
+        private void DisableFields()
+        {
+            guna2TextBoxTypeProduct.Enabled = false;
+            guna2TextBoxDesproduct.Enabled = false;
+            guna2TextBoxPrice.Enabled = false;
+            guna2TextBoxStock.Enabled = false;
         }
 
         private void Save_Click(object sender, EventArgs e)
         {
-
-            switch (SQLAction)
+            if (FormDataValidation(out Produto produtos))
             {
-                case SQL_INSERT:
+                produtos.TipoProd = guna2TextBoxTypeProduct.Text;
+                produtos.PrecoUnit = int.Parse(guna2TextBoxPrice.Text);
+                produtos.DescProd = guna2TextBoxDesproduct.Text;
+                produtos.QuantArmazem = int.Parse(guna2TextBoxStock.Text);
 
-                    if (FormDataValidation())
-                    {
-                        FillForm(null);
-                        SQLProduto.Insert(products);
-                        this.Close();
-                    }
-                    break;
-                /*
-            case SQL_UPDATE:
-                buttonAction.Text = "Editar";
-                if (FormDataValidation())
-                {
-                    Employee employee = new Employee(this.employee.Cod, cbName.Text, textBoxDepartment.Text, textBoxPhoneNo.Text);
-
-                    SQLEmployee.Update(employee);
-                    this.Close();
-                }
-                break;
-            case SQL_DELETE:
-                buttonAction.Text = "Remover";
-                DisableFields();
-                FillForm(employee);
-
-                var result = MessageBox.Show($"Deseja mesmo eliminar o registo Cod[{employee.Cod}] - {employee.Name}", "Confirmação de remover", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (result == DialogResult.Yes)
-                {
-                    SQLEmployee.Delete(employee);
-                }
-                this.Close();
-                break;*/
-                default:
-
-                    MessageBox.Show("Ação não permitida", "Por favor faça uma ação que seja permitida.",
-                        MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                    break;
+                SQLProduto.Insert(produtos);
             }
+            MessageBox.Show("Data saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #region Utils
-
-
-        private bool FormDataValidation()
+        private bool FormDataValidation(out Produto produtos)
         {
+            produtos = new Produto();
             if (IsEmpty(guna2TextBoxTypeProduct.Text))
             {
                 MessageBox.Show(
@@ -119,7 +101,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
                 return false;
             }
 
-            if (IsNumber(guna2TextBoxStock.Text))
+            if (!IsNumber(guna2TextBoxStock.Text))
             {
                 MessageBox.Show(
                  "Campo TextBoxstock incorreto, por favor coloque corretamente",
@@ -131,7 +113,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
                 return false;
             }
 
-            if (IsNumber(guna2TextBoxPrice.Text))
+            if (!IsNumber(guna2TextBoxPrice.Text))
             {
                 MessageBox.Show(
                  "Campo TextBoxPrice incorreto, por favor coloque corretamente",
@@ -147,35 +129,13 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
         }
 
 
-        private void FillForm(Produto products)
-        {
 
-            //if employee is null jumps out of the method
-            if (products == null)
-            {
 
-                this.products = new Produto();
-
-                this.products.TipoProd = guna2TextBoxTypeProduct.Text;
-                this.products.DescProd = guna2TextBoxDesproduct.Text;
-                this.products.PrecoUnit = int.Parse(guna2TextBoxPrice.Text);
-                this.products.QuantArmazem = int.Parse(guna2TextBoxStock.Text);
-
-            }
-
-            //fill the employee data
-            guna2TextBoxTypeProduct.Text = this.products.TipoProd;
-            guna2TextBoxDesproduct.Text = this.products.DescProd;
-            guna2TextBoxPrice.Text = this.products.PrecoUnit.ToString();
-            guna2TextBoxStock.Text = this.products.QuantArmazem.ToString();
-        }
-        private void DisableFields()
-        {
-            guna2TextBoxTypeProduct.Enabled = false;
-            guna2TextBoxDesproduct.Enabled = false;
-            guna2TextBoxPrice.Enabled = false;
-            guna2TextBoxStock.Enabled = false;
-        }
         #endregion
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

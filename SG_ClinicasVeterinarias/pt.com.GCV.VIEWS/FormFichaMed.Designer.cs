@@ -297,6 +297,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.Cancel.Size = new System.Drawing.Size(180, 45);
             this.Cancel.TabIndex = 26;
             this.Cancel.Text = "Cancel";
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // Save
             // 

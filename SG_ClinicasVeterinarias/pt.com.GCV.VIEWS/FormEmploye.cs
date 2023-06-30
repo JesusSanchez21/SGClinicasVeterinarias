@@ -31,7 +31,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
         {
             if (FormDataValidation(out Colaborador colab))
             {
-                colab.TipoColab = char.Parse(TypeWorker.Text);
+                colab.TipoColab = TypeWorker.Text;
                 colab.Email = guna2TextBoxEmail.Text;
                 colab.Nome = guna2TextBoxName.Text;
                 colab.Telefone = int.Parse(guna2TextBoxTelefone.Text);
@@ -76,7 +76,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
                 return false;
             }
 
-            if (IsNumber(guna2TextBoxTelefone.Text))
+            if (!IsNumber(guna2TextBoxTelefone.Text))
             {
                 MessageBox.Show(
                  "Campo telefone incorreto, por favor coloque corretamente",
@@ -88,7 +88,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
                 return false;
             }
 
-            if (IsNumber(guna2TextBoxNif.Text))
+            if (!IsNumber(guna2TextBoxNif.Text))
             {
                 MessageBox.Show(
                  "Campo Nif incorreto, por favor coloque corretamente",
@@ -101,6 +101,11 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             }
 
             return true;
+        }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
