@@ -33,7 +33,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
         private void formClientesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormCliente formcliente = new FormCliente(Utils.SQL_INSERT,null);
+            FormCliente formcliente = new FormCliente(1);
             formcliente.ShowDialog();
            
         }

@@ -76,7 +76,6 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                                     (DateTime)reader["dataNasc"],
                                     int.Parse(reader["nif"].ToString())
                                 );
-
                                 clientes.Add(cliente);
                             }
                         }

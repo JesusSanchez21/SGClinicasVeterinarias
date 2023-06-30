@@ -47,10 +47,10 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
         #endregion
 
         #region Read
-        internal static List<Produto> getAll()
+        public static List<Produto> getAll()
         {
             List<Produto> produtos = new List<Produto>();
-
+            Produto produto = null;
             try
             {
                 using (DbConnection conn = OpenConnection())
@@ -70,12 +70,13 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
 
                             while (reader.Read())
                             {
-                                Produto produto = new Produto(
+                                produto = new Produto(
                                     reader.GetInt32(reader.GetOrdinal("codProd")),
                                     reader["tipoProd"].ToString(),
                                     reader["descProd"].ToString(),
                                     int.Parse(reader["quantArmazem"].ToString()),
-                                    int.Parse(reader["precoUnit"].ToString()));
+                                    int.Parse(reader["precoUnit"].ToString())
+                                    );
                                 produtos.Add(produto);
                             }
                         }

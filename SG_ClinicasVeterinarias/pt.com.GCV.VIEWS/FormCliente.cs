@@ -18,11 +18,11 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
     public partial class FormCliente : Form
     {
         public int SQLAction = -1;
-        Cliente clientes { get; set; } 
+        
 
-        public FormCliente(int sqlAction, Cliente clientes)
+        public FormCliente(int sqlAction)
         {
-            this.clientes = clientes;
+            
             SQLAction = sqlAction;
             InitializeComponent();
         }
@@ -100,35 +100,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
         }
 
 
-        private void FillForm(Cliente clientes)
-        {
-
-            //if employee is null jumps out of the method
-            if (clientes == null)
-            {
-
-                this.clientes = new Cliente();
-
-                this.clientes.Nome = guna2TextBoxName.Text;
-                this.clientes.Email = guna2TextBoxEmail.Text;
-                this.clientes.Nif = int.Parse(guna2TextBoxNif.Text);
-                this.clientes.Telefone = int.Parse(guna2TextBoxTelefone.Text);
-
-            }
-
-            //fill the employee data
-            guna2TextBoxName.Text = this.clientes.Nome;
-            guna2TextBoxEmail.Text = this.clientes.Email;
-            guna2TextBoxNif.Text = this.clientes.Nif.ToString();
-            guna2TextBoxTelefone.Text = this.clientes.Telefone.ToString();
-        }
-        private void DisableFields()
-        {
-            guna2TextBoxName.Enabled = false;
-            guna2TextBoxEmail.Enabled = false;
-            guna2TextBoxNif.Enabled = false;
-            guna2TextBoxTelefone.Enabled = false;
-        }
+       
         #endregion
 
         private void FormCliente_Load(object sender, EventArgs e)

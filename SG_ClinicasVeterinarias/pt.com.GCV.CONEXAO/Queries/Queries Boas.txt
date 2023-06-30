@@ -1,0 +1,59 @@
+﻿create TABLE produtos(
+    codProd int PRIMARY KEY identity(1,1),
+    tipoProd varchar(150) not null,
+    descProd varchar(15) not null,
+    quantArmazem int not null,
+    precoUnit int not null,   
+);
+
+create TABLE animais(
+    id int PRIMARY KEY identity(1,1),
+    nomeDono varchar(150) not null,
+    dataNasc DateTime not null,
+    dataFal DateTime not null,
+    dataUltimaCons DateTime not null,
+    tipoAnimal varchar(15) not null,
+    raca varchar(25) not null,
+    sexo varchar(10) not null,
+    peso tinyint not null
+);
+
+create TABLE clientes(
+    id int PRIMARY KEY identity(1,1),
+    nome varchar(150) not null,
+    email varchar(50) not null,
+    telefone int not null,
+    dataNasc DateTime not null,
+    nif int not null
+    );
+
+create TABLE fichas(
+id int PRIMARY KEY identity(1,1),
+nomeDono varchar(50),
+nomeColab varchar(50),
+peso int not null,
+observacoes varchar(250),
+prescricao varchar(50),
+quantPrescricao int not null,
+proxVisita DateTime not null
+);
+
+create TABLE colaboradores(
+id int PRIMARY KEY identity(1,1),
+nome  varchar(150) not null ,
+dataNasc DateTime not null,
+nif int not null,
+tipoColab varchar(250) not null,
+funcao varchar(50) not null,
+dataIniColab DateTime not null,
+dataFimColab DateTime not null,
+telefone int not null,
+email varchar(50) not null
+);
+
+create TABLE Users(
+    id int PRIMARY KEY identity(1,1),
+    name varchar(150) not null,
+    email varchar(50) not null,
+    password int not null
+    );

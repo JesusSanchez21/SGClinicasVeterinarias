@@ -17,31 +17,22 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
 {
     public partial class FormFichaMed : Form
     {
-        SQLAnimais SQLCliente = new SQLAnimais();
+        SQLAnimais SQLAnimals = new SQLAnimais();
         SQLColaboradores SQLColaboradore = new SQLColaboradores();
-         Ficha ficha { get; set; }
 
         public FormFichaMed()
         {
             InitializeComponent();
 
-            guna2ComboBoxIdAnimal.DataSource = SQLAnimais.getAll();
-            //define nome no form
-            guna2ComboBoxIdAnimal.DisplayMember = "nomeDono";
-            //valor do item selecionado
-            guna2ComboBoxIdAnimal.ValueMember = "nome";
-
             //obter valor selecionado
             var selectedValue = guna2ComboBoxIdAnimal.SelectedValue;
-            
+
             guna2ComboBoxIdColab.DataSource = SQLColaboradores.getAll();
             //define nome no form
-            guna2ComboBoxIdColab.DisplayMember = "nome";
+            guna2ComboBoxIdColab.DisplayMember = "Nome";
             //valor do item selecionado
             guna2ComboBoxIdColab.ValueMember = "nome";
 
-            //obter valor selecionado
-            var selectedValue2 = guna2ComboBoxIdColab.SelectedValue;
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -53,6 +44,12 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
         {
             if (FormDataValidation(out Ficha ficha))
             {
+
+              
+
+
+                //obter valor selecionado
+                var selectedValue2 = guna2ComboBoxIdColab.SelectedValue;
                 ficha.Animal_Id = guna2ComboBoxIdAnimal.Text;
                 ficha.Colaborador_Id = guna2ComboBoxIdColab.Text;
                 ficha.Diagnostico = Diagnosis.Text;
