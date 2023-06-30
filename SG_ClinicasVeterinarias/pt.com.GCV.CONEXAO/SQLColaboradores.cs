@@ -35,10 +35,9 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                         sqlCommand.Parameters.Add(new SqlParameter("@telefone", colaborador.Telefone));
                         sqlCommand.Parameters.Add(new SqlParameter("@email", colaborador.Email));
 
-
                         if (sqlCommand.ExecuteNonQuery() != 1)
                         {
-                            throw new System.Exception("[SQLCliente] - Ocorreu um erro na query sql");
+                            throw new System.Exception("[SQLColaboradores] - Ocorreu um erro na query sql");
                         }
                     }
                 }

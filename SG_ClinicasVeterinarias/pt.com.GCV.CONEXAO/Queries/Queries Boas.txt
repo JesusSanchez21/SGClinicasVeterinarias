@@ -46,7 +46,6 @@ nif int not null,
 tipoColab varchar(250) not null,
 funcao varchar(50) not null,
 dataIniColab DateTime not null,
-dataFimColab DateTime not null,
 telefone int not null,
 email varchar(50) not null
 );
