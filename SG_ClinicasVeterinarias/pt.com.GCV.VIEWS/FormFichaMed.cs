@@ -27,6 +27,16 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             //obter valor selecionado
             var selectedValue = guna2ComboBoxIdAnimal.SelectedValue;
 
+            guna2ComboBoxIdAnimal.DataSource = SQLAnimais.getAll();
+            //define nome no form
+            guna2ComboBoxIdAnimal.DisplayMember = "id";
+            //valor do item selecionado
+            guna2ComboBoxIdAnimal.ValueMember = "id";
+
+
+            //obter valor selecionado
+            var selectedValue2 = guna2ComboBoxIdColab.SelectedValue;
+
             guna2ComboBoxIdColab.DataSource = SQLColaboradores.getAll();
             //define nome no form
             guna2ComboBoxIdColab.DisplayMember = "Nome";
@@ -44,14 +54,8 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
         {
             if (FormDataValidation(out Ficha ficha))
             {
-
-              
-
-
-                //obter valor selecionado
-                var selectedValue2 = guna2ComboBoxIdColab.SelectedValue;
-                ficha.Animal_Id = guna2ComboBoxIdAnimal.Text;
-                ficha.Colaborador_Id = guna2ComboBoxIdColab.Text;
+                ficha.Animal_Id = int.Parse(guna2ComboBoxIdAnimal.Text);
+                ficha.ColabNome = guna2ComboBoxIdColab.Text;
                 ficha.Diagnostico = Diagnosis.Text;
                 ficha.Peso = int.Parse(guna2TextBoxWeight.Text);
                 ficha.Observacoes = Observation.Text;
@@ -110,6 +114,13 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
         private void Cancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FormFichaMed_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'database1DataSet.animais' table. You can move, or remove it, as needed.
+            this.animaisTableAdapter.Fill(this.database1DataSet.animais);
+
         }
     }
 }

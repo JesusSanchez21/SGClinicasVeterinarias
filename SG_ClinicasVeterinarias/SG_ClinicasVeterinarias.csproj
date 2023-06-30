@@ -69,6 +69,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Database1DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database1DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Database1DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database1DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Database1DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database1DataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="pt.com.GCV.CONEXAO\SQLAnimais.cs" />
     <Compile Include="pt.com.GCV.CONEXAO\SQLClientes.cs" />
     <Compile Include="pt.com.GCV.CONEXAO\SQLColaboradores.cs" />
@@ -275,6 +295,50 @@
     <EmbeddedResource Include="pt.com.GCV.VIEWS\Manipulation of the Form\Users.resx">
       <DependentUpon>Users.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Database1DataSet.xsc">
+      <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Database1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database1DataSet.xss">
+      <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Database1DataSet1.xsc">
+      <DependentUpon>Database1DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Database1DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database1DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database1DataSet1.xss">
+      <DependentUpon>Database1DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Database1DataSet2.xsc">
+      <DependentUpon>Database1DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Database1DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database1DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database1DataSet2.xss">
+      <DependentUpon>Database1DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Database1DataSet3.xsc">
+      <DependentUpon>Database1DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Database1DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database1DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database1DataSet3.xss">
+      <DependentUpon>Database1DataSet3.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -23,11 +23,11 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                     {
                         sqlCommand.CommandType = CommandType.Text;
                         sqlCommand.CommandText = "INSERT INTO \"fichas\" "
-                        + "(animal_Id, colaborador_Id, diagnostico, peso, observacoes, prescricao, quantPrescricao, proxVisita) "
-                        + "VALUES (@animal_Id, @colaborador_Id, @diagnostico, @peso, @observacoes, @prescricao, @quantPrescricao, @proxVisita);";
+                        + "(animal_Id, colabNome, diagnostico, peso, observacoes, prescricao, quantPrescricao, proxVisita) "
+                        + "VALUES (@animal_Id, @colabNome, @diagnostico, @peso, @observacoes, @prescricao, @quantPrescricao, @proxVisita);";
                         //sqlCommand.Parameters.Add(new SqlParameter("@id", ficha.Id));
                         sqlCommand.Parameters.Add(new SqlParameter("@animal_Id", ficha.Animal_Id));
-                        sqlCommand.Parameters.Add(new SqlParameter("@colaborador_Id", ficha.Colaborador_Id));
+                        sqlCommand.Parameters.Add(new SqlParameter("@colabNome", ficha.ColabNome));
                         sqlCommand.Parameters.Add(new SqlParameter("@diagnostico", ficha.Diagnostico));
                         sqlCommand.Parameters.Add(new SqlParameter("@peso", ficha.Peso));
                         sqlCommand.Parameters.Add(new SqlParameter("@observacoes", ficha.Observacoes));
@@ -76,8 +76,8 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                             {
                                 ficha = new Ficha(
                                     reader.GetInt32(reader.GetOrdinal("id")),
-                                    reader["animal_Id"].ToString(),
-                                    reader["colaborador_id"].ToString(),
+                                    int.Parse(reader["animal_Id"].ToString()),
+                                    reader["colabNome"].ToString(),
                                     reader["diagnostico"].ToString(),
                                     int.Parse(reader["peso"].ToString()),
                                     reader["observacoes"].ToString(),
@@ -125,8 +125,8 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                             {
                                 ficha = new Ficha(
                                     reader.GetInt32(reader.GetOrdinal("id")),
-                                    reader["animal_Id"].ToString(),
-                                    reader["colaborador_id"].ToString(),
+                                    int.Parse(reader["animal_Id"].ToString()),
+                                    reader["colabNome"].ToString(),
                                     reader["diagnostico"].ToString(),
                                     int.Parse(reader["peso"].ToString()),
                                     reader["observacoes"].ToString(),
@@ -174,18 +174,18 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                     {
                         sqlCommand.CommandType = CommandType.Text;
                         sqlCommand.CommandText = "UPDATE fichas SET" +
-                            " Name = @animal_id," +
-                            " Email = @colaborador_Id," +
-                            " Diagnostico = @diagnostico" +
-                            " Peso = @peso" +
-                            " Observacoes = @observacoes" +
-                            " Prescricao = @prescricao" +
-                            " QuantPrescricao = @quantPrescricao" +
+                            " Animal_Id = @animal_id," +
+                            " ColabNome = @colabNome," +
+                            " Diagnostico = @diagnostico," +
+                            " Peso = @peso," +
+                            " Observacoes = @observacoes," +
+                            " Prescricao = @prescricao," +
+                            " QuantPrescricao = @quantPrescricao," +
                             " ProxVisita = @proxVisita" +
                             " WHERE ID = @id";
                         sqlCommand.Parameters.Add(new SqlParameter("@id", ficha.Id));
                         sqlCommand.Parameters.Add(new SqlParameter("@animal_id", ficha.Animal_Id));
-                        sqlCommand.Parameters.Add(new SqlParameter("@colaborador_Id", ficha.Colaborador_Id));
+                        sqlCommand.Parameters.Add(new SqlParameter("@colabNome", ficha.ColabNome));
                         sqlCommand.Parameters.Add(new SqlParameter("@diagnostico", ficha.Diagnostico));
                         sqlCommand.Parameters.Add(new SqlParameter("@peso", ficha.Peso));
                         sqlCommand.Parameters.Add(new SqlParameter("@observacoes", ficha.Observacoes));

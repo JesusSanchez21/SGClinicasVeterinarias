@@ -29,7 +29,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Listas
             // Definição dos nomes das colunas
             listView2.Columns[0].Text = "#"; // ID -> sempre escondido
             listView2.Columns[1].Text = "Animal_Id";
-            listView2.Columns[2].Text = "Colaborador_Id";
+            listView2.Columns[2].Text = "Colaborador";
             listView2.Columns[3].Text = "Diagnostico";
             listView2.Columns[4].Text = "Peso";
             listView2.Columns[5].Text = "Observacoes";
@@ -55,7 +55,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Listas
                 ListViewItem row = new ListViewItem(new[] {
                             ficha.Id.ToString(),
                             ficha.Animal_Id.ToString(),
-                            ficha.Colaborador_Id.ToString(),
+                            ficha.ColabNome.ToString(),
                             ficha.Diagnostico.ToString(),
                             ficha.Peso.ToString(),
                             ficha.Observacoes.ToString(),

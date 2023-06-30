@@ -28,28 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
             this.Cancel = new Guna.UI2.WinForms.Guna2Button();
             this.confirm_edit = new Guna.UI2.WinForms.Guna2Button();
             this.edit = new Guna.UI2.WinForms.Guna2Button();
             this.Remove = new Guna.UI2.WinForms.Guna2Button();
             this.search = new Guna.UI2.WinForms.Guna2Button();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.guna2TextBoxQnt = new Guna.UI2.WinForms.Guna2TextBox();
             this.NextVisit = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2ComboBoxIdColab = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.colaboradoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.database1DataSet3 = new SG_ClinicasVeterinarias.Database1DataSet3();
             this.guna2ComboBoxIdAnimal = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.animaisBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.database1DataSet2 = new SG_ClinicasVeterinarias.Database1DataSet2();
             this.Diagnosis = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.Observation = new Guna.UI2.WinForms.Guna2TextBox();
@@ -63,7 +59,23 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxId = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.animaisTableAdapter = new SG_ClinicasVeterinarias.Database1DataSet2TableAdapters.animaisTableAdapter();
+            this.colaboradoresTableAdapter = new SG_ClinicasVeterinarias.Database1DataSet3TableAdapters.colaboradoresTableAdapter();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.colaboradoresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.animaisBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // Cancel
@@ -156,30 +168,6 @@
             this.search.Text = "Search";
             this.search.Click += new System.EventHandler(this.search_Click);
             // 
-            // listView2
-            // 
-            this.listView2.BackColor = System.Drawing.Color.PeachPuff;
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8});
-            listViewGroup1.Header = "ListViewGroup";
-            listViewGroup1.Name = "listViewGroup1";
-            this.listView2.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1});
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(0, 490);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(967, 146);
-            this.listView2.TabIndex = 49;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -271,6 +259,7 @@
             this.guna2ComboBoxIdColab.AutoRoundedCorners = true;
             this.guna2ComboBoxIdColab.BackColor = System.Drawing.Color.Transparent;
             this.guna2ComboBoxIdColab.BorderRadius = 17;
+            this.guna2ComboBoxIdColab.DataSource = this.colaboradoresBindingSource;
             this.guna2ComboBoxIdColab.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.guna2ComboBoxIdColab.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.guna2ComboBoxIdColab.FillColor = System.Drawing.Color.PapayaWhip;
@@ -284,11 +273,22 @@
             this.guna2ComboBoxIdColab.Size = new System.Drawing.Size(176, 36);
             this.guna2ComboBoxIdColab.TabIndex = 26;
             // 
+            // colaboradoresBindingSource
+            // 
+            this.colaboradoresBindingSource.DataMember = "colaboradores";
+            this.colaboradoresBindingSource.DataSource = this.database1DataSet3;
+            // 
+            // database1DataSet3
+            // 
+            this.database1DataSet3.DataSetName = "Database1DataSet3";
+            this.database1DataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // guna2ComboBoxIdAnimal
             // 
             this.guna2ComboBoxIdAnimal.AutoRoundedCorners = true;
             this.guna2ComboBoxIdAnimal.BackColor = System.Drawing.Color.Transparent;
             this.guna2ComboBoxIdAnimal.BorderRadius = 17;
+            this.guna2ComboBoxIdAnimal.DataSource = this.animaisBindingSource;
             this.guna2ComboBoxIdAnimal.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.guna2ComboBoxIdAnimal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.guna2ComboBoxIdAnimal.FillColor = System.Drawing.Color.PapayaWhip;
@@ -301,6 +301,16 @@
             this.guna2ComboBoxIdAnimal.Name = "guna2ComboBoxIdAnimal";
             this.guna2ComboBoxIdAnimal.Size = new System.Drawing.Size(176, 36);
             this.guna2ComboBoxIdAnimal.TabIndex = 25;
+            // 
+            // animaisBindingSource
+            // 
+            this.animaisBindingSource.DataMember = "animais";
+            this.animaisBindingSource.DataSource = this.database1DataSet2;
+            // 
+            // database1DataSet2
+            // 
+            this.database1DataSet2.DataSetName = "Database1DataSet2";
+            this.database1DataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Diagnosis
             // 
@@ -491,17 +501,50 @@
             this.label5.TabIndex = 54;
             this.label5.Text = "ID";
             // 
+            // animaisTableAdapter
+            // 
+            this.animaisTableAdapter.ClearBeforeFill = true;
+            // 
+            // colaboradoresTableAdapter
+            // 
+            this.colaboradoresTableAdapter.ClearBeforeFill = true;
+            // 
+            // listView2
+            // 
+            this.listView2.BackColor = System.Drawing.Color.PeachPuff;
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10});
+            listViewGroup1.Header = "ListViewGroup";
+            listViewGroup1.Name = "listViewGroup1";
+            this.listView2.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            listViewGroup1});
+            this.listView2.HideSelection = false;
+            this.listView2.Location = new System.Drawing.Point(-1, 506);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(970, 129);
+            this.listView2.TabIndex = 56;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            // 
             // MedicalFile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(968, 637);
+            this.Controls.Add(this.listView2);
             this.Controls.Add(this.textBoxId);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.listView2);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.confirm_edit);
             this.Controls.Add(this.edit);
@@ -509,9 +552,15 @@
             this.Controls.Add(this.search);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MedicalFile";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MedicalFile";
+            this.Load += new System.EventHandler(this.MedicalFile_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.colaboradoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.animaisBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -524,13 +573,6 @@
         private Guna.UI2.WinForms.Guna2Button edit;
         private Guna.UI2.WinForms.Guna2Button Remove;
         private Guna.UI2.WinForms.Guna2Button search;
-        private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox1;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBoxIdColab;
@@ -548,10 +590,24 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox textBoxId;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxQnt;
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2DateTimePicker NextVisit;
+        private Database1DataSet2 database1DataSet2;
+        private System.Windows.Forms.BindingSource animaisBindingSource;
+        private Database1DataSet2TableAdapters.animaisTableAdapter animaisTableAdapter;
+        private Database1DataSet3 database1DataSet3;
+        private System.Windows.Forms.BindingSource colaboradoresBindingSource;
+        private Database1DataSet3TableAdapters.colaboradoresTableAdapter colaboradoresTableAdapter;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
     }
 }

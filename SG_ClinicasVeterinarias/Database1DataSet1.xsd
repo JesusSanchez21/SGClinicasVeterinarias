@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Database1DataSet1" targetNamespace="http://tempuri.org/Database1DataSet1.xsd" xmlns:mstns="http://tempuri.org/Database1DataSet1.xsd" xmlns="http://tempuri.org/Database1DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Database1ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Database1ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SG_ClinicasVeterinarias.Properties.Settings.GlobalReference.Default.Database1ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="colaboradoresTableAdapter" GeneratorDataComponentClassName="colaboradoresTableAdapter" Name="colaboradores" UserDataComponentName="colaboradoresTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Database1ConnectionString (Settings)" DbObjectName="dbo.colaboradores" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT nome FROM dbo.colaboradores</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nome" DataSetColumn="nome" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Database1DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="Database1DataSet1" msprop:Generator_DataSetName="Database1DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="colaboradores" msprop:Generator_RowEvHandlerName="colaboradoresRowChangeEventHandler" msprop:Generator_RowDeletedName="colaboradoresRowDeleted" msprop:Generator_RowDeletingName="colaboradoresRowDeleting" msprop:Generator_RowEvArgName="colaboradoresRowChangeEvent" msprop:Generator_TablePropName="colaboradores" msprop:Generator_RowChangedName="colaboradoresRowChanged" msprop:Generator_RowChangingName="colaboradoresRowChanging" msprop:Generator_TableClassName="colaboradoresDataTable" msprop:Generator_RowClassName="colaboradoresRow" msprop:Generator_TableVarName="tablecolaboradores" msprop:Generator_UserTableName="colaboradores">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nome" msprop:Generator_ColumnPropNameInRow="nome" msprop:Generator_ColumnPropNameInTable="nomeColumn" msprop:Generator_ColumnVarNameInTable="columnnome" msprop:Generator_UserColumnName="nome">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

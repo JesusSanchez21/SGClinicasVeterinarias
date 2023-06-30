@@ -29,11 +29,14 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFichaMed));
             this.Observation = new Guna.UI2.WinForms.Guna2TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.guna2ComboBoxIdColab = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2ComboBoxIdAnimal = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.animaisBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.database1DataSet = new SG_ClinicasVeterinarias.Database1DataSet();
             this.Diagnosis = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -52,8 +55,16 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.guna2TextBoxQnt = new Guna.UI2.WinForms.Guna2TextBox();
             this.NextVisit = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
+            this.animaisTableAdapter = new SG_ClinicasVeterinarias.Database1DataSetTableAdapters.animaisTableAdapter();
+            this.database1DataSet1 = new SG_ClinicasVeterinarias.Database1DataSet1();
+            this.colaboradoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.colaboradoresTableAdapter = new SG_ClinicasVeterinarias.Database1DataSet1TableAdapters.colaboradoresTableAdapter();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.animaisBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.colaboradoresBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Observation
@@ -122,6 +133,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.guna2ComboBoxIdAnimal.AutoRoundedCorners = true;
             this.guna2ComboBoxIdAnimal.BackColor = System.Drawing.Color.Transparent;
             this.guna2ComboBoxIdAnimal.BorderRadius = 17;
+            this.guna2ComboBoxIdAnimal.DataSource = this.animaisBindingSource;
             this.guna2ComboBoxIdAnimal.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.guna2ComboBoxIdAnimal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.guna2ComboBoxIdAnimal.FillColor = System.Drawing.Color.PapayaWhip;
@@ -134,6 +146,16 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.guna2ComboBoxIdAnimal.Name = "guna2ComboBoxIdAnimal";
             this.guna2ComboBoxIdAnimal.Size = new System.Drawing.Size(176, 36);
             this.guna2ComboBoxIdAnimal.TabIndex = 25;
+            // 
+            // animaisBindingSource
+            // 
+            this.animaisBindingSource.DataMember = "animais";
+            this.animaisBindingSource.DataSource = this.database1DataSet;
+            // 
+            // database1DataSet
+            // 
+            this.database1DataSet.DataSetName = "Database1DataSet";
+            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Diagnosis
             // 
@@ -257,9 +279,9 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(246, 16);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 25);
+            this.label2.Size = new System.Drawing.Size(95, 25);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Id Employe";
+            this.label2.Text = "Employe";
             // 
             // label1
             // 
@@ -385,6 +407,24 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.label8.TabIndex = 30;
             this.label8.Text = "Next Visit";
             // 
+            // animaisTableAdapter
+            // 
+            this.animaisTableAdapter.ClearBeforeFill = true;
+            // 
+            // database1DataSet1
+            // 
+            this.database1DataSet1.DataSetName = "Database1DataSet1";
+            this.database1DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // colaboradoresBindingSource
+            // 
+            this.colaboradoresBindingSource.DataMember = "colaboradores";
+            this.colaboradoresBindingSource.DataSource = this.database1DataSet1;
+            // 
+            // colaboradoresTableAdapter
+            // 
+            this.colaboradoresTableAdapter.ClearBeforeFill = true;
+            // 
             // FormFichaMed
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -405,9 +445,14 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.Name = "FormFichaMed";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FormFichaMed_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.animaisBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.colaboradoresBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -437,5 +482,11 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBoxIdColab;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBoxIdAnimal;
+        private Database1DataSet database1DataSet;
+        private System.Windows.Forms.BindingSource animaisBindingSource;
+        private Database1DataSetTableAdapters.animaisTableAdapter animaisTableAdapter;
+        private Database1DataSet1 database1DataSet1;
+        private System.Windows.Forms.BindingSource colaboradoresBindingSource;
+        private Database1DataSet1TableAdapters.colaboradoresTableAdapter colaboradoresTableAdapter;
     }
 }
