@@ -32,13 +32,13 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manipulation_of_the_Form
             // Definição dos nomes das colunas
             listView2.Columns[0].Text = "#";
             listView2.Columns[1].Text = "Nome";
-            listView2.Columns[2].Text = "Funcion";
-            listView2.Columns[3].Text = "Email";
-            listView2.Columns[4].Text = "Telefone";
-            listView2.Columns[5].Text = "Nif";
-            listView2.Columns[6].Text = "Date of birth";
-            listView2.Columns[7].Text = "Type of Employe";
-            listView2.Columns[8].Text = "Start Date";
+            listView2.Columns[2].Text = "Date of birth";
+            listView2.Columns[3].Text = "Nif";
+            listView2.Columns[4].Text = "Function";
+            listView2.Columns[5].Text = "Start Date";
+            listView2.Columns[6].Text = "Telefone";
+            listView2.Columns[7].Text = "Email";
+            listView2.Columns[8].Text = "Type of Employe";
 
             // Definição das colunas da listview. 
             // NOTA: Os valores percentuais da largura das colunas tem de somar 100
@@ -136,7 +136,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manipulation_of_the_Form
         if (result == DialogResult.Yes)
         {
             // Faz a operação delete
-            bool success = SQLClientes.deleteCliente(id);
+            bool success = SQLColaboradores.deleteEmploye(id);
 
             if (success)
             {
@@ -192,7 +192,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manipulation_of_the_Form
         {
             if (selectcolab == null)
             {
-                MessageBox.Show("Selecione na lista o cliente para Editar.");
+                MessageBox.Show("Selecione na lista o colaborador para Editar.");
                 return;
             }
 
@@ -228,7 +228,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manipulation_of_the_Form
 
             if (success)
             {
-                MessageBox.Show("Cliente editado com sucesso.");
+                MessageBox.Show("Colaborador editado com sucesso.");
                 // Limpa os dados apos atualizar
                 guna2TextBoxName.Clear();
                 guna2TextBoxEmail.Clear();

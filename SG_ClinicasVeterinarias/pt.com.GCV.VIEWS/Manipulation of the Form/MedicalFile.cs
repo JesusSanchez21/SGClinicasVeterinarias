@@ -10,6 +10,8 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manipulation_of_the_Form
 {
     public partial class MedicalFile : Form
     {
+        SQLAnimais SQLClientes = new SQLAnimais();
+        SQLColaboradores SQLColaboradores = new SQLColaboradores();
         List<Ficha> fichalist = new List<Ficha>();
 
         private Ficha selectedFicha;
@@ -17,6 +19,23 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manipulation_of_the_Form
         public MedicalFile()
         {
             InitializeComponent();
+            guna2ComboBoxIdAnimal.DataSource = SQLAnimais.getAll();
+            //define nome no form
+            guna2ComboBoxIdAnimal.DisplayMember = "nome_animal";
+            //valor do item selecionado
+            guna2ComboBoxIdAnimal.ValueMember = "nome";
+
+            //obter valor selecionado
+            var selectedValue1 = guna2ComboBoxIdAnimal.SelectedValue;
+
+            guna2ComboBoxIdColab.DataSource = SQLColaboradores.getAll();
+            //define nome no form
+            guna2ComboBoxIdColab.DisplayMember = "nome_colab";
+            //valor do item selecionado
+            guna2ComboBoxIdColab.ValueMember = "nome";
+
+            //obter valor selecionado
+            var selectedValue2 = guna2ComboBoxIdColab.SelectedValue;
         }
         private void MedFile_Load(object sender, EventArgs e)
         {
@@ -59,6 +78,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manipulation_of_the_Form
                             ficha.Observacoes.ToString(),
                             ficha.Prescricao.ToString(),
                             ficha.QuantPrescricao.ToString(),
+                            ficha.ProxVisita.ToString(),
                         });
                 listView2.Items.Add(row);
             }
@@ -98,6 +118,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manipulation_of_the_Form
                             ficha.Observacoes,
                             ficha.Prescricao,
                             ficha.QuantPrescricao.ToString(),
+                            ficha.ProxVisita.ToString(),
                     });
                         listView2.Items.Add(row);
                     }
@@ -129,7 +150,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manipulation_of_the_Form
             if (result == DialogResult.Yes)
             {
                 // Faz a operação delete
-                bool success = SQLClientes.deleteCliente(id);
+                bool success = SQLficha.Delete(id);
 
                 if (success)
                 {
@@ -173,6 +194,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manipulation_of_the_Form
                 guna2TextBoxPresciprtion.Text = selectedFicha.Prescricao.ToString();
                 Observation.Text = selectedFicha.Observacoes.ToString();
                 Diagnosis.Text = selectedFicha.Diagnostico.ToString();
+                NextVisit.Text = selectedFicha.ProxVisita.ToString();
             }
             else
             {
@@ -193,7 +215,9 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manipulation_of_the_Form
             selectedFicha.Prescricao = guna2TextBoxPresciprtion.Text;
             selectedFicha.Observacoes = Observation.Text;
             selectedFicha.Diagnostico = Diagnosis.Text;
-            
+            selectedFicha.ProxVisita = NextVisit.Value;
+            selectedFicha.Animal_Id = guna2ComboBoxIdAnimal.Text;
+            selectedFicha.Colaborador_Id = guna2ComboBoxIdColab.Text;
             if (int.TryParse(guna2TextBoxQnt.Text, out int quantPresc))
             {
                 selectedFicha.QuantPrescricao = quantPresc;
@@ -203,25 +227,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manipulation_of_the_Form
                 MessageBox.Show("Quantidade inválida.");
                 return;
             }
-
-            if (int.TryParse(guna2ComboBoxIdAnimal.Text, out int animalId))
-            {
-                selectedFicha.Animal_Id = animalId;
-            }
-            else
-            {
-                MessageBox.Show("Animal_Id inválido.");
-                return;
-            }
-            if (int.TryParse(guna2ComboBoxIdColab.Text, out int idColab))
-            {
-                selectedFicha.Colaborador_Id = idColab;
-            }
-            else
-            {
-                MessageBox.Show("Colaborador_Id inválido.");
-                return;
-            }
+            
             if (int.TryParse(guna2TextBox2.Text, out int peso))
             {
                 selectedFicha.Peso = peso;
@@ -244,7 +250,6 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Manipulation_of_the_Form
                 guna2TextBoxQnt.Clear();
                 Diagnosis.Clear();
                 Observation.Clear();
-
                 selectedFicha = null;
             }
             else

@@ -14,7 +14,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Listas
 {
     public partial class ListaEmploye : Form
     {
-        List<Colaborador> colabs = new List<Colaborador>();
+        List<Colaborador> colablist = new List<Colaborador>();
         public ListaEmploye()
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Listas
         private void ListaEmploye_Load(object sender, EventArgs e)
         {
 
-            colabs = SQLColaboradores.getAll();
+            colablist = SQLColaboradores.getAll();
 
             //Definir colunas
             // Definição dos nomes das colunas
@@ -49,7 +49,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Listas
             listView2.Columns[7].Width = (15 * listView2.Width) / 100;
             listView2.Columns[8].Width = (15 * listView2.Width) / 100;
 
-            foreach (Colaborador colab in colabs)
+            foreach (Colaborador colab in colablist)
             {
                 ListViewItem row = new ListViewItem(new[] {
                             colab.Id.ToString(),
@@ -64,6 +64,11 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Listas
                         });
                 listView2.Items.Add(row);
             }
+        }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

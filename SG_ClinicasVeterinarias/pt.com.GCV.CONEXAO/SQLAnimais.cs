@@ -13,7 +13,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
     public class SQLAnimais
     {
         #region Create
-        static public void Insert(Animal animal)
+        static public void Insert(Animal animals)
         {
             try
             {
@@ -26,19 +26,19 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                         + "(nomeDono, dataNasc, dataFal, dataUltimaCons, tipoAnimal, raca, sexo, peso) "
                         + "VALUES (@nomeDono, @dataNasc, @dataFal, @dataUltimaCons, @tipoAnimal, @raca, @sexo, @peso);";
                         //sqlCommand.Parameters.Add(new SqlParameter("@id", animal.Id));
-                        //sqlCommand.Parameters.Add(new SqlParameter("@nomeDono", animal.NomeDono));
-                        sqlCommand.Parameters.Add(new SqlParameter("@dataNasc", animal.DataNasc));
-                        sqlCommand.Parameters.Add(new SqlParameter("@dataFal", animal.DataFal));
-                        sqlCommand.Parameters.Add(new SqlParameter("@dataUltimaCons", animal.DataUltimaCons));
-                        sqlCommand.Parameters.Add(new SqlParameter("@tipoAnimal", animal.TipoAnimal));
-                        sqlCommand.Parameters.Add(new SqlParameter("@raca", animal.Raca));
-                        sqlCommand.Parameters.Add(new SqlParameter("@sexo", animal.Sexo));
-                        sqlCommand.Parameters.Add(new SqlParameter("@peso", animal.Peso));
+                        sqlCommand.Parameters.Add(new SqlParameter("@nomeDono", animals.NomeDono));
+                        sqlCommand.Parameters.Add(new SqlParameter("@dataNasc", animals.DataNasc));
+                        sqlCommand.Parameters.Add(new SqlParameter("@dataFal", animals.DataFal));
+                        sqlCommand.Parameters.Add(new SqlParameter("@dataUltimaCons", animals.DataUltimaCons));
+                        sqlCommand.Parameters.Add(new SqlParameter("@tipoAnimal", animals.TipoAnimal));
+                        sqlCommand.Parameters.Add(new SqlParameter("@raca", animals.Raca));
+                        sqlCommand.Parameters.Add(new SqlParameter("@sexo", animals.Sexo));
+                        sqlCommand.Parameters.Add(new SqlParameter("@peso", animals.Peso));
 
 
                         if (sqlCommand.ExecuteNonQuery() != 1)
                         {
-                            throw new System.Exception("[SQLCliente] - Ocorreu um erro na query sql");
+                            throw new System.Exception("[SQLAnimais] - Ocorreu um erro na query sql");
                         }
                     }
                 }
@@ -56,6 +56,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
         public static List<Animal> getAll()
         {
             List<Animal> animais = new List<Animal>();
+            Animal animals = null;
 
             try
             {
@@ -76,7 +77,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
 
                             while (reader.Read())
                             {
-                                Animal animal = new Animal(
+                                animals = new Animal(
                                     reader.GetInt32(reader.GetOrdinal("id")),
                                     reader["nomeDono"].ToString(),
                                     (DateTime)reader["dataNasc"],
@@ -84,9 +85,9 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                                     (DateTime)reader["dataUltimaCons"],
                                     reader["tipoAnimal"].ToString(),
                                     reader["raca"].ToString(),
-                                    char.Parse(reader["sexo"].ToString()),
+                                    reader["sexo"].ToString(),
                                     int.Parse(reader["peso"].ToString()));
-                                animais.Add(animal);
+                                animais.Add(animals);
                             }
                         }
                     }
@@ -107,7 +108,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
         #region GetByID
         internal static Animal GetById(int id)
         {
-            Animal animal = null;
+            Animal animals = null;
 
             try
             {
@@ -125,7 +126,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                         {
                             if (reader.Read())
                             {
-                                animal = new Animal(
+                                animals = new Animal(
                                     reader.GetInt32(reader.GetOrdinal("id")),
                                     reader["nomeDono"].ToString(),
                                     (DateTime)reader["dataNasc"],
@@ -133,7 +134,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                                     (DateTime)reader["dataUltimaCons"],
                                     reader["tipoAnimal"].ToString(),
                                     (reader["raca"].ToString()),
-                                    char.Parse(reader["sexo"].ToString()),
+                                    reader["sexo"].ToString(),
                                     int.Parse(reader["peso"].ToString()));
                             }
                         }
@@ -157,12 +158,12 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                 );
                 return null;
             }
-            return animal;
+            return animals;
         }
         #endregion
 
         #region Update
-        internal static bool UpdateAnimal(Animal Animal)
+        internal static bool UpdateAnimal(Animal animals)
         {
             bool success = false;
             try
@@ -176,22 +177,22 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                         sqlCommand.CommandText = "UPDATE animais SET" +
                             " NomeDono = @nomeDono," +
                             " DataNasc = @dataNasc," +
-                            " DataFal = @dataFal" +
-                            " DataUltimaCons = @dataUltimaCons" +
-                            " TipoAnimal = @tipoAnimal" +
-                            " Raca = @raca" +
-                            " Sexo = @sexo" +
+                            " DataFal = @dataFal," +
+                            " DataUltimaCons = @dataUltimaCons," +
+                            " TipoAnimal = @tipoAnimal," +
+                            " Raca = @raca," +
+                            " Sexo = @sexo," +
                             " Peso = @peso" +
                             " WHERE ID = @id";
-                        sqlCommand.Parameters.Add(new SqlParameter("@id", Animal.Id));
-                        sqlCommand.Parameters.Add(new SqlParameter("@nomeDono", Animal.NomeDono));
-                        sqlCommand.Parameters.Add(new SqlParameter("@dataNasc", Animal.DataNasc));
-                        sqlCommand.Parameters.Add(new SqlParameter("@dataFal", Animal.DataFal));
-                        sqlCommand.Parameters.Add(new SqlParameter("@dataUltimaCons", Animal.DataUltimaCons));
-                        sqlCommand.Parameters.Add(new SqlParameter("@tipoAnimal", Animal.TipoAnimal));
-                        sqlCommand.Parameters.Add(new SqlParameter("@raca", Animal.Raca));
-                        sqlCommand.Parameters.Add(new SqlParameter("@sexo", Animal.Sexo));
-                        sqlCommand.Parameters.Add(new SqlParameter("@peso", Animal.Peso));
+                        sqlCommand.Parameters.Add(new SqlParameter("@id", animals.Id));
+                        sqlCommand.Parameters.Add(new SqlParameter("@nomeDono", animals.NomeDono));
+                        sqlCommand.Parameters.Add(new SqlParameter("@dataNasc", animals.DataNasc));
+                        sqlCommand.Parameters.Add(new SqlParameter("@dataFal", animals.DataFal));
+                        sqlCommand.Parameters.Add(new SqlParameter("@dataUltimaCons", animals.DataUltimaCons));
+                        sqlCommand.Parameters.Add(new SqlParameter("@tipoAnimal", animals.TipoAnimal));
+                        sqlCommand.Parameters.Add(new SqlParameter("@raca", animals.Raca));
+                        sqlCommand.Parameters.Add(new SqlParameter("@sexo", animals.Sexo));
+                        sqlCommand.Parameters.Add(new SqlParameter("@peso", animals.Peso));
 
                         // Execute a query update
                         int rowsAffected = sqlCommand.ExecuteNonQuery();

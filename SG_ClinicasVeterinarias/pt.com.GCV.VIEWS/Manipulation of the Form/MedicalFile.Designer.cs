@@ -45,7 +45,9 @@
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.guna2TextBoxQnt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.NextVisit = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2ComboBoxIdColab = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2ComboBoxIdAnimal = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Diagnosis = new Guna.UI2.WinForms.Guna2TextBox();
@@ -184,13 +186,15 @@
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(236, 19);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(503, 37);
+            this.label10.Size = new System.Drawing.Size(492, 37);
             this.label10.TabIndex = 50;
-            this.label10.Text = "Manupulation Form Medical File";
+            this.label10.Text = "Manipulation Form Medical File";
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.guna2TextBoxQnt);
+            this.groupBox1.Controls.Add(this.NextVisit);
             this.groupBox1.Controls.Add(this.guna2ComboBoxIdColab);
             this.groupBox1.Controls.Add(this.guna2ComboBoxIdAnimal);
             this.groupBox1.Controls.Add(this.Diagnosis);
@@ -211,6 +215,16 @@
             this.groupBox1.TabIndex = 51;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = " ";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(448, 16);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(103, 25);
+            this.label8.TabIndex = 57;
+            this.label8.Text = "Next Visit";
             // 
             // guna2TextBoxQnt
             // 
@@ -234,6 +248,23 @@
             this.guna2TextBoxQnt.SelectedText = "";
             this.guna2TextBoxQnt.Size = new System.Drawing.Size(115, 36);
             this.guna2TextBoxQnt.TabIndex = 27;
+            // 
+            // NextVisit
+            // 
+            this.NextVisit.AutoRoundedCorners = true;
+            this.NextVisit.BackColor = System.Drawing.Color.Transparent;
+            this.NextVisit.BorderRadius = 14;
+            this.NextVisit.Checked = true;
+            this.NextVisit.FillColor = System.Drawing.Color.PapayaWhip;
+            this.NextVisit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.NextVisit.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.NextVisit.Location = new System.Drawing.Point(443, 55);
+            this.NextVisit.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.NextVisit.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.NextVisit.Name = "NextVisit";
+            this.NextVisit.Size = new System.Drawing.Size(197, 31);
+            this.NextVisit.TabIndex = 56;
+            this.NextVisit.Value = new System.DateTime(2023, 6, 15, 14, 43, 26, 890);
             // 
             // guna2ComboBoxIdColab
             // 
@@ -411,11 +442,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(246, 16);
+            this.label2.Location = new System.Drawing.Point(248, 16);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 25);
+            this.label2.Size = new System.Drawing.Size(95, 25);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Id Employe";
+            this.label2.Text = "Employe";
             // 
             // label1
             // 
@@ -423,9 +454,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(17, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 25);
+            this.label1.Size = new System.Drawing.Size(77, 25);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Id Animals";
+            this.label1.Text = "Animal";
             // 
             // textBoxId
             // 
@@ -520,5 +551,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxQnt;
+        private System.Windows.Forms.Label label8;
+        private Guna.UI2.WinForms.Guna2DateTimePicker NextVisit;
     }
 }

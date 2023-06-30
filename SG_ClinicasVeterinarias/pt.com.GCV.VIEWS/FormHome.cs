@@ -41,7 +41,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
         private void formAnimalsToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormAnimal form = new FormAnimal();
+            FormAnimal form = new FormAnimal(null);
             form.ShowDialog();
         }
 

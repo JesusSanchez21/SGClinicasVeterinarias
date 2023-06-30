@@ -14,6 +14,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Listas
 {
     public partial class ListaAnimal : Form
     {
+
         List<Animal> animallist = new List<Animal>();
         public ListaAnimal()
         {
@@ -65,6 +66,11 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Listas
                         });
                 listView2.Items.Add(row);
             }
+        }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

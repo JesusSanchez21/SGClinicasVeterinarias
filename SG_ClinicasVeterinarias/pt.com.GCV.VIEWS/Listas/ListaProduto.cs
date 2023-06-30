@@ -29,9 +29,9 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Listas
             // Definição dos nomes das colunas
             listView2.Columns[0].Text = "#"; // ID -> sempre escondido
             listView2.Columns[1].Text = "Type of Product";
-            listView2.Columns[4].Text = "Description of the product";
+            listView2.Columns[2].Text = "Description of the product";
             listView2.Columns[3].Text = "Quantity of stock";
-            listView2.Columns[2].Text = "Price";
+            listView2.Columns[4].Text = "Price";
 
 
             // Definição das colunas da listview. 
@@ -54,6 +54,11 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Listas
                 listView2.Items.Add(row);
             }
 
+        }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

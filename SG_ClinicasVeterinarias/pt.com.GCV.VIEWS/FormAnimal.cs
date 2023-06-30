@@ -19,12 +19,12 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
     {
         public int SQLAction = -1;
         SQLClientes SQLClientes = new SQLClientes();
-        Animal animal { get; set; }
+        Animal animals { get; set; }
 
-        public FormAnimal()
+        public FormAnimal(Animal animals)
         {
             InitializeComponent();
-
+            this.animals = animals;
             guna2ComboBoxOwner.DataSource = SQLClientes.getAll();
             //define nome no form
             guna2ComboBoxOwner.DisplayMember = "Name";
@@ -47,7 +47,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             {
                 animals.NomeDono = guna2ComboBoxOwner.Text;
                 animals.Raca = guna2TextBoxRace.Text;
-                animals.Sexo = char.Parse( guna2ComboBoxSex.Text.ToString().Substring(0,1));
+                animals.Sexo = guna2ComboBoxSex.Text;
                 animals.Peso = int.Parse(guna2TextBoxWeight.Text);
                 animals.TipoAnimal = guna2ComboBoxTypeAnimal.Text;
                 animals.DataFal = Date_Death.Value;
@@ -55,14 +55,14 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
                 animals.DataUltimaCons = last_visit.Value;
                 
 
-                SQLAnimais.Insert(animal);
+                SQLAnimais.Insert(animals);
             }
             MessageBox.Show("Data saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private bool FormDataValidation(out Animal animal)
+        private bool FormDataValidation(out Animal animals)
         {
-            animal = new Animal();
+            animals = new Animal();
             if (IsEmpty(guna2ComboBoxOwner.Text))
             {
                 MessageBox.Show(
@@ -88,6 +88,11 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             }
 
             return true;
+        }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

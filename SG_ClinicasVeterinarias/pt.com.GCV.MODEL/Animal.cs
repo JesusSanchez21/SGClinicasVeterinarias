@@ -11,7 +11,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.MODEL
         public DateTime DataUltimaCons { get; set; }
         public string TipoAnimal { get; set; }
         public string Raca { get; set; }
-        public char Sexo { get; set; }
+        public string Sexo { get; set; }
         public int Peso { get; set; }
 
 
@@ -24,7 +24,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.MODEL
         {
             Id = id;
         }
-        public Animal(int id, string nomeDono, DateTime dataNasc, DateTime dataFal, DateTime dataUltimaCons, string tipoAnimal, string raca, char sexo, int peso)
+        public Animal(int id, string nomeDono, DateTime dataNasc, DateTime dataFal, DateTime dataUltimaCons, string tipoAnimal, string raca, string sexo, int peso)
         {
             Id = id;
             NomeDono = nomeDono;

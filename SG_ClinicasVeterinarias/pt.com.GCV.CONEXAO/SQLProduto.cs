@@ -162,14 +162,14 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                         sqlCommand.CommandText = "UPDATE Produtos SET" +
                             " TipoProd = @tipoProd," +
                             " DescProd = @descProd," +
-                            " QuantArmazem = @quantArmazem" +
+                            " QuantArmazem = @quantArmazem," +
                             " PrecoUnit = @precoUnit" +
                             " WHERE CodProd = @codProd";
                         sqlCommand.Parameters.Add(new SqlParameter("@codProd", produto.CodProd));    
-                        sqlCommand.Parameters.Add(new SqlParameter("@animal_id", produto.TipoProd));
-                        sqlCommand.Parameters.Add(new SqlParameter("@colaborador_Id", produto.DescProd));
-                        sqlCommand.Parameters.Add(new SqlParameter("@diagnostico", produto.QuantArmazem));
-                        sqlCommand.Parameters.Add(new SqlParameter("@peso", produto.PrecoUnit));
+                        sqlCommand.Parameters.Add(new SqlParameter("@tipoProd", produto.TipoProd));
+                        sqlCommand.Parameters.Add(new SqlParameter("@descProd", produto.DescProd));
+                        sqlCommand.Parameters.Add(new SqlParameter("@quantArmazem", produto.QuantArmazem));
+                        sqlCommand.Parameters.Add(new SqlParameter("@precoUnit", produto.PrecoUnit));
                         
                         // Execute a query update
                         int rowsAffected = sqlCommand.ExecuteNonQuery();

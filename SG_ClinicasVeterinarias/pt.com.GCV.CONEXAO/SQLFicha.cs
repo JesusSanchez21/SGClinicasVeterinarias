@@ -10,7 +10,7 @@ using static SG_ClinicasVeterinarias.pt.com.GCV.DAO.SqLConnection;
 namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
 {
 
-    internal class SQLficha
+    public class SQLficha
     {
         #region Create
         static public void Insert(Ficha ficha)
@@ -23,8 +23,8 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                     {
                         sqlCommand.CommandType = CommandType.Text;
                         sqlCommand.CommandText = "INSERT INTO \"fichas\" "
-                        + "(animal_Id, colaborador_Id, diagnostico, peso, observacoes, prescricao, quantPrescricao) "
-                        + "VALUES (@colaborador_Id, @diagnostico, @peso, @observacoes, @prescricao, @quantPrescricao);";
+                        + "(animal_Id, colaborador_Id, diagnostico, peso, observacoes, prescricao, quantPrescricao, proxVisita) "
+                        + "VALUES (@animal_Id, @colaborador_Id, @diagnostico, @peso, @observacoes, @prescricao, @quantPrescricao, @proxVisita);";
                         //sqlCommand.Parameters.Add(new SqlParameter("@id", ficha.Id));
                         sqlCommand.Parameters.Add(new SqlParameter("@animal_Id", ficha.Animal_Id));
                         sqlCommand.Parameters.Add(new SqlParameter("@colaborador_Id", ficha.Colaborador_Id));
@@ -33,6 +33,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                         sqlCommand.Parameters.Add(new SqlParameter("@observacoes", ficha.Observacoes));
                         sqlCommand.Parameters.Add(new SqlParameter("@prescricao", ficha.Prescricao));
                         sqlCommand.Parameters.Add(new SqlParameter("@quantPrescricao", ficha.QuantPrescricao));
+                        sqlCommand.Parameters.Add(new SqlParameter("@proxVisita", ficha.ProxVisita));
 
                         if (sqlCommand.ExecuteNonQuery() != 1)
                         {
@@ -50,9 +51,10 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
         #endregion
 
         #region Read
-        internal static List<Ficha> getAll()
+        public static List<Ficha> getAll()
         {
             List<Ficha> fichas = new List<Ficha>();
+            Ficha ficha = null;
 
             try
             {
@@ -70,18 +72,18 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
 
                         using (SqlDataReader reader = sqlCommand.ExecuteReader())
                         {
-
                             while (reader.Read())
                             {
-                                Ficha ficha = new Ficha(
+                                ficha = new Ficha(
                                     reader.GetInt32(reader.GetOrdinal("id")),
-                                    int.Parse(reader["animal_Id"].ToString()),
-                                    int.Parse(reader["colaborador_id"].ToString()),
+                                    reader["animal_Id"].ToString(),
+                                    reader["colaborador_id"].ToString(),
                                     reader["diagnostico"].ToString(),
                                     int.Parse(reader["peso"].ToString()),
                                     reader["observacoes"].ToString(),
                                     reader["prescricao"].ToString(),
-                                    int.Parse(reader["quantPrescricao"].ToString()));
+                                    int.Parse(reader["quantPrescricao"].ToString()),
+                                    (DateTime)reader["proxVisita"]);
                                 fichas.Add(ficha);
                             }
                         }
@@ -123,13 +125,15 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                             {
                                 ficha = new Ficha(
                                     reader.GetInt32(reader.GetOrdinal("id")),
-                                    int.Parse(reader["animal_Id"].ToString()),
-                                    int.Parse(reader["colaborador_Id"].ToString()),
+                                    reader["animal_Id"].ToString(),
+                                    reader["colaborador_id"].ToString(),
                                     reader["diagnostico"].ToString(),
                                     int.Parse(reader["peso"].ToString()),
                                     reader["observacoes"].ToString(),
                                     reader["prescricao"].ToString(),
-                                    int.Parse(reader["quantPrescricao"].ToString()));
+                                    int.Parse(reader["quantPrescricao"].ToString()),
+                                    (DateTime)reader["proxVisita"]
+                                    );
 
                             }
                         }
@@ -187,6 +191,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                         sqlCommand.Parameters.Add(new SqlParameter("@observacoes", ficha.Observacoes));
                         sqlCommand.Parameters.Add(new SqlParameter("@prescricao", ficha.Prescricao));
                         sqlCommand.Parameters.Add(new SqlParameter("@quantPrescricao", ficha.QuantPrescricao));
+                        sqlCommand.Parameters.Add(new SqlParameter("@proxVisita", ficha.ProxVisita));
 
                         // Execute a query update
                         int rowsAffected = sqlCommand.ExecuteNonQuery();

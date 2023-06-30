@@ -12,40 +12,36 @@ using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using static SG_ClinicasVeterinarias.Setting.Utils;
-using SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO;
-using SG_ClinicasVeterinarias.pt.com.GCV.MODEL;
 
 namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
 {
     public partial class FormFichaMed : Form
     {
-        /*SQLAnimais = new SQLAnimais();
-        SQLColaboradores = new SQLColaboradores();
-        */
+        SQLAnimais SQLCliente = new SQLAnimais();
+        SQLColaboradores SQLColaboradore = new SQLColaboradores();
          Ficha ficha { get; set; }
 
         public FormFichaMed()
         {
             InitializeComponent();
-            /*
 
             guna2ComboBoxIdAnimal.DataSource = SQLAnimais.getAll();
             //define nome no form
-            guna2ComboBoxIdAnimal.DisplayMember = "idAnimal";
+            guna2ComboBoxIdAnimal.DisplayMember = "nomeDono";
             //valor do item selecionado
-            guna2ComboBoxIdAnimal.ValueMember = "id";
+            guna2ComboBoxIdAnimal.ValueMember = "nome";
 
             //obter valor selecionado
-            var selectedValue1 = guna2ComboBoxIdAnimal.SelectedValue;
+            var selectedValue = guna2ComboBoxIdAnimal.SelectedValue;
             
             guna2ComboBoxIdColab.DataSource = SQLColaboradores.getAll();
             //define nome no form
-            guna2ComboBoxIdColab.DisplayMember = "idColab";
+            guna2ComboBoxIdColab.DisplayMember = "nome";
             //valor do item selecionado
-            guna2ComboBoxIdColab.ValueMember = "id";
+            guna2ComboBoxIdColab.ValueMember = "nome";
 
             //obter valor selecionado
-            var selectedValue2 = guna2ComboBoxIdColab.SelectedValue; */
+            var selectedValue2 = guna2ComboBoxIdColab.SelectedValue;
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -57,13 +53,14 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
         {
             if (FormDataValidation(out Ficha ficha))
             {
-                ficha.Animal_Id = guna2ComboBoxIdAnimal.SelectedIndex;
-                ficha.Colaborador_Id = guna2ComboBoxIdColab.SelectedIndex;
+                ficha.Animal_Id = guna2ComboBoxIdAnimal.Text;
+                ficha.Colaborador_Id = guna2ComboBoxIdColab.Text;
                 ficha.Diagnostico = Diagnosis.Text;
                 ficha.Peso = int.Parse(guna2TextBoxWeight.Text);
                 ficha.Observacoes = Observation.Text;
                 ficha.Prescricao = guna2TextBoxPresciprtion.Text;
                 ficha.QuantPrescricao = int.Parse(guna2TextBoxQnt.Text);
+                ficha.ProxVisita = (DateTime)NextVisit.Value;
 
 
                 SQLficha.Insert(ficha);

@@ -61,9 +61,15 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS.Listas
                             ficha.Observacoes.ToString(),
                             ficha.Prescricao.ToString(),
                             ficha.QuantPrescricao.ToString(),
+                            ficha.ProxVisita.ToString(),
                         });
                 listView2.Items.Add(row);
             }
+        }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

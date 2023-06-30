@@ -49,7 +49,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                 throw new System.Exception(ex.Message, ex.InnerException);
             }
         }
-        internal static List<Colaborador> getAll()
+        public static List<Colaborador> getAll()
         {
             List<Colaborador> colabs = new List<Colaborador>();
             Colaborador colab = null;
@@ -61,7 +61,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                     //instancia para permitir comandos 
                     using (SqlCommand sqlCommand = ((SqlConnection)conn).CreateCommand())
                     {
-                        string query = "Select * from employe;";
+                        string query = "Select * from colaboradores;";
                         //defining o tipo de comando
                         sqlCommand.CommandText = query;
                         sqlCommand.CommandType = CommandType.Text;
@@ -110,7 +110,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                     using (SqlCommand sqlCommand = ((SqlConnection)conn).CreateCommand())
                     {
                         // Define a query
-                        string query = "SELECT * FROM employe WHERE id = @id;";
+                        string query = "SELECT * FROM colaboradores WHERE id = @id;";
                         sqlCommand.CommandText = query;
                         sqlCommand.CommandType = CommandType.Text;
                         sqlCommand.Connection = ((SqlConnection)conn);
@@ -161,7 +161,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                     using (SqlCommand sqlCommand = ((SqlConnection)conn).CreateCommand())
                     {
                         // Cria a query
-                        string query = "UPDATE employe SET nome = @nome,dataNasc = @dataNasc ,nif = @nif, tipocolab = @tipocolab, funcao = @funcao, dataIncColab = @dataIncColab, telefone = @telefone,email = @email,  WHERE id = @id;";
+                        string query = "UPDATE colaboradores SET nome = @nome,dataNasc = @dataNasc ,nif = @nif, tipocolab = @tipocolab, funcao = @funcao, dataIniColab = @dataIniColab, telefone = @telefone, email = @email  WHERE id = @id;";
                         sqlCommand.CommandText = query;
                         sqlCommand.CommandType = CommandType.Text;
                         sqlCommand.Connection = ((SqlConnection)conn);
@@ -205,7 +205,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.CONEXAO
                     using (SqlCommand sqlCommand = ((SqlConnection)conn).CreateCommand())
                     {
 
-                        string query = "DELETE FROM employe WHERE id = @id;";
+                        string query = "DELETE FROM colaboradores WHERE id = @id;";
                         sqlCommand.CommandText = query;
                         sqlCommand.CommandType = CommandType.Text;
                         sqlCommand.Connection = ((SqlConnection)conn);
