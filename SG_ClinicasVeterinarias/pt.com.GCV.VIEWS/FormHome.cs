@@ -29,6 +29,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
 
         }
 
+        #region Menu nuttons
         private void formClientesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -125,5 +126,34 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             Animals form = new Animals();
             form.ShowDialog();
         }
+
+        private void listAnimalsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ListaAnimal form = new ListaAnimal();
+            form.ShowDialog();
+        }
+
+        private void listEmployeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ListaEmploye form = new ListaEmploye();
+            form.ShowDialog();
+        }
+
+        private void listProductToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ListaProduto form = new ListaProduto();
+            form.ShowDialog();
+        }
+
+        private void listMedicalRecordToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ListaFichaMed form = new ListaFichaMed();
+            form.ShowDialog();
+        }
+#endregion
     }
 }

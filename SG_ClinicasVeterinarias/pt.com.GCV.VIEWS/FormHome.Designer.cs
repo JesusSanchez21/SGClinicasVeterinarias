@@ -175,7 +175,7 @@
             this.listClientesToolStripMenuItem1.BackColor = System.Drawing.Color.PeachPuff;
             this.listClientesToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listClientesToolStripMenuItem1.Name = "listClientesToolStripMenuItem1";
-            this.listClientesToolStripMenuItem1.Size = new System.Drawing.Size(176, 22);
+            this.listClientesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.listClientesToolStripMenuItem1.Text = "ListClientes";
             this.listClientesToolStripMenuItem1.Click += new System.EventHandler(this.listClientesToolStripMenuItem1_Click);
             // 
@@ -184,37 +184,42 @@
             this.listAnimalsToolStripMenuItem1.BackColor = System.Drawing.Color.PeachPuff;
             this.listAnimalsToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listAnimalsToolStripMenuItem1.Name = "listAnimalsToolStripMenuItem1";
-            this.listAnimalsToolStripMenuItem1.Size = new System.Drawing.Size(176, 22);
+            this.listAnimalsToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.listAnimalsToolStripMenuItem1.Text = "ListAnimals";
+            this.listAnimalsToolStripMenuItem1.Click += new System.EventHandler(this.listAnimalsToolStripMenuItem1_Click);
             // 
             // listEmployeToolStripMenuItem
             // 
             this.listEmployeToolStripMenuItem.BackColor = System.Drawing.Color.PeachPuff;
             this.listEmployeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listEmployeToolStripMenuItem.Name = "listEmployeToolStripMenuItem";
-            this.listEmployeToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.listEmployeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listEmployeToolStripMenuItem.Text = "ListEmploye";
+            this.listEmployeToolStripMenuItem.Click += new System.EventHandler(this.listEmployeToolStripMenuItem_Click);
             // 
             // listProductToolStripMenuItem
             // 
             this.listProductToolStripMenuItem.BackColor = System.Drawing.Color.PeachPuff;
             this.listProductToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listProductToolStripMenuItem.Name = "listProductToolStripMenuItem";
-            this.listProductToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.listProductToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listProductToolStripMenuItem.Text = "ListProduct";
+            this.listProductToolStripMenuItem.Click += new System.EventHandler(this.listProductToolStripMenuItem_Click);
             // 
             // listMedicalRecordToolStripMenuItem1
             // 
             this.listMedicalRecordToolStripMenuItem1.BackColor = System.Drawing.Color.PeachPuff;
             this.listMedicalRecordToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.listMedicalRecordToolStripMenuItem1.Name = "listMedicalRecordToolStripMenuItem1";
-            this.listMedicalRecordToolStripMenuItem1.Size = new System.Drawing.Size(176, 22);
+            this.listMedicalRecordToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.listMedicalRecordToolStripMenuItem1.Text = "ListMedicalRecord";
+            this.listMedicalRecordToolStripMenuItem1.Click += new System.EventHandler(this.listMedicalRecordToolStripMenuItem1_Click);
             // 
             // listUserToolStripMenuItem
             // 
+            this.listUserToolStripMenuItem.BackColor = System.Drawing.Color.PeachPuff;
             this.listUserToolStripMenuItem.Name = "listUserToolStripMenuItem";
-            this.listUserToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.listUserToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listUserToolStripMenuItem.Text = "ListUser";
             this.listUserToolStripMenuItem.Click += new System.EventHandler(this.listUserToolStripMenuItem_Click);
             // 
