@@ -17,14 +17,10 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
 {
     public partial class FormAnimal : Form
     {
-        public int SQLAction = -1;
         SQLClientes SQLClientes = new SQLClientes();
-        Animal animals { get; set; }
-
-        public FormAnimal(Animal animals)
+        public FormAnimal()
         {
             InitializeComponent();
-            this.animals = animals;
             guna2ComboBoxOwner.DataSource = SQLClientes.getAll();
             //define nome no form
             guna2ComboBoxOwner.DisplayMember = "Name";

@@ -29,7 +29,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
 
         }
 
-        #region Menu nuttons
+        #region Menu buttons
         private void formClientesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -41,7 +41,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
         private void formAnimalsToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormAnimal form = new FormAnimal(null);
+            FormAnimal form = new FormAnimal();
             form.ShowDialog();
         }
 

@@ -17,10 +17,6 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
 {
     public partial class FormEmploye : Form
     {
-        public int SQLAction = -1;
-
-        Colaborador colab { get; set; }
-
         public FormEmploye()
         {
             InitializeComponent();

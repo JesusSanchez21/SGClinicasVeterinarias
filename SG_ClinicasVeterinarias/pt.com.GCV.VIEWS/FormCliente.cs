@@ -105,17 +105,6 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
 
         private void FormCliente_Load(object sender, EventArgs e)
         {
-
-            switch (SQLAction)
-            {
-                case SQL_INSERT:
-                    Save.Text = "Insert";
-                    break;
-
-                default:
-                    MessageBox.Show("Operação não permitida.");
-                    break;
-            }
         }
 
         private void Cancel_Click(object sender, EventArgs e)

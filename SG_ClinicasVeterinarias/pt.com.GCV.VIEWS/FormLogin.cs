@@ -117,12 +117,6 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.Hide();
             formRegister.Show();
         }
-
-        private void guna2GradientTileButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             this.Close();

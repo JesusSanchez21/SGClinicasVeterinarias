@@ -50,7 +50,6 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.Cancel = new Guna.UI2.WinForms.Guna2Button();
             this.Save = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -380,14 +379,6 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.LightSalmon;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(970, 30);
-            this.guna2Panel1.TabIndex = 21;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -405,7 +396,6 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(968, 637);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Cancel);
@@ -444,7 +434,6 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxFuncion;
         private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
 
         private System.Windows.Forms.Label label5;
     }

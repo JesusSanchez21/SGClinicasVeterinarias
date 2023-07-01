@@ -51,7 +51,6 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.Cancel = new Guna.UI2.WinForms.Guna2Button();
             this.Save = new Guna.UI2.WinForms.Guna2Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2TextBoxQnt = new Guna.UI2.WinForms.Guna2TextBox();
             this.NextVisit = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
@@ -349,14 +348,6 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.label5.TabIndex = 24;
             this.label5.Text = "Form Medical File ";
             // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.LightSalmon;
-            this.guna2Panel1.Location = new System.Drawing.Point(-18, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(970, 30);
-            this.guna2Panel1.TabIndex = 23;
-            // 
             // guna2TextBoxQnt
             // 
             this.guna2TextBoxQnt.AutoRoundedCorners = true;
@@ -438,7 +429,6 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.Save);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -473,7 +463,6 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
         private Guna.UI2.WinForms.Guna2Button Cancel;
         private Guna.UI2.WinForms.Guna2Button Save;
         private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxQnt;
         private System.Windows.Forms.Label label8;
