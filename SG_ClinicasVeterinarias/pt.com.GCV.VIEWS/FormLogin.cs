@@ -125,7 +125,7 @@ namespace SG_ClinicasVeterinarias.pt.com.GCV.VIEWS
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }
